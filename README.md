@@ -26,6 +26,9 @@ Initial administrator for accessing the backend:
 **Username:** admin   
 **Password:** password
 
+## Google Drive doc
+[Link to the document with notes](https://docs.google.com/document/d/1rY4vwakcrDl4I49xLB9IgjEeocbBJtv8peWRTkSrQPk/edit#)
+
 ##Documentation
 Documentation os Sitefinity is on the link below
 [Link to Documentation](http://docs.sitefinity.com/)
