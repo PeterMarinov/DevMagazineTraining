@@ -15,9 +15,16 @@ Main contributors from the site:
 ##Running the project
 
 * The database used is MS SQL Server 2014. Instead of attached back file, the database is in the \db_script\ folder in the root
+To restore the folder you can use this [guide](https://www.mssqltips.com/sqlservertip/2810/how-to-migrate-a-sql-server-database-to-a-lower-version/)
 
-* The connection string to the database should be set in   
+To restore please make sure to:
+* Change the path for the database files (it's in the script)
+* Execute the script
+* Modify the connection string to match your connection string. The connection string to the database should be set in   
+
+```
 \Web\App_Data\Sitefinity\Configuration\DataConfig.config
+```
 
 ##Login information
 
@@ -26,9 +33,9 @@ Initial administrator for accessing the backend:
 **Username:** admin   
 **Password:** password
 
-## Google Drive doc
+### Google Drive doc
 [Link to the document with notes](https://docs.google.com/document/d/1rY4vwakcrDl4I49xLB9IgjEeocbBJtv8peWRTkSrQPk/edit#)
 
-##Documentation
+### Documentation
 Documentation os Sitefinity is on the link below
 [Link to Documentation](http://docs.sitefinity.com/)
