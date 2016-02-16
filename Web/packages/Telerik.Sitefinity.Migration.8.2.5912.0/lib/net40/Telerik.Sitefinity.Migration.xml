@@ -1,0 +1,3226 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Sitefinity.Migration</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Configuration.MigrationModuleConfig">
+            <summary>
+            Migration module configuration section
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Configuration.MigrationModuleConfig.OnPropertiesInitialized">
+            <summary>
+            Called after the properties of this instance have been initialized.
+            Load default values here.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Configuration.MigrationModuleConfig.AddDefaultWidgetBuilders">
+            <summary>
+            Adds the widget builders for all well known 3.7 types
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Configuration.MigrationModuleConfig.AddPropertiesToSkip">
+            <summary>
+            Adds the properties to be skipped during the migration during the migration of widgets.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Configuration.MigrationModuleConfig.GetPropertiesToSkip">
+            <summary>
+            Gets the properties to be skipped during the migration of widgets.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Configuration.MigrationModuleConfig.TryGetWellKnownBuilder(System.String,System.Type@)">
+            <summary>
+            Tries to get the builder for the given 3.7 control type
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Configuration.MigrationModuleConfig.LastMigrationUrl">
+            <summary>
+            Gets or sets the last migration URL.
+            </summary>
+            <value>The last migration URL.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Configuration.MigrationModuleConfig.Migrate37CustomPagesUrlAsCustomUrl">
+            <summary>
+            Gets or sets a value indicating whether the 3.7 custom page URL is migrated as custom URL.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Configuration.MigrationModuleConfig.MigrateCustomProvidersAsDynamicModules">
+            <summary>
+            Gets or sets the migrate custom providers as dynamic modules.
+            </summary>
+            <value>The migrate custom providers as dynamic modules.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Configuration.MigrationModuleConfig.OriginalUrlsAreMigratedAsAdditional">
+            <summary>
+            If <c>true</c> will migrate the urls as additional urls (301 redirects) and generate default urls in the Sitefinity 4.0 pattern
+            If <c>false</c> will keep the original urls as default and no additional urls will be created
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Configuration.MigrationModuleConfig.MigrateOwner">
+            <summary>
+            Gets or sets the migrate owner.
+            </summary>
+            <value>The migrate owner.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Configuration.MigrationModuleConfig.MembershipProviders">
+            <summary>
+            Gets a collection of data provider settings.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Configuration.MigrationModuleConfig.PropertiesToSkip">
+            <summary>
+            Gets or sets the properties to be skip during the migration of widgets
+            </summary>
+            <value>
+            The properties to skip.
+            </value>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Configuration.MigrationWidgetBuilderElement.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="!:TypeImplementationsElement"/> class.
+            </summary>
+            <param name="parent">The parent config element.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Configuration.MigrationWidgetBuilderElement.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="!:TypeImplementationsElement"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Configuration.MigrationWidgetBuilderElement.ControlTypeName">
+            <summary>
+            Gets or sets the key for the configuration entry.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Configuration.MigrationWidgetBuilderElement.MigrationBuilderType">
+            <summary>
+            A types that inherit/implement a, possibly abstract, type or interface.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MasterPageLoadException.#ctor(Telerik.Sitefinity.Pages.Model.PageTemplate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Pages.Model.DuplicatePageUrlException"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MasterPageLoadException.#ctor(Telerik.Sitefinity.Pages.Model.PageTemplate,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Pages.Model.DuplicatePageUrlException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MasterPageLoadException.Page">
+            <summary>
+            Gets the page.
+            </summary>
+            <value>The page.</value>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MissingTemplateException.#ctor(Telerik.Sitefinity.Pages.Model.PageData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Pages.Model.DuplicatePageUrlException"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MissingTemplateException.#ctor(Telerik.Sitefinity.Pages.Model.PageData,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Pages.Model.DuplicatePageUrlException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MissingTemplateException.Page">
+            <summary>
+            Gets the page.
+            </summary>
+            <value>The page.</value>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.IMigrationOperation.ExecuteOperation(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Executes the operation in the specified contect
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.IMigrationOperation.SetNext(Telerik.Sitefinity.Modules.Migration.IMigrationOperation)">
+            <summary>
+            Sets the next operation to be executed
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.IMigrationOperation.Next">
+            <summary>
+            Gets the next operation to be executed
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationExtensions.ToDbDateTime(System.String)">
+            <summary>
+            Convert a string datetime to a Utc DateTime that can be stored in the database
+            </summary>
+            <param name="value">The string datetime value.</param>
+            <exception cref="T:System.ArgumentException"/>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationExtensions.ToMetadataDateTime(System.String)">
+            <summary>
+            Converts a metadata string datetime to a DateTime
+            </summary>
+            <param name="value">The string datetime value.</param>
+            <exception cref="T:System.ArgumentException"/>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.MigrationModule">
+            <summary>
+            Entry point for the Migration module, used to transfer data from a Sitefinity 3.7 project.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Modules.Migration.MigrationModule.ModuleId">
+            <summary>
+            Id of the module. Used for licensing.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Modules.Migration.MigrationModule.MigrationViewControlId">
+            <summary>
+            Defines the control id of the ContentView inside the migration module screen.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationModule.Initialize(Telerik.Sitefinity.Services.ModuleSettings)">
+            <summary>
+            Initializes the service with specified settings.
+            </summary>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationModule.Install(Telerik.Sitefinity.Abstractions.SiteInitializer)">
+            <summary>
+            Installs this module in Sitefinity system.
+            </summary>
+            <param name="initializer">The Site Initializer. A helper class for installing Sitefinity modules.</param>
+        </member>
+        <member name="F:Telerik.Sitefinity.Modules.Migration.MigrationModule.ResourceClassId">
+            <summary>
+            Localization resources' class Id for forms
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Modules.Migration.MigrationModule.HomePageId">
+            <summary>
+            Identity for the home page in the migration module
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationModule.Managers">
+            <summary>
+            Gets the CLR types of all data managers provided by this module.
+            </summary>
+            <value>An array of <see cref="T:System.Type"/> objects.</value>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationOperation.ExecuteOperation(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Executes the operation in the specified contect
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationOperation.SetNext(Telerik.Sitefinity.Modules.Migration.IMigrationOperation)">
+            <summary>
+            Sets the next operation to be executed
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationOperation.RemoveNext">
+            <summary>
+            Removes the next operation from the chain, 
+            so the current operation becomes the last operation in the chain
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationOperation.Next">
+            <summary>
+            Gets the next operation to be executed
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.MigrationResources">
+            <summary>
+            Represents string resources for UI labels.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationResources.#ctor">
+            <summary>
+            Initializes new instance of <see cref="T:Telerik.Sitefinity.Modules.Migration.MigrationResources"/> class with the default <see cref="T:Telerik.Sitefinity.Localization.Data.ResourceDataProvider"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationResources.#ctor(Telerik.Sitefinity.Localization.Data.ResourceDataProvider)">
+            <summary>
+            Initializes new instance of <see cref="T:Telerik.Sitefinity.Modules.Migration.MigrationResources"/> class with the provided <see cref="T:Telerik.Sitefinity.Localization.Data.ResourceDataProvider"/>.
+            </summary>
+            <param name="dataProvider"><see cref="T:Telerik.Sitefinity.Localization.Data.ResourceDataProvider"/></param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationResources.MigrationResourcesTitle">
+            <summary>
+            Generic Content
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationResources.MigrationResourcesDescription">
+            <summary>
+            Contains localizable resources for Generic Content user interface.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationResources.MigrationTitle">
+            <summary>
+            Migration
+            </summary>
+            <value>Title for the migration module.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationResources.PageGroupNodeTitle">
+            <summary>
+            Migration
+            </summary>
+            <value>Title of the migration page group.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationResources.PageGroupNodeDescription">
+            <summary>
+            This is the page group that contains all pages for the migration module.
+            </summary>
+            <value>migration Page Group Description</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationResources.MigrationUrlName">
+            <summary>
+            Migration
+            </summary>
+            <value>Migration URL</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationResources.MigrationDescription">
+            <summary>
+            Represents a landing page for Sitefinity's Migration module.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationResources.MigrationHtmlTitle">
+            <summary>
+            Messsage: Html Title for the Migration module.
+            </summary>
+            <value>Title for the Migration module.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationResources.ModuleIsNotLicensed">
+            <summary>
+            Messsage: Migration functionality is not available for your type of license.
+            </summary>
+            <value>Title for the Migration module.</value>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Telerik.Sitefinity.Modules.Migration.MigrationResources.MigrationToolBetaMessage" -->
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationResources.MigrationResourcesTitlePlural">
+            <summary>
+            Migration tool
+            </summary>
+            <value>Title plural for the Forms module.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationResources.OpenAccessMembership37Provider">
+            <summary>
+            Label: Backend Users 3.7 provider
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationResources.UserControlLoadProblemMessage">
+             <summary>
+            Message: The message is displayed when migrated user control fails to load.
+             </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationResources.ControlTypeNameTitle">
+            <summary>
+            phrase: Control type (in Sitefinity 3.7)
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationResources.ControlTypeNameDescription">
+            <summary>
+            phrase: Full type name of the 3.7 widget
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationResources.MigrationBuilderTypeTitle">
+            <summary>
+            phrase: Widget builder type (in Sitefinity 4.x)
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationResources.MigrationBuilderTypeDescription">
+            <summary>
+            phrase: Full type name of the 3.7 widget
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationResources.WidgetBuildersMapTitle">
+            <summary>
+            phrase: Widget builders used to migrate a Sitefinity 3.7 widgets to 4.x
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationResources.WidgetBuildersMapDescription">
+            <summary>
+            phrase: Widget builders used to migrate a Sitefinity 3.7 widgets to 4.x
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended">
+            <summary>
+            Represents global settins for the migration process
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended"/> class.
+            </summary>
+            <param name="serviceLocation">The service location.</param>
+            <param name="username">The username.</param>
+             <param name="password">The password.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended.MigrateCustomPagesUrlAsCustomUrl">
+            <summary>
+            Gets or sets a value indicating whether to migrate all the 3.7 custom pages URL as custom URL.
+            </summary>
+            <value>
+            <c>true</c> if [migrate custom pages URL as custom URL]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended.MigrateOwner">
+            <summary>
+            Gets or sets the migrate owner.
+            </summary>
+            <value>The migrate owner.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended.Localization">
+            <summary>
+            Gets or sets the localization.
+            </summary>
+            <value>The localization.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended.Membership">
+            <summary>
+            Gets or sets the membership.
+            </summary>
+            <value>The membership.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended.ServiceLocation">
+            <summary>
+            Gets or sets the service location.
+            </summary>
+            <value>
+            The service location.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended.Username">
+            <summary>
+            Gets or sets the username.
+            </summary>
+            <value>
+            The username.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+            <value>
+            The password.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended.MigrateCustomProvidersAsDynamicModules">
+            <summary>
+            Gets or sets the migrate custom providers as dynamic modules.
+            </summary>
+            <value>The migrate custom providers as dynamic modules.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended.OriginalUrlsAreMigratedAsAdditional">
+            <summary>
+            If true the 3.7 urls will be added as additional to the items, and the default urls will be compiled with the 4.x format
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationSettingsManager.#cctor">
+            <summary>
+            Initializes the <see cref="T:Telerik.Sitefinity.Modules.Migration.MigrationSettingsManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationSettingsManager.GetInstance">
+            <summary>
+            Gets the instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationSettingsManager.GetMigrationSettings(System.String,System.String,System.String)">
+            <summary>
+            Gets the migration settings.
+            </summary>
+            <param name="siteUrl">The site URL.</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationSettingsManager.GetSf37Settings(System.String,System.String,System.String)">
+            <summary>
+            Gets the SF37 settings.
+            </summary>
+            <param name="siteUrl">The site URL.</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.MigrationsManager">
+            <summary>
+            Represents a manager that handles the migration of specific data from Sitefinity 3.7 to 4x
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationsManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.MigrationsManager"/> class. User the constructor with MigrationSettingsExtended.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationsManager.#ctor(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.MigrationsManager"/> class.
+            </summary>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationsManager.GetMigrationStatistics">
+            <summary>
+            Gets the statistics for the items to be migrated.
+            </summary>
+            <param name="settings">The settings for migration.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationsManager.GetContentStatistics">
+            <summary>
+            Gets the content statistics in a contract item.
+            </summary>
+            <param name="settings">The settings for migration.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationsManager.IsMigrationModuleInstalled(Telerik.Sitefinity.Modules.Migration.MigrationOperations)">
+            <summary>
+            Determines whether the migration module for the specified operation is installed.
+            </summary>
+            <param name="migrationModuleOperation">The migration module operation.</param>
+            <param name="statistics">The statistics.</param>       
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationsManager.GetItemsForOperation(Telerik.Sitefinity.Modules.Migration.MigrationOperations)">
+            <summary>
+            Gets the items to be migrated from a specified operation.
+            </summary>
+            <param name="migrationModuleOperation">The migration module operation.</param>
+            <param name="statistics">The statistics.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationsManager.ExecuteMigrationProcess(System.String[])">
+            <summary>
+            Executes the migration process executing the specified operations
+            </summary>
+            <param name="operations">The operations.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationsManager.SetupLocalization">
+            <summary>
+            Setups the localization.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationsManager.SetupLocalizationConfig(Telerik.Sitefinity.Modules.Migration.Settings.MigrationLocalizationSettings,Telerik.Sitefinity.Localization.Configuration.ResourcesConfig)">
+            <summary>
+            Setups the localization config.
+            </summary>
+            <param name="migrationSettingsExtended">The migration settings extended.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationsManager.CreateCultureElement(Telerik.Sitefinity.Configuration.Web.CultureViewModel)">
+            <summary>
+            Creates the culture element.
+            </summary>
+            <param name="item">The item.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationsManager.GetMigrationStrategies(System.String[])">
+            <summary>
+            Gets the migration strategies corresponding to the specified migration operations
+            </summary>
+            <param name="operations">The operations.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationsManager.GetMigrationStatistics(Telerik.Sitefinity.MigrationContracts.MigrationItemStatistics)">
+            <summary>
+            Gets the statistics for the items to be migrated from a specified contract item.
+            </summary>
+            <param name="mic">The statistics contract item</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.MigrationStatistics.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.MigrationStatistics"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationStatistics.ModuleItems">
+            <summary>
+            Gets or sets the items in the module for migration.
+            </summary>
+            <value>
+            The module items.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationStatistics.Multilingual">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Telerik.Sitefinity.Modules.Migration.MigrationStatistics"/> is multilingual.
+            </summary>
+            <value>
+              <c>true</c> if multilingual; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.MigrationStatistics.ContentLanguages">
+            <summary>
+            Gets or sets the languages of the content in SF 3.7.
+            </summary>
+            <value>
+            The content languages.
+            </value>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.OperationContext.#ctor(System.String,Telerik.Sitefinity.Model.IDataItem,System.Collections.Generic.List{Telerik.Sitefinity.Model.IDataItem},Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.OperationContext"/> class.
+            </summary>
+            <param name="transactionName">Name of the transaction.</param>
+            <param name="parentItem">The parent item.</param>
+            <param name="childItems">The child items.</param>
+            <param name="serviceLocation">The service location.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.OperationContext.TransactionName">
+            <summary>
+            Gets the name of the transaction.
+            </summary>
+            <value>
+            The name of the transaction.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.OperationContext.MigrationItem">
+            <summary>
+            Gets or sets the migration item from Sitefinity 3.7
+            </summary>
+            <value>
+            The migration item.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.OperationContext.Item">
+            <summary>
+            Gets or sets the item stored to Sitefinity 4.0
+            </summary>
+            <value>
+            The parent item.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.OperationContext.SharedItem">
+            <summary>
+            Gets or sets item that will be shared in addition to the main item between the operations
+            </summary>
+            <value>
+            The parent item.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.OperationContext.Parent">
+            <summary>
+            Gets or sets the parent item.
+            </summary>
+            <value>
+            The parent.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.OperationContext.Children">
+            <summary>
+            Gets or sets the child items of Item.
+            </summary>
+            <value>
+            The child items.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.OperationContext.Manager">
+            <summary>
+            Gets or sets the manager for the items.
+            </summary>
+            <value>
+            The manager.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.OperationContext.IsMultilingual">
+            <summary>
+            Gets or sets a value indicating whether this instance is multilingual.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.OperationContext.IsFirstLanguage">
+            <summary>
+            Gets or sets a value indicating whether this is the first language of this instance. 
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.OperationContext.MigrationSettings">
+            <summary>
+            Gets or sets the settings for the migration process
+            </summary>
+            <value>The migration settings.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.OperationContext.MigrationModule">
+            <summary>
+            Represents the module being currently migrated
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.OperationContext.Culture">
+            <summary>
+            Represents the culture of the migrated item.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Security.Data.ASPMembershipProviderHelper">
+            <summary>
+            Helper class required to call the encrypt/decrypt default functionality
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Security.Data.ASPMembershipProviderHelper.EncryptPassword(System.Byte[])">
+            <summary>
+            Encrypts a password.
+            </summary>
+            <param name="password">A byte array that contains the password to encrypt.</param>
+            <returns>
+            A byte array that contains the encrypted password.
+            </returns>
+            <exception cref="T:System.Configuration.Provider.ProviderException">The <see cref="P:System.Web.Configuration.MachineKeySection.ValidationKey"/> property or <see cref="P:System.Web.Configuration.MachineKeySection.DecryptionKey"/> property is set to AutoGenerate.</exception>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Security.Data.ASPMembershipProviderHelper.DecryptPassword(System.Byte[])">
+            <summary>
+            Decrypts an encrypted password.
+            </summary>
+            <param name="encodedPassword">A byte array that contains the encrypted password to decrypt.</param>
+            <returns>
+            A byte array that contains the decrypted password.
+            </returns>
+            <exception cref="T:System.Configuration.Provider.ProviderException">The <see cref="P:System.Web.Configuration.MachineKeySection.ValidationKey"/> property or <see cref="P:System.Web.Configuration.MachineKeySection.DecryptionKey"/> property is set to AutoGenerate.</exception>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Security.Data.OpenAccessMembership37Provider">
+            <summary>
+            Open Access membership provider implementing membership logic from sitefinity v.3.7
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Security.Data.OpenAccessMembership37Provider.ChangePassword(Telerik.Sitefinity.Security.Model.User,System.String,System.String)">
+            <summary>
+            Changes the password.
+            </summary>
+            <param name="user">The user object.</param>
+            <param name="oldPassword">The old password.</param>
+            <param name="newPassword">The new password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Security.Data.OpenAccessMembership37Provider.CreateMigrationUser(System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Boolean,System.Object,System.Web.Security.MembershipCreateStatus@)">
+            <summary>
+            Creates the migration user.
+            </summary>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <param name="salt">The salt.</param>
+            <param name="passwordFormat">The password format.</param>
+            <param name="email">The email.</param>
+            <param name="passwordQuestion">The password question.</param>
+            <param name="passwordAnswer">The password answer.</param>
+            <param name="isApproved">The is approved.</param>
+            <param name="providerUserKey">The provider user key.</param>
+            <param name="status">The status.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Security.Data.OpenAccessMembership37Provider.CreateUser(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Object,System.Web.Security.MembershipCreateStatus@)">
+            <summary>
+            Adds a new membership user to the data source.
+            </summary>
+            <param name="username">The user name for the new user.</param>
+            <param name="password">The password for the new user.</param>
+            <param name="email">The e-mail address for the new user.</param>
+            <param name="passwordQuestion">The password question for the new user.</param>
+            <param name="passwordAnswer">The password answer for the new user</param>
+            <param name="isApproved">Whether or not the new user is approved to be validated.</param>
+            <param name="providerUserKey">The unique identifier from the membership data source for the user.</param>
+            <param name="status">A <see cref="T:System.Web.Security.MembershipCreateStatus"/> enumeration value indicating whether the user was created successfully.</param>
+            <returns>
+            A <see cref="T:Telerik.Sitefinity.Security.Model.User"/> object populated with the information for the newly created user.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Security.Data.OpenAccessMembership37Provider.ValidateUser(Telerik.Sitefinity.Security.Model.User,System.String)">
+            <summary>
+            Verifies that the specified user and password exist in the data source.
+            </summary>
+            <param name="user">The user.</param>
+            <param name="password">The password for the specified user.</param>
+            <returns>
+            true if the specified username and password are valid; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Security.Data.OpenAccessMembership37Provider.GetPassword(Telerik.Sitefinity.Security.Model.User,System.String)">
+            <summary>
+            Gets the password for the specified user name from the data source.
+            </summary>
+            <param name="user">
+            An instance of <see cref="T:Telerik.Sitefinity.Security.Model.User"/> object for which the passoword should be retrieved.
+            </param>
+            <param name="answer">The password answer for the user.</param>
+            <returns>
+            The password for the specified user name.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Security.Data.OpenAccessMembership37Provider.ResetPassword(Telerik.Sitefinity.Security.Model.User,System.String)">
+            <summary>
+            Resets a user's password to a new, automatically generated password.
+            </summary>
+            <param name="user">The user.</param>
+            <param name="answer">The password answer for the specified user.</param>
+            <returns>The new password for the specified user.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Security.Data.OpenAccessMembership37Provider.Initialize(System.String,System.Collections.Specialized.NameValueCollection,System.Type)">
+            <summary>
+            Initializes the data provider.
+            </summary>
+            <param name="providerName">The friendly name of the provider.</param>
+            <param name="config">A collection of the name/value pairs representing the provider-specific attributes specified in the configuration for this provider.</param>
+            <param name="managerType">The type of the manger initialized this provider.
+            The type is needed for retrieving lifetime mangers.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Security.Data.OpenAccessMembership37Provider.ValidateParameters(System.String@,System.String@,System.String@,System.String@,System.String@,System.Object@,System.Web.Security.MembershipCreateStatus@)">
+            <summary>
+            Validates user parameters.
+            </summary>
+            <param name="userName">The user name for the new user.</param>
+            <param name="password">The password for the new user.</param>
+            <param name="email">The e-mail address for the new user.</param>
+            <param name="passwordQuestion">The password question for the new user.</param>
+            <param name="passwordAnswer">The password answer for the new user</param>
+            <param name="providerUserKey">The unique identifier from the membership data source for the user.</param>
+            <param name="status">A <see cref="T:System.Web.Security.MembershipCreateStatus" /> enumeration value indicating whether the user was created successfully.</param>
+            <returns>true if all parameters are valid.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Security.Data.OpenAccessMembership37Provider.DecodePassword(System.String,System.Web.Security.MembershipPasswordFormat)">
+            <summary>
+            Decodes the provided password.
+            </summary>
+            <param name="encodedPassword">The password to decode.</param>
+            <param name="passwordFormat">The password format.</param>
+            <returns>The decoded password.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Security.Data.OpenAccessMembership37Provider.EncodePassword(System.String,System.String,System.Web.Security.MembershipPasswordFormat)">
+            <summary>
+            Encodes the provided password.
+            </summary>
+            <param name="password">The password to encode.</param>
+            <param name="salt">An optional suffix that can be added to encoded password.</param>
+            <param name="passwordFormat">The password format.</param>
+            <returns>The encoded password.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Security.Data.OpenAccessMembership37Provider.Encrypt(System.String,System.String)">
+            <summary>
+            Encrypts the specified password original.
+            </summary>
+            <param name="passwordOriginal">The password original.</param>
+            <param name="salt">The salt.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Security.Data.OpenAccessMembership37Provider.GeneratePassword">
+            <summary>
+            Generates the password.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Security.Data.OpenAccessMembership37Provider.GenerateSalt">
+            <summary>
+            Generates the salt.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Security.Data.OpenAccessMembership37Provider.ComputeHash(System.String,System.String,System.Web.Security.MembershipPasswordFormat,System.String)">
+            <summary>
+            Computes the hash.
+            </summary>
+            <param name="password">The password.</param>
+            <param name="salt">The salt.</param>
+            <param name="passwordFormat">The password format.</param>
+            <param name="hastAlgorithmType">Type of the hast algorithm.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Security.Data.OpenAccessMembership37Provider.CheckValidPassword(Telerik.Sitefinity.Security.Model.User,System.String)">
+            <summary>
+            Checks the valid password.
+            </summary>
+            <param name="user">The user.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Security.Data.OpenAccessMembership37Provider.CheckValidPassword(System.String,System.String,System.String,System.Web.Security.MembershipPasswordFormat)">
+            <summary>
+            Checks the valid password.
+            </summary>
+            <param name="enteredByUser">The entered by user.</param>
+            <param name="original">The original.</param>
+            <param name="salt">The salt.</param>
+            <param name="passwordFormat">The password format.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Security.Data.OpenAccessMembership37Provider.HashAlgorithType">
+            <summary>
+            Gets or sets the type of the hash algorith.
+            </summary>
+            <value>The type of the hash algorith.</value>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Settings.MigrationLocalizationSettings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.Settings.MigrationLocalizationSettings"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Settings.MigrationMembershipSettings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.Settings.MigrationMembershipSettings"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Settings.MigrationMembershipSettings.PasswordHashAlgorithm">
+            <summary>
+            Gets or sets the password hash algorithm.
+            </summary>
+            <value>The password hash algorithm.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Settings.MigrationMembershipSettings.PasswordFormat">
+            <summary>
+            Gets or sets the password format.
+            </summary>
+            <value>The password format.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Settings.MigrationMembershipSettings.EnablePasswordRetrieval">
+            <summary>
+            Gets or sets the enable password retrieval.
+            </summary>
+            <value>The enable password retrieval.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Settings.MigrationMembershipSettings.EnablePasswordReset">
+            <summary>
+            Gets or sets the enable password reset.
+            </summary>
+            <value>The enable password reset.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Settings.MigrationMembershipSettings.RequiresQuestionAndAnswer">
+            <summary>
+            Gets or sets the requires question and answer.
+            </summary>
+            <value>The requires question and answer.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Settings.MigrationMembershipSettings.RequiresUniqueEmail">
+            <summary>
+            Gets or sets the requires unique email.
+            </summary>
+            <value>The requires unique email.</value>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.MigrationStrategy.#ctor(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Initializes a new instance of the <see cref="!:RolesMigrationStrategy"/> class.
+            </summary>
+            <param name="serviceLocation">The service location.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Blogs.Operations.BlogCopyPermissionsOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the copy blog permissions operation in the specified context
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Blogs.Operations.BlogCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the create blog operation in the specified context
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Blogs.Operations.BlogPostAddCommentsOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the create tags for blog post operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.ContentCopyPropertiesOperationBase`1">
+            <summary>
+            Base class that implements the common logic for migration of item properperties
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.ContentCopyPropertiesOperationBase`1.CopyCommonProperties(Telerik.Sitefinity.MigrationContracts.MigrationGenericContent,`0)">
+            <summary>
+            Migrates the common Content properties - datecreated, lastmodified, etc
+            </summary>
+            <param name="migrationItem"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.ContentCopyPropertiesOperationBase`1.CopyMetaFieldProperties(Telerik.Sitefinity.MigrationContracts.MigrationGenericContent,`0)">
+            <summary>
+            Migrates all the properties that are stored as meta fields in 3.7
+            </summary>
+            <param name="migrationItem"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.ContentCopyPropertiesOperationBase`1.CopyTaxonomies(Telerik.Sitefinity.MigrationContracts.MigrationGenericContent,Telerik.Sitefinity.GenericContent.Model.Content,System.String,System.String)">
+            <summary>
+            Migrates tags and categories
+            </summary>
+            <param name="migrationItem"></param>
+            <param name="item"></param>
+            <param name="transactionName"></param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.ContentCopyPropertiesOperationBase`1.MigrateUrlName(Telerik.Sitefinity.MigrationContracts.MigrationGenericContent,Telerik.Sitefinity.GenericContent.Model.Content,System.Linq.IQueryable{Telerik.Sitefinity.GenericContent.Model.UrlData},System.Boolean,System.Globalization.CultureInfo)">
+            <summary>
+            Migrates the url name of the item
+            </summary>
+            <param name="migrationItem">The migration item.</param>
+            <param name="item">The item.</param>
+            <param name="duplicatesQueryable">The duplicates queryable.</param>
+            <param name="originalUrlsAreMigratedAsAdditional">The original urls are migrated as additional.</param>       
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Blogs.Operations.BlogPostCopyPropertiesOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the copy blog posts properties in the specified context
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Blogs.Operations.BlogPostCopyPropertiesOperation.CopyMetaFieldProperties(Telerik.Sitefinity.MigrationContracts.MigrationGenericContent,Telerik.Sitefinity.Blogs.Model.BlogPost)">
+            <summary>
+            Migrates all the properties that are stored as meta fields in 3.7
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Blogs.Operations.BlogPostCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the create blog post operation in the specified context
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Blogs.Operations.BlogPostFixOperation">
+            <summary>
+            Fix operation
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.ContentPublishOperationBase`2">
+            <summary>
+            Base operation for publishing of content items
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="M"></typeparam>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.ContentPublishOperationBase`2.PublishItem(Telerik.Sitefinity.MigrationContracts.MigrationGenericContent,`0,Telerik.Sitefinity.Lifecycle.ILifecycleManager,System.Boolean,System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Publishes the item and compiles the urls
+            </summary>
+            <param name="originalItem">The original item.</param>
+            <param name="item">The item.</param>
+            <param name="manager">The manager.</param>
+            <param name="originalUrlsAreMigratedAsAdditional">if set to <c>true</c> [original urls are migrated as additional].</param>
+            <param name="transactionName">Name of the transaction.</param>
+            <param name="culture">The culture.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Blogs.Operations.BlogPostPublishOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the save blog post operation in the specified context
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Blogs.Operations.BlogPostsCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the create blog posts operation in the specified context
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Blogs.Operations.BlogPostsCreateOperation.InitializeChain(Telerik.Sitefinity.Modules.Migration.Strategies.Blogs.Operations.BlogPostCreateOperation)">
+            <summary>
+            Initializes the chain.
+            </summary>
+            <param name="startOperation">The start operation.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.SaveChangesOperation">
+            <summary>
+            Commits content transaction
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.SaveChangesOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Blogs.Operations.BlogsCreateOperation.GetGenericMigrationBlogs(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Gets the generic migration blogs.
+            </summary>
+            <param name="settings">The settings.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Blogs.Operations.BlogsCreateOperation.GetMigrationBlog(System.Guid,System.String,System.String,System.String,Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Gets the migration blog.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="name">The name.</param>
+            <param name="providerName">Name of the provider.</param>
+            <param name="language">The language.</param>
+            <param name="settings">The settings.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Blogs.Operations.BlogsCreateOperation.InitializeChain(Telerik.Sitefinity.Modules.Migration.Strategies.Blogs.Operations.BlogCreateOperation)">
+            <summary>
+            Initializes the chain.
+            </summary>
+            <param name="startOperation">The start operation.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.MigrationMetadataOperation">
+            <summary>
+            Base class for migrating metadata
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.MigrationMetadataOperation.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.MigrationMetadataOperation"/> class.
+            </summary>
+            <param name="type">The type.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.MigrationMetadataOperation.AddMetadata(System.Type,System.Collections.Generic.List{System.String})">
+            <summary>
+            Adds the metadata.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="additionalNamesToSkip">The additional names to skip.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.MigrationMetadataOperation.ClearState">
+            <summary>
+            Clears the state.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.MigrationMetadataOperation.IsMetafieldNameAllowed(System.String,System.Type,System.Collections.Generic.List{System.String})">
+            <summary>
+            Determines whether [is metafield name allowed] [the specified field name].
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <param name="type">The type.</param>
+            <param name="additionalMetadataNamesToDeny">The additional metadata names to deny.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.MigrationMetadataOperation.GetDefaultValueClrType(Telerik.Sitefinity.MigrationContracts.MigrationMetaDataValueType)">
+            <summary>
+            Gets the default type of the value CLR.
+            </summary>
+            <param name="migrationMetaDataValueType">Type of the migration meta data value.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Blogs.Operations.BlogUrlMigrationOperation">
+            <summary>
+            Represents the logic for migration the url of a blog
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Actions.ContentParser.ProcessMasterHierarchy(System.Collections.Generic.List{Telerik.Sitefinity.MigrationContracts.MigrationMasterPage})">
+            <summary>
+            Processes the content of the master pages in the hierarchy, commenting tags that can cause compilation error.
+            The master pages in the list are order in the way they inherite each other in a given template.
+            </summary>
+            <param name="masterHierarchy">The master hierarchy.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Actions.ContentParser.ProcessMasterPage(Telerik.Sitefinity.MigrationContracts.MigrationMasterPage)">
+            <summary>
+            Processes the master page content, commenting tags that can cause compilation error.
+            </summary>
+            <param name="masterPage">The master page.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Actions.ContentParser.ProcessCssControls(System.String)">
+            <summary>
+            Processes the CSS controls. Rewrites the CssFileLinks controls with SF 4.* ResourceLinks controls
+            </summary>
+            <param name="fileContent">Content of the file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Actions.ContentParser.ParseAspNetContent(System.String)">
+            <summary>
+            Parses the content of asp.net control, commenting or removing tags, 
+            properties and directives that can cause compilation error.
+            </summary>
+            <param name="fileContent">Content of the file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.Components.CustomProvidersMigrationHelper.IsNameReserved(System.String)">
+            <summary>
+            Determines whether [is name reserved] [the specified name].
+            </summary>
+            <param name="name">The name.</param>
+            <returns></returns>
+        </member>
+        <member name="F:Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.Components.CustomProvidersMigrationHelper.ReservedNames">
+            <summary>
+            Reserved names for providers
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.Components.CustomProvidersMigrationHelper.IsFieldValid(System.String)">
+            <summary>
+            Determines whether [is field valid] [the specified field name].
+            </summary>
+            <param name="fieldName">Name of the field.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.Components.CustomProvidersMigrationHelper.MigrateItemUrl(Telerik.Sitefinity.MigrationContracts.CustomProviders.MigrationCustomProviderItem,Telerik.Sitefinity.DynamicModules.Model.DynamicContent,System.Boolean)">
+            <summary>
+            Migrates the item URL.
+            </summary>
+            <param name="migrationItem">The migration item.</param>
+            <param name="item">The item.</param>
+            <param name="originalUrlsAreMigratedAsAdditional">The original urls are migrated as additional.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.Components.CustomProvidersMigrationHelper.GetDynamicItemTitle(Telerik.Sitefinity.DynamicModules.Model.DynamicContent)">
+            <summary>
+            Gets the dynamic item title.
+            </summary>
+            <param name="dynamicItem">The dynamic item.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.CustomProviderOperationContext.DynamicModuleId">
+            <summary>
+            Gets or sets the dynamic module id.
+            </summary>
+            <value>The dynamic module id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.CustomProviderOperationContext.NewDynamicModuleName">
+            <summary>
+            Gets or sets the new name of the dynamic module.
+            </summary>
+            <value>The new name of the dynamic module.</value>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.CustomProvidersMigrationStrategy.#ctor(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.CustomProvidersMigrationStrategy"/> class.
+            </summary>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.Operations.CreateDynamicModuleOperation.CreateDynamicModuleFields(System.Collections.Generic.List{Telerik.Sitefinity.MigrationContracts.MigrationMetaDataType})">
+            <summary>
+            Creates the dynamic module fields.
+            </summary>
+            <param name="list">The list.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.Operations.CreateDynamicModuleOperation.ContainsFieldsWithEqualNames(Telerik.Sitefinity.DynamicModules.Builder.Data.ContentTypeContext)">
+            <summary>
+            Determines whether [contains fields with equal names] [the specified content type].
+            </summary>
+            <param name="contentType">Type of the content.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.Operations.CustomProviderItemsCreateOperation.InitChain(Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.Operations.CreateDynamicModuleOperation)">
+            <summary>
+            Inits the chain.
+            </summary>
+            <param name="startOperation">The start operation.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.Operations.CustomProviderItemsCreateOperation.SetPropertyValue(Telerik.Sitefinity.DynamicModules.Model.DynamicContent,Telerik.Sitefinity.MigrationContracts.CustomProviders.MigrationCustomProviderItemProperty)">
+            <summary>
+            Sets the property value.
+            </summary>
+            <param name="dynamicItem">The dynamic item.</param>
+            <param name="prop">The migration property.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.Operations.CustomProviderItemsCreateOperation.GetCustomProviders(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Gets the custom providers.
+            </summary>
+            <param name="settings">The settings.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.Operations.CustomProviderItemsCreateOperation.GetCustomProvidersItem(System.String,Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Gets the custom providers item.
+            </summary>
+            <param name="providerName">Name of the provider.</param>
+            <param name="settings">The settings.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.Operations.CustomProvidersCreateCategoriesOperation.GetCategories(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended,System.String)">
+            <summary>
+            Gets the categories.
+            </summary>
+            <param name="settings">The settings.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.Operations.CustomProvidersCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.Operations.CustomProvidersCreateOperation.InitChain(Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.Operations.CustomProvidersCreateCategoriesOperation)">
+            <summary>
+            Inits the chain.
+            </summary>
+            <param name="startOperation">The start operation.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.CustomProviders.Operations.CustomProvidersCreateOperation.GetCustomProviders(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Gets the custom providers.
+            </summary>
+            <param name="settings">The settings.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Events.EventsMigrationStrategy">
+            <summary>
+            Migration strategy for Events module.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Events.EventsMigrationStrategy.#ctor(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.Strategies.Events.EventsMigrationStrategy"/> class.
+            </summary>
+            <param name="serviceLocation">The service location.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Events.EventsMigrationStrategy.Migrate">
+            <summary>
+            Start the migration
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Events.EventsMigrationStrategy.InitializeChain(Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventsMetadataFieldsCreateOperation)">
+            <summary>
+            Initializes the chain.
+            </summary>
+            <param name="start">The start.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventAddCommentsOperation">
+            <summary>
+            Adds comments to an event operation
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventAddCommentsOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the create comments and tags for news item operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventCopyPropertiesOperation">
+            <summary>
+            Copy properties of an event
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventCopyPropertiesOperation.CopyMetaFieldProperties(Telerik.Sitefinity.MigrationContracts.MigrationGenericContent,Telerik.Sitefinity.Events.Model.Event)">
+            <summary>
+            Migrates all the properties that are stored as meta fields in 3.7
+            </summary>
+            <param name="migrationItem"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventCopyPropertiesOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventCreateOperation">
+            <summary>
+            Create single event operation
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.CreateContentOperation.SkipItemIfExists(System.Linq.IQueryable{Telerik.Sitefinity.GenericContent.Model.Content},Telerik.Sitefinity.MigrationContracts.MigrationGenericContent,System.Boolean@,Telerik.Sitefinity.GenericContent.Model.Content@)">
+            <summary>
+            Skips the item if exists.
+            </summary>
+            <param name="items">The items.</param>
+            <param name="id">The id.</param>
+            <param name="language">The language.</param>
+            <param name="migrationItem">The migration item.</param>
+            <param name="addNewLanguage">if set to <c>true</c> [add new language].</param>
+            <param name="content">The content.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventPublishOperation">
+            <summary>
+            Publish event operation
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventPublishOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventsCreateOperation">
+            <summary>
+            Create all events
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventsCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventsCreateOperation.GetGenericMigrationEventItems(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Gets the generic migration event items.
+            </summary>
+            <param name="serviceLocation">The service location.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventsCreateOperation.GetMigrationEvent(System.Guid,System.String,System.String,System.String,Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Gets the migration event.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="name">The name.</param>
+            <param name="providerName">Name of the provider.</param>
+            <param name="language">The language.</param>
+            <param name="serviceLocation">The service location.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventsCreateOperation.InitializeChain(Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventCreateOperation)">
+            <summary>
+            Initializes the chain.
+            </summary>
+            <param name="startOperation">The start operation.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventsMetadataFieldCreateOperation">
+            <summary>
+            Migrates metadata for an event item
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventsMetadataFieldCreateOperation.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventsMetadataFieldCreateOperation"/> class.
+            </summary>
+            <param name="type">The type.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventsMetadataFieldCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventsMetadataFieldsCreateOperation">
+            <summary>
+            Migrates all metadata for the Event module.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventsMetadataFieldsCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Events.Operations.EventsMetadataFieldsCreateOperation.GetGenericMigrationMetaTypes(System.String,Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Gets the generic migration meta types.
+            </summary>
+            <param name="moduleName">Name of the module.</param>
+            <param name="serviceLocation">The service location.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.GenericContentMigrationStrategy">
+            <summary>
+            Migration strategy for GenericContent module.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.GenericContentMigrationStrategy.#ctor(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.GenericContentMigrationStrategy"/> class.
+            </summary>
+            <param name="serviceLocation">The service location.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.GenericContentMigrationStrategy.Migrate">
+            <summary>
+            Start the migration
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.GenericContentMigrationStrategy.InitializeChain(Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentMetadataFieldsCreateOperation)">
+            <summary>
+            Initializes the chain.
+            </summary>
+            <param name="start">The start.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentAddCommentsOperation">
+            <summary>
+            Adds comments to an GenericContent operation
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentAddCommentsOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the create comments and tags for news item operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentCopyPropertiesOperation">
+            <summary>
+            Copy properties of an GenericContent
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentCopyPropertiesOperation.CopyMetaFieldProperties(Telerik.Sitefinity.MigrationContracts.MigrationGenericContent,Telerik.Sitefinity.GenericContent.Model.ContentItem)">
+            <summary>
+            Migrates all the properties that are stored as meta fields in 3.7
+            </summary>
+            <param name="migrationItem"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentCopyPropertiesOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentCreateOperation">
+            <summary>
+            Create single GenericContent operation
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentItemsCreateOperation">
+            <summary>
+            Create all GenericContent
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentItemsCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentItemsCreateOperation.GetGenericMigrationGenericContentItems(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Gets the generic migration GenericContent items.
+            </summary>
+            <param name="serviceLocation">The service location.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentItemsCreateOperation.GetMigrationGenericContent(System.Guid,System.String,System.String,System.String,Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Gets the migration GenericContent.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="name">The name.</param>
+            <param name="providerName">Name of the provider.</param>
+            <param name="language">The language.</param>
+            <param name="serviceLocation">The service location.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentItemsCreateOperation.InitializeChain(Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentCreateOperation)">
+            <summary>
+            Initializes the chain.
+            </summary>
+            <param name="startOperation">The start operation.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentMetadataFieldCreateOperation">
+            <summary>
+            Migrates metadata for an GenericContent item
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentMetadataFieldCreateOperation.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentMetadataFieldCreateOperation"/> class.
+            </summary>
+            <param name="type">The type.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentMetadataFieldCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentMetadataFieldsCreateOperation">
+            <summary>
+            Migrates all metadata for the GenericContent module.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentMetadataFieldsCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentMetadataFieldsCreateOperation.GetGenericMigrationMetaTypes(System.String,Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Gets the generic migration meta types.
+            </summary>
+            <param name="moduleName">Name of the module.</param>
+            <param name="serviceLocation">The service location.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.GenericContent.Operations.GenericContentPublishOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the public GenericContent item operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Libraries.LibrariesMigrationStrategy">
+            <summary>
+            Represents the chain of operations for migration of libraries and their items
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Libraries.Operations.LibrariesCreateOperation.InitializeChain(Telerik.Sitefinity.Modules.Migration.Strategies.Libraries.Operations.LibraryCreateOperation)">
+            <summary>
+            Initializes the chain.
+            </summary>
+            <param name="startOperation">The start operation.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Libraries.Operations.LibrariesCreateOperation.GetGenericMigrationLibs(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Gets the generic migration libs.
+            </summary>
+            <param name="settings">The settings.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Libraries.Operations.LibrariesCreateOperation.GetMigrationLib(System.Guid,System.String,System.String,System.String,Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Gets the migration lib.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="name">The name.</param>
+            <param name="providerName">Name of the provider.</param>
+            <param name="language">The language.</param>
+            <param name="settings">The settings.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Libraries.Operations.LibraryCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the create lib operation in the specified context
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Libraries.Operations.LibraryItemAddCommentsOperation">
+            <summary>
+            Represents the logic for migration of the comments for the item
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Libraries.Operations.LibraryItemCopyPropertiesOperation.GetDataItem(System.Guid,System.String,Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Gets the data item.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="providerName">Name of the provider.</param>
+            <param name="settings">The settings.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Libraries.Operations.LibraryItemsCreateOperation.InitializeChain(Telerik.Sitefinity.Modules.Migration.Strategies.Libraries.Operations.LibraryItemCreateOperation)">
+            <summary>
+            Initializes the chain.
+            </summary>
+            <param name="startOperation">The start operation.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Lists.ListsMigrationStrategy">
+            <summary>
+            Represents the logic for migration of lists and list items 
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Lists.ListsMigrationStrategy.#ctor(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Initializes a new instance of the <see cref="!:NewsMigrationStrategy"/> class.
+            </summary>
+            <param name="serviceLocation">The service location.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Lists.Operations.ListCopyPropertiesOperation">
+            <summary>
+            Operation for transfering the properties ofa 3.7 list to 4.0 list
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Lists.Operations.ListCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Executes the creation of a list
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Lists.Operations.ListItemCopyPropertiesOperation">
+            <summary>
+            Represents the logic for transfering ofthe proerty values of a list item
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Lists.Operations.ListItemCopyPropertiesOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the copy list items' properties in the specified context
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Lists.Operations.ListItemCreateOperation">
+            <summary>
+            Represents the logc for creation of a list item
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Lists.Operations.ListItemCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Creation of a list item
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Lists.Operations.ListItemPublishOperation">
+            <summary>
+            Represents the logc for publishing of a news item
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Lists.Operations.ListItemPublishOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Exececutes the publishing of a list item
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Lists.Operations.ListItemsCreateOperation">
+            <summary>
+            Represents the logic for creation of the list items for the currently processed list
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Lists.Operations.ListItemsCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the create blog posts operation in the specified context
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Lists.Operations.ListItemsCreateOperation.InitializeChain(Telerik.Sitefinity.Modules.Migration.Strategies.Lists.Operations.ListItemCreateOperation)">
+            <summary>
+            Initializes the chain.
+            </summary>
+            <param name="startOperation">The start operation.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Lists.Operations.ListsCreateOperation.GetGenericMigrationLists(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Gets the generic migration lists.
+            </summary>
+            <param name="settings">The settings.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Lists.Operations.ListsCreateOperation.GetMigrationList(System.Guid,System.String,Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Gets the migration list.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="providerName">Name of the provider.</param>
+            <param name="settings">The settings.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Lists.Operations.ListsCreateOperation.InitializeChain(Telerik.Sitefinity.Modules.Migration.Strategies.Lists.Operations.ListCreateOperation)">
+            <summary>
+            Initializes the chain.
+            </summary>
+            <param name="startOperation">The start operation.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Actions.MigrationComments.AddCommentsToGenericContent(System.Guid,System.Collections.Generic.List{Telerik.Sitefinity.MigrationContracts.MigrationComment},System.String,System.String)">
+            <summary>
+            Adds the content of the comments to generic.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="comments">The comments.</param>
+            <param name="language">The language.</param>
+            <param name="transactionName">Name of the transaction.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Actions.MigrationComments.AddCommentsToNewsItem(System.Guid,System.Collections.Generic.List{Telerik.Sitefinity.MigrationContracts.MigrationComment},System.String,System.String,System.String)">
+            <summary>
+            Adds the comments to news item.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="comments">The comments.</param>
+            <param name="itemTitle">The item title.</param>
+            <param name="language">The language.</param>
+            <param name="transactionName">Name of the transaction.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Actions.MigrationComments.AddCommentsToLibraryItem``1(System.Guid,System.Collections.Generic.List{Telerik.Sitefinity.MigrationContracts.MigrationComment},System.String,System.String,System.String)">
+            <summary>
+            Adds the comments to library item.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="id">The identifier.</param>
+            <param name="comments">The comments.</param>
+            <param name="itemTitle">The item title.</param>
+            <param name="language">The language.</param>
+            <param name="transactionName">Name of the transaction.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Actions.MigrationComments.AddCommentsToBlogPost(System.Guid,System.Collections.Generic.List{Telerik.Sitefinity.MigrationContracts.MigrationComment},System.String,System.String,System.String)">
+            <summary>
+            Adds the comments to blog post.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="comments">The comments.</param>
+            <param name="itemTitle">The item title.</param>
+            <param name="language">The language.</param>
+            <param name="transactionName">Name of the transaction.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Actions.MigrationComments.AddCommentsToEvent(System.Guid,System.Collections.Generic.List{Telerik.Sitefinity.MigrationContracts.MigrationComment},System.String,System.String,System.String)">
+            <summary>
+            Adds the comments to event.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="comments">The comments.</param>
+            <param name="itemTitle">The item title.</param>
+            <param name="language">The language.</param>
+            <param name="transactionName">Name of the transaction.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Actions.MigrationComments.GetOrCreateGroup(Telerik.Sitefinity.Services.Comments.ICommentService,System.String,System.String,System.String)">
+            <summary>
+            Gets the or create group.
+            </summary>
+            <param name="cs">The cs.</param>
+            <param name="managerType">Type of the manager.</param>
+            <param name="providerName">Name of the provider.</param>
+            <param name="moduleName">Name of the module.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Actions.MigrationComments.GetOrCreateThread(Telerik.Sitefinity.Services.Comments.ICommentService,System.String,System.String,System.Type,System.Guid,System.String,System.String)">
+            <summary>
+            Gets the or create thread.
+            </summary>
+            <param name="cs">The cs.</param>
+            <param name="groupKey">The group key.</param>
+            <param name="providerName">Name of the provider.</param>
+            <param name="commentedItemType">Type of the commented item.</param>
+            <param name="commentedItemId">The commented item identifier.</param>
+            <param name="commentedItemTitle">The commented item title.</param>
+            <param name="language">The language.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Actions.MigrationComments.MigrateComment(Telerik.Sitefinity.Services.Comments.ICommentService,Telerik.Sitefinity.MigrationContracts.MigrationComment,System.String)">
+            <summary>
+            Migrates the comment.
+            </summary>
+            <param name="cs">The cs.</param>
+            <param name="comment">The comment.</param>
+            <param name="threadKey">The thread key.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.MigrationTaxonomiesManager.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.Strategies.MigrationTaxonomiesManager"/> class.
+            </summary>
+            <param name="providerName">Name of the provider.</param>
+            <param name="transactionName">Name of the transaction.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.MigrationTaxonomiesManager.AddTagsToOrganizer(System.Collections.Generic.List{Telerik.Sitefinity.MigrationContracts.MigrationTag},Telerik.Sitefinity.Taxonomies.Model.OrganizerBase,System.String)">
+            <summary>
+            Adds the tags to organizer.
+            </summary>
+            <param name="tags">The tags.</param>
+            <param name="organizer">The organizer.</param>
+            <param name="language">The language.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.MigrationTaxonomiesManager.AddCategoryToOrganizer(Telerik.Sitefinity.MigrationContracts.MigrationCategory,Telerik.Sitefinity.Taxonomies.Model.OrganizerBase,System.String)">
+            <summary>
+            Adds the category to organizer.
+            </summary>
+            <param name="migrationCategory">The migration category.</param>
+            <param name="organizer">The organizer.</param>
+            <param name="language">The language.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.MigrationTaxonomiesManager.AddTagToTaxonomy(Telerik.Sitefinity.MigrationContracts.MigrationTag,Telerik.Sitefinity.Taxonomies.Model.FlatTaxonomy,System.String)">
+            <summary>
+            Adds the tag to taxonomy.
+            </summary>
+            <param name="tag">The tag.</param>
+            <param name="taxonomy">The taxonomy.</param>
+            <param name="language">The language.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.News.NewsMigrationStrategy.#ctor(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.Strategies.News.NewsMigrationStrategy"/> class.
+            </summary>
+            <param name="serviceLoation">The service location.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.News.Operations.NewsCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.News.Operations.NewsCreateOperation.GetGenericMigrationNewsItems(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Gets the generic migration news items.
+            </summary>
+            <param name="settings">The settings.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.News.Operations.NewsCreateOperation.GetMigrationNewsItem(System.Guid,System.String,System.String,System.String,Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Gets the migration news item.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="name">The name.</param>
+            <param name="providerName">Name of the provider.</param>
+            <param name="language">The language.</param>
+            <param name="settings">The settings.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.News.Operations.NewsCreateOperation.InitializeChain(Telerik.Sitefinity.Modules.Migration.Strategies.News.Operations.NewsItemCreateOperation)">
+            <summary>
+            Initializes the chain.
+            </summary>
+            <param name="startOperation">The start operation.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.News.Operations.NewsItemAddCommentsOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the create comments and tags for news item operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.News.Operations.NewsItemCopyPropertiesOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the copy news item properties in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.News.Operations.NewsItemCopyPropertiesOperation.CopyMetaFieldProperties(Telerik.Sitefinity.MigrationContracts.MigrationGenericContent,Telerik.Sitefinity.News.Model.NewsItem)">
+            <summary>
+            Migrates all the properties that are stored as meta fields in 3.7
+            </summary>
+            <param name="migrationItem"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.News.Operations.NewsItemCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the create news operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.News.Operations.NewsItemPublishOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the public news item operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.LocatableItemUrlMigrationOperation">
+            <summary>
+            Represents the functionality needed to transfer the urls of the 3.7 items to ILocatable item in 4.0, such as news, events, lists, etc
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.MigrationCategoriesOperation">
+            <summary>
+            Common operation for migrating the categories for a specific 3.7 module
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.MigrationCategoriesOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Executes the migration of the categories
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.MigrationCategoriesOperation.CreateModuleCategories(Telerik.Sitefinity.MigrationContracts.MigrationModuleCategories)">
+            <summary>
+            Creates the categories for each provider of the module.
+            </summary>
+            <param name="migrationCategories">The migration categories.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Operations.MigrationCategoriesOperation.GetCategories(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended,Telerik.Sitefinity.MigrationContracts.Sitefinity37Module)">
+            <summary>
+            Gets the categories.
+            </summary>
+            <param name="settings">The settings.</param>
+            <param name="module">The module.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.Operations.ExternalPageCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the create external page operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.Operations.GroupPageCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the create group page operation operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.Operations.HomePageSetOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the initailize the migration settings operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.Operations.MigrationSettingsInitializeOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the initailize the migration settings operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.Operations.PageCreateAdvancedPropertiesOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the create advanced properties operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.Operations.PageCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the create page operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.Operations.PageCreateOperation.GetGroupPageChain">
+            <summary>
+            Gets the group page chain.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.Operations.PageCreateOperation.GetExternalPageChain">
+            <summary>
+            Gets the external page chain.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.Operations.PageCreateOperation.GetStandardPageChain">
+            <summary>
+            Gets the standard page chain.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.Operations.PageCreateUrlsOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.Operations.PageDataCreateOperation.GetTemplate(System.Guid,Telerik.Sitefinity.Modules.Pages.PageManager)">
+            <summary>
+            Gets the page template with the specified id using the specified manager.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="manager">The manager.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.Operations.PageNodeCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the create standard page operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.Operations.PagePermissionsCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the create permissions operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.Operations.PagePermissionsCreateOperation.GetApplicationRoleId">
+            <summary>
+            Gets the id of the role "Everyone" registered in the application
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.Operations.PagePublishOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the publish page operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.PagesMigrationStrategy.#ctor(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.PagesMigrationStrategy"/> class.
+            </summary>
+            <param name="serviceLocation">The service location.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.PagesMigrationStrategy.Migrate">
+            <summary>
+            Migrates pages from Sitefinity 3.7
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.PagesMigrationStrategy.GetGenericMigrationPages">
+            <summary>
+            Gets the generic migration pages.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.PagesMigrationStrategy.GetMigrationPage(System.Guid,System.String)">
+            <summary>
+            Gets the migration page.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Pages.PagesMigrationStrategy.PageTranslationsAreOfSameType(Telerik.Sitefinity.MigrationContracts.MigrationPageGroup)">
+            <summary>
+            Checks if all the translations of the page are of the same type - standard, group page or external
+            SF 4 does not support different page types for the different translation
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Roles.Operations.RoleCreateOperation">
+            <summary>
+            Create single Role operation
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Roles.Operations.RoleCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Roles.Operations.RoleCreateOperation.DoesRoleExist(System.String)">
+            <summary>
+            Doeses the role exist.
+            </summary>
+            <param name="roleName">Name of the role.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Roles.Operations.RolesCreateOperation">
+            <summary>
+            Create all Roles
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Roles.Operations.RolesCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Roles.Operations.RolesCreateOperation.GetMigrationRoles(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Gets the migration roles.
+            </summary>
+            <param name="serviceLocation">The service location.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Roles.RolesMigrationStrategy">
+            <summary>
+            Migration strategy for Roles module.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Roles.RolesMigrationStrategy.#ctor(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.Strategies.Roles.RolesMigrationStrategy"/> class.
+            </summary>
+            <param name="serviceLocation">The service location.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Roles.RolesMigrationStrategy.Migrate">
+            <summary>
+            Start the migration
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.GetObjectFromService(System.String,System.Type)">
+            <summary>
+            Gets the response object from the specified endpoint url.
+            </summary>
+            <param name="endpointUrl">The endpoint URL.</param>
+            <param name="objectType">Type of the object.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.GetObjectFromService``1(System.String,System.Type)">
+            <summary>
+            Gets the response object from the specified endpoint url.
+            </summary>
+            <param name="endpointUrl">The endpoint URL.</param>
+            <param name="objectType">Type of the object.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.GetObjectFromService(System.String,System.Type,System.String,System.String)">
+            <summary>
+            Gets the response object from the specified endpoint url authenticating with the specified username and password.
+            </summary>
+            <param name="endpointUrl">The endpoint URL.</param>
+            <param name="objectType">Type of the object.</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.GetDataFromService(System.String,System.String,System.String)">
+            <summary>
+            Gets the data from the specified endpoint url authenticating with the specified username and password.
+            </summary>
+            <param name="endpointUrl">The endpoint URL.</param>
+            <param name="objectType">Type of the object.</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.GetObjectFromService``1(System.String,System.String,System.String)">
+            <summary>
+            Gets the response object from the specified endpoint url authenticating with the specified username and password
+            </summary>
+            <param name="endpointUrl">The endpoint URL.</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.GetObjectFromService(System.String,System.Type,System.Net.WebClient)">
+            <summary>
+            Gets the object from service.
+            </summary>
+            <param name="endpointUrl">The endpoint URL.</param>
+            <param name="objectType">Type of the object.</param>
+            <param name="proxy">The proxy.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.GetRawServiceData(System.String,System.String,System.String)">
+            <summary>
+            Download Bytes from the specified endpoint url authenticating with the specified username and password
+            </summary>
+            <param name="endpointUrl">The endpoint URL.</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.SetPublicationDate(Telerik.Sitefinity.GenericContent.Model.Content,Telerik.Sitefinity.IContentLifecycleManager,System.DateTime)">
+            <summary>
+            Sets the publication date of the content item to the specified date.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="manager">The manager.</param>
+            <param name="publicationDate">The publication date.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.GetUrlName(System.String,System.String,System.Boolean)">
+            <summary>
+            Gets the urlname from the given url
+            </summary>
+            <param name="pageUrl"></param>
+            <param name="extensionToRemove"></param>
+            <param name="removeExtension"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.MigrateUrlAsDefault``1(``0,Telerik.Sitefinity.Lifecycle.ILifecycleManager,System.String)">
+            <summary>
+            Sets the given url to the master and live items
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.GetPageUrlName(Telerik.Sitefinity.MigrationContracts.MigrationPage,Telerik.Sitefinity.Pages.Model.PageNode,System.Boolean,System.Globalization.CultureInfo)">
+            <summary>
+            Gets the name of the page URL.
+            </summary>
+            <param name="migrationPage">The migration page.</param>
+            <param name="node">The node.</param>
+            <param name="migratePageUrlAsCustom">if set to <c>true</c> [migrate page URL as custom].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.ProcessPageUrl(Telerik.Sitefinity.MigrationContracts.MigrationPage,Telerik.Sitefinity.Pages.Model.PageNode,Telerik.Sitefinity.Modules.Pages.PageManager,System.Globalization.CultureInfo,System.Boolean)">
+            <summary>
+            Processes the page URL.
+            </summary>
+            <param name="pageContent">Content of the page.</param>
+            <param name="pageNode">The page node.</param>
+            <param name="manager">The manager.</param>
+            <param name="culture">The culture.</param>
+            <param name="migratePageUrlAsCustom">if set to <c>true</c> [migrate page URL as custom].</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.GetParentPath(Telerik.Sitefinity.Modules.Pages.PageManager,Telerik.Sitefinity.Pages.Model.PageNode,System.Globalization.CultureInfo)">
+            <summary>
+            Gets the parent path.
+            </summary>
+            <param name="manager">The manager.</param>
+            <param name="pageNode">The page node.</param>
+            <param name="culture">The culture.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.GetParentPathRecursive(Telerik.Sitefinity.Modules.Pages.PageManager,Telerik.Sitefinity.Pages.Model.PageNode,System.Globalization.CultureInfo,System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Gets the parent path recursive.
+            </summary>
+            <param name="manager">The manager.</param>
+            <param name="pageNode">The page node.</param>
+            <param name="culture">The culture.</param>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.GetParent(Telerik.Sitefinity.MigrationContracts.MigrationPage,Telerik.Sitefinity.Modules.Pages.PageManager,System.Globalization.CultureInfo)">
+            <summary>
+            Gets the parent to be assigned to a migrated page.
+            </summary>
+            <param name="page">The page.</param>
+            <param name="manager">The manager.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.GetParent(Telerik.Sitefinity.MigrationContracts.MigrationPage,Telerik.Sitefinity.Modules.Pages.PageManager)">
+            <summary>
+            Gets the parent to be assigned to a migrated page.
+            </summary>
+            <param name="page">The page.</param>
+            <param name="manager">The manager.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.InitializeApprovalTrackingRecordMap(Telerik.Sitefinity.IApprovalWorkflowItem,System.String,System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Creates a default approval tracking record for the specified item with the corresponding approval tracking records map.
+            </summary>
+            <param name="workflowItem">The workflow item.</param>
+            <param name="applicationName">Name of the application.</param>
+            <param name="status">The status.</param>
+            <param name="culture">The culture.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.TryLoadMasterPage(System.String,System.Exception@)">
+            <summary>
+            Attempts to load a master page - checks if the page dependencies are intact
+            </summary>
+            <param name="masterPage">Path to the master page <example>~/app_master/default.master</example></param>
+            <param name="exception">Excetpion</param>
+            <returns>true if the master page is loaded correctly</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.TryRenderMasterPage(System.String,System.Exception@,System.String@)">
+            <summary>
+            Attempts to render a master page with a mocked empty page. 
+            Usefull for validating the events of the master page and its dependencies
+            </summary>
+            <param name="masterPage">Path to the master page <example>~/app_master/default.master</example></param>
+            <param name="exception">Exception</param>
+            <param name="renderedPage">The rendered html of the master page</param>
+            <returns>true if the master page is rendered successfully</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.TrySetValueToProperty``1(``0,System.String,System.Object,System.String)">
+            <summary>
+            Tries to sets a value to a specified property name using property descriptor
+            </summary>
+            <param name="item">The item.</param>
+            <param name="propertyName">Name of the property.</param>
+            <param name="value">The value.</param>
+            <param name="language">The language.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.SetUrl(System.String,Telerik.Sitefinity.GenericContent.Model.ILocatable,Telerik.Sitefinity.Modules.GenericContent.UrlDataProviderBase,System.Boolean)">
+            <summary>
+            Sets the URL.
+            </summary>
+            <param name="originalUrl">The original URL.</param>
+            <param name="item">The item.</param>
+            <param name="provider">The provider.</param>
+            <param name="deleteUrlDataBeforeMigrate">The delete URL data before migrate.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.GetUserByUsername(System.String)">
+            <summary>
+            Gets the user by username.
+            </summary>
+            <param name="username">The username.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.GetDefaultOwner">
+            <summary>
+            Gets the default owner.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.IsLibraryImage(System.String)">
+            <summary>
+            Checks if the image url is a library image url.
+            </summary>
+            <param name="imageUrl">The 3.7 image url.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.GetLibraryImageId(System.String)">
+            <summary>
+            Gets the library image id from the image url.
+            </summary>
+            <param name="imageUrl">The 3.7 image url.</param>
+            <returns>The image id.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.HandleException(System.Exception,System.String)">
+            <summary>
+            Handles the exception logging it and displaying friendly message to the UI log.
+            </summary>
+            <param name="ex">The ex.</param>
+            <param name="logMessage">The log friendly message.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.AddUserNamePasswordHeaders(System.Net.WebClient,System.String,System.String)">
+            <summary>
+            Adds the user name password headers.
+            </summary>
+            <param name="proxy">The proxy.</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.GetOwnerId(System.Nullable{System.Guid})">
+            <summary>
+            Gets the owner id depending on the migration settings.
+            </summary>
+            <param name="ownerId">The default owner id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.CreateCategories(Telerik.Sitefinity.MigrationContracts.ProviderCategories,System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Creates the categories.
+            </summary>
+            <param name="providerCategories">The provider categories.</param>
+            <param name="transactionName">Name of the transaction.</param>
+            <param name="ci">The ci.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.BuildCategoriesTree(Telerik.Sitefinity.Taxonomies.Model.HierarchicalTaxon,System.Collections.Generic.IList{Telerik.Sitefinity.MigrationContracts.MigrationCategory},Telerik.Sitefinity.Taxonomies.TaxonomyManager,Telerik.Sitefinity.Taxonomies.Model.HierarchicalTaxonomy,System.Globalization.CultureInfo)">
+            <summary>
+            Builds the categories tree.
+            </summary>
+            <param name="providerRoot">The provider root.</param>
+            <param name="categories">The categories.</param>
+            <param name="manager">The manager.</param>
+            <param name="taxonomy">The taxonomy.</param>
+            <param name="culture">The culture.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.GetOrCreateTaxon(Telerik.Sitefinity.MigrationContracts.MigrationCategory,Telerik.Sitefinity.Taxonomies.TaxonomyManager,Telerik.Sitefinity.Taxonomies.Model.HierarchicalTaxonomy,System.Globalization.CultureInfo)">
+            <summary>
+            Gets the or create taxon.
+            </summary>
+            <param name="category">The category.</param>
+            <param name="manager">The manager.</param>
+            <param name="taxonomy">The taxonomy.</param>
+            <param name="culture">The culture.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.StrategyHelper.CheckForExistingUrls``1(``0,Telerik.Sitefinity.Lifecycle.ILifecycleManager,System.String)">
+            <summary>
+            Checks whether there is already an item with this url.
+            </summary>
+            <param name="item">The content item.</param>
+            <param name="manager">The manager.</param>
+            <param name="originalUrl">The url to check.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Templates.Operations.TemplateCreateControlsOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Templates.Operations.TemplateCreateMasterPagesOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Templates.Operations.TemplateCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Templates.Operations.TemplatePublishOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Templates.Operations.TemplatesCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Templates.TemplatesMigrationStrategy.#ctor(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.Strategies.Templates.TemplatesMigrationStrategy"/> class.
+            </summary>
+            <param name="settings"></param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Templates.TemplatesMigrationStrategy.Migrate">
+            <summary>
+            Migrates the templates registered in SF 3.7
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Themes.ThemesStrategy.#ctor(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.Strategies.Themes.ThemesStrategy"/> class.
+            </summary>
+            <param name="settings"></param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Users.Operations.UserAddToRolesOperation">
+            <summary>
+            Add user to roles operation
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Users.Operations.UserAddToRolesOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Users.Operations.UserCreateOperation">
+            <summary>
+            Create single User operation
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Users.Operations.UserCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Users.Operations.UserProfileCreateOperation">
+            <summary>
+            Create single User operation
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Users.Operations.UserProfileCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Users.Operations.UsersCreateOperation">
+            <summary>
+            Create all Users
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Users.Operations.UsersCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Users.Operations.UsersCreateOperation.GetMigrationUsers(System.String,System.String,System.String)">
+            <summary>
+            Gets the migration users.
+            </summary>
+            <param name="serviceLocation">The service location.</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Users.Operations.UsersCreateOperation.GetMigrationUser(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Gets the migration user.
+            </summary>
+            <param name="serviceLocation">The service location.</param>
+            <param name="userName">Name of the user.</param>
+            <param name="providerName">Name of the provider.</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Users.Operations.UserProfilesCreateOperation.Process(Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Processes the operation in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Users.UserProfilesMigrationStrategy">
+            <summary>
+            Migration strategy for User Profiles module.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Users.UserProfilesMigrationStrategy.#ctor(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.Strategies.Users.UserProfilesMigrationStrategy"/> class.
+            </summary>
+            <param name="serviceLocation">The service location.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Users.UserProfilesMigrationStrategy.Migrate">
+            <summary>
+            Start the migration
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.Users.UsersMigrationStrategy">
+            <summary>
+            Migration strategy for Users module.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Users.UsersMigrationStrategy.#ctor(Telerik.Sitefinity.Modules.Migration.MigrationSettingsExtended)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.Strategies.Users.UsersMigrationStrategy"/> class.
+            </summary>
+            <param name="serviceLocation">The service location.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Users.UsersMigrationStrategy.Migrate">
+            <summary>
+            Start the migration
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.Users.UsersMigrationStrategy.InitMembershipProvider">
+            <summary>
+            Inits the membership 3.7 provider.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.WidgetBuilderBase">
+            <summary>
+            Used as a base builder for all widgets
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.IWidgetBuilder">
+            <summary>
+            Base interface for all widgets
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.IWidgetBuilder.Build(Telerik.Sitefinity.MigrationContracts.Widgets.MigrationWidget)">
+            <summary>
+            Builds the specified widget.
+            </summary>
+            <param name="widget">The widget.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.WidgetBuilderBase.ResolveControl(Telerik.Sitefinity.MigrationContracts.Widgets.MigrationWidget)">
+            <summary>
+            Resolves the control.
+            </summary>
+            <param name="widget">The widget.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.WidgetBuilderBase.ConvertPropertyValue(System.String,System.Type)">
+            <summary>
+            Converts the property value.
+            </summary>
+            <param name="stringValue">The string value.</param>
+            <param name="valueType">Type of the value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.WidgetBuilderBase.CopyWidgetProperties(Telerik.Sitefinity.MigrationContracts.Widgets.MigrationWidget,System.Web.UI.Control)">
+            <summary>
+            Copies the widget properties.
+            </summary>
+            <param name="widget">The widget.</param>
+            <param name="control">The control.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.WidgetBuilderBase.CopyProperty(Telerik.Sitefinity.MigrationContracts.Widgets.MigrationControlProperty,System.Web.UI.Control,System.Int32)">
+            <summary>
+            Copies the property.
+            </summary>
+            <param name="migProp">The mig prop.</param>
+            <param name="control">The control.</param>
+            <param name="searchLevel">The search level.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.WidgetBuilderBase.ShouldSkipProperty(Telerik.Sitefinity.MigrationContracts.Widgets.MigrationControlProperty)">
+            <summary>
+            Shoulds the skip property.
+            </summary>
+            <param name="prop">The prop.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.WidgetBuilderBase.CopyPropertyInternal(System.Object,System.String,System.Type,System.String,System.String,System.Int32,System.Int32,System.Collections.Generic.List{System.Object})">
+            <summary>
+            Copies the property internal.
+            </summary>
+            <param name="obj">The obj.</param>
+            <param name="propName">Name of the prop.</param>
+            <param name="propType">Type of the prop.</param>
+            <param name="propStringValue">The prop string value.</param>
+            <param name="parentPropName">Name of the parent prop.</param>
+            <param name="searchLevel">The search level.</param>
+            <param name="currentLevel">The current level.</param>
+            <param name="traverseDb">The traverse db.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.BlogPostViewBuilder">
+            <summary>
+            Builds a blogs view control based on a SF 3.7 widget
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.ContentViewBuilderBase">
+            <summary>
+            Base class for building ContentView based controls
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.IRequiresOperationContext">
+            <summary>
+            Specifies if the builder needs the operation context in order to build the control
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.ContentViewBuilderBase.ResolveContentView(Telerik.Sitefinity.MigrationContracts.Widgets.MigrationContentView)">
+            <summary>
+            Should return a new instance of the ContentView based widget that is to be configured
+            </summary>
+            <param name="widget"></param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.ContentViewBuilderBase.SetCategiresFromFilterExpression(System.String,Telerik.Sitefinity.Web.UI.ContentUI.Contracts.IContentViewMasterDefinition)">
+            <summary>
+            Gets the categories out of the filter expression and adds those as filter to the master view
+            expression should be like : Category IN ("newscat1 provider 1", "newscat1-2provider 1")
+            </summary>
+            <param name="migrationFilterExpression"></param>
+            <param name="masterDefinition"></param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.ContentViewBuilderBase.SetParentsFromFilterExpression(System.String,Telerik.Sitefinity.Web.UI.ContentUI.Contracts.IContentViewMasterDefinition)">
+            <summary>
+            Gets the parent item ids and sets it to the corresponding properties in the master view
+            <remarks>
+            Some widgets use parentId and others use parentIds
+            So the method sets parent id if only one id is found and parentIds if multiple are found
+            </remarks>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.ContentViewBuilderBase.ParentIDInRegex">
+            <summary>
+            Matches the ids from the parent ids in an expression like 
+            "Publication_Date ... AND ParentID IN (353341b4-6ea0-4068-9d3a-1dd9d6772760, 0a95555e-b481-404f-9fa7-e8ff3f078719)"
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.ContentViewBuilderBase.CategoryInRegex">
+            <summary>
+            Matches expressions like
+            Category In ("...")
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.ContentViewBuilderBase.CommaSeparatedQuotedValuesRegex">
+            <summary>
+            Matches expressions like
+            newscat1 provider 1, newscat1-2provider 1
+            Returns a named group with items without the quotes
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.ContentViewBuilderBase.ParentIdGuidRegex">
+            <summary>
+            Matches expressions like
+            43aa09fc-60c3-4a69-914e-24c2d871387f, 5997e90d-ec87-42d5-81a9-f308d50c92ba, 66aea86c-93d9-4ee4-a322-c61592dfe603
+            Returns a named group with the guids without the commas
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.DownloadListViewBuilder">
+            <summary>
+            Builds a download list control based on a SF 3.7 widget
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.EventsViewBuilder">
+            <summary>
+            Builds a events view control based on a SF 3.7 widget
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.GenericContentBuilder.Build(Telerik.Sitefinity.MigrationContracts.Widgets.MigrationWidget)">
+            <summary>
+            Builds the specified widget.
+            </summary>
+            <param name="widget">The widget.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.GenericWidgetBuilder">
+            <summary>
+            Generic builder for widgets that were resolved by their type and has no registered builders in the system
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.ImagesViewBuilder">
+            <summary>
+            Builds a image library view control based on a SF 3.7 widget
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.ListViewBuilder">
+            <summary>
+            Builds a lists view control based on a SF 3.7 widget
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.ListViewBuilder.ResolveContentView(Telerik.Sitefinity.MigrationContracts.Widgets.MigrationContentView)">
+            <summary>
+            Should return a new instance of the ListView based widget that is to be configured
+            </summary>
+            <param name="widget"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.ListViewBuilder.Configure(Telerik.Sitefinity.Web.UI.ContentUI.ContentView,Telerik.Sitefinity.MigrationContracts.Widgets.MigrationContentView)">
+            <summary>
+            Configures the specified content view.
+            </summary>
+            <param name="contentView">The content view.</param>
+            <param name="widget">The widget.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.LoginControlBuilder">
+            <summary>
+            A builder for login control.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.LoginControlBuilder.Build(Telerik.Sitefinity.MigrationContracts.Widgets.MigrationWidget)">
+            <summary>
+            Builds a login control based on a 3.7 login widget.
+            </summary>
+            <param name="widget">The widget.</param>
+            <returns>The control.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.LoginControlBuilder.ResolveControl(Telerik.Sitefinity.MigrationContracts.Widgets.MigrationWidget)">
+            <summary>
+            Creates an instance of the login control.
+            </summary>
+            <param name="widget">The widget.</param>
+            <returns>The control.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.LoginNameControlBuilder">
+            <summary>
+            A builder for login name control.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.LoginNameControlBuilder.Build(Telerik.Sitefinity.MigrationContracts.Widgets.MigrationWidget)">
+            <summary>
+            Builds a login name control based on a 3.7 login name widget.
+            </summary>
+            <param name="widget">The widget.</param>
+            <returns>The control.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.LoginNameControlBuilder.ResolveControl(Telerik.Sitefinity.MigrationContracts.Widgets.MigrationWidget)">
+            <summary>
+            Creates an instance of the LoginNameControl.
+            </summary>
+            <param name="widget"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.LoginStatusControlBuilder">
+            <summary>
+            A builder for login status control.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.LoginStatusControlBuilder.ResolveControl(Telerik.Sitefinity.MigrationContracts.Widgets.MigrationWidget)">
+            <summary>
+            Builds a login status control based on a 3.7 login status widget.
+            </summary>
+            <param name="widget">The widget.</param>
+            <returns>The control.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.LoginViewControlBuilder">
+            <summary>
+            A builder for login view control.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.LoginViewControlBuilder.ResolveControl(Telerik.Sitefinity.MigrationContracts.Widgets.MigrationWidget)">
+            <summary>
+            Builds a login view control based on a 3.7 login view widget.
+            </summary>
+            <param name="widget">The widget.</param>
+            <returns>The control.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.NavigationControlBuilder.Build(Telerik.Sitefinity.MigrationContracts.Widgets.MigrationWidget)">
+            <summary>
+            Builds the navigation widget.
+            </summary>
+            <param name="widget">The widget.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.NewsViewBuilder">
+            <summary>
+            Builds a news view control based on a SF 3.7 widget
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.SubscriptionFormBuilder.ResolveControl(Telerik.Sitefinity.MigrationContracts.Widgets.MigrationWidget)">
+            <summary>
+            Resolves the subscription form control.
+            </summary>
+            <param name="widget">The widget.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.UserControlsBuilder.ResolveControl(Telerik.Sitefinity.MigrationContracts.Widgets.MigrationWidget)">
+            <summary>
+            Resolves migrated user control which wraps the original user control.
+            </summary>
+            <param name="widget">The widget.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.VideosViewBuilder">
+            <summary>
+            Class that constructs a videos view widget based on a 3.7 Video widget
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.WidgetHelper.AddWidgetControls``1(System.Collections.Generic.IList{``0},System.Collections.Generic.IList{Telerik.Sitefinity.MigrationContracts.Widgets.MigrationWidget},Telerik.Sitefinity.Modules.Pages.PageManager,Telerik.Sitefinity.Modules.Migration.OperationContext)" -->
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Strategies.WidgetBuilders.WidgetsFactory.CreatePageControl(Telerik.Sitefinity.MigrationContracts.Widgets.MigrationWidget,Telerik.Sitefinity.Modules.Migration.OperationContext)">
+            <summary>
+            Creates a page control from the specified migration widget
+            </summary>
+            <param name="widget">The widget.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Web.UI.MigrationControls.MigratedUserControl">
+            <summary>
+            This control should be used only for wrapper of user controls migrated from SF 3.7
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Web.UI.MigrationControls.MigratedUserControl.CreateChildControls">
+            <summary>
+            Called by the ASP.NET page framework to notify server controls that use composition-based implementation to create any child controls they contain in preparation for posting back or rendering.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Web.UI.MigrationControls.MigratedUserControl.AscxPath">
+            <summary>
+            Gets or sets the path to the user control which this control wraps
+            </summary>
+            <value>
+            The ascx path.
+            </value>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Web.Services.IMigrationService.GetMigrationCounts(System.String,System.String,System.String)">
+            <summary>
+            Gets the count of the items for migration.
+            </summary>
+            <param name="siteUrl">The site URL.</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Web.Services.IMigrationService.TestConnection(System.String,System.String,System.String)">
+            <summary>
+            Tests the connection to the SF 3.7 migration service.
+            </summary>
+            <param name="siteUrl">The site URL.</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Web.Services.IMigrationService.MigrationStart(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String)">
+            <summary>
+            Migrates the selected modules from the SF 3.7 project.
+            </summary>
+            <param name="siteUrl">The site URL.</param>
+            <param name="checkedBoxesToMigrate">The checked boxes to migrate.</param>
+            <param name="rolesProvider">The roles provider.</param>
+            <param name="usersProvider">The users provider.</param>
+            <param name="librariesProvider">The libraries provider.</param>
+            <param name="genericContentsProvider">The generic contents provider.</param>
+            <param name="newsProvider">The news provider.</param>
+            <param name="blogsProvider">The blogs provider.</param>
+            <param name="eventsProvider">The events provider.</param>
+            <param name="listsProvider">The lists provider.</param>
+            <param name="rewriteRegisterTags">if set to <c>true</c> [rewrite register tags].</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Web.Services.IMigrationService.ClearLog">
+            <summary>
+            Clears content of the log.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Web.Services.IMigrationService.GetLog">
+            <summary>
+            Gets content of the log.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Web.Services.IMigrationService.CancelMigration">
+            <summary>
+            Cancels the migration migration process.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Modules.Migration.Web.Services.MigrationService">
+            <summary>
+            This service is used when calling migration methods or querying the 
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Web.Services.MigrationService.GetMigrationCounts(System.String,System.String,System.String)">
+            <summary>
+            Gets the count of the items for migration.
+            </summary>
+            <param name="siteUrl">The site URL.</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Web.Services.MigrationService.TestConnection(System.String,System.String,System.String)">
+            <summary>
+            Tests the connection to the SF 3.7 migration service.
+            </summary>
+            <param name="siteUrl">The site URL.</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Web.Services.MigrationService.DoMigration(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String)">
+            <summary>
+            Does the migration.
+            </summary>
+            <param name="siteUrl">The site URL.</param>
+            <param name="checkedBoxesToMigrate">The checked boxes to migrate.</param>
+            <param name="rolesProvider">The roles provider.</param>
+            <param name="usersProvider">The users provider.</param>
+            <param name="librariesProvider">The libraries provider.</param>
+            <param name="genericContentsProvider">The generic contents provider.</param>
+            <param name="newsProvider">The news provider.</param>
+            <param name="blogsProvider">The blogs provider.</param>
+            <param name="eventsProvider">The events provider.</param>
+            <param name="listsProvider">The lists provider.</param>
+            <param name="rewriteRegisterTags">if set to <c>true</c> [rewrite register tags].</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Web.Services.MigrationService.MigrationStart(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String)">
+            <summary>
+            Migrates the selected modules from the SF 3.7 project.
+            </summary>
+            <param name="siteUrl">The site URL.</param>
+            <param name="checkedBoxesToMigrate">The checked boxes to migrate.</param>
+            <param name="rolesProvider">The roles provider.</param>
+            <param name="usersProvider">The users provider.</param>
+            <param name="librariesProvider">The libraries provider.</param>
+            <param name="genericContentsProvider">The generic contents provider.</param>
+            <param name="newsProvider">The news provider.</param>
+            <param name="blogsProvider">The blogs provider.</param>
+            <param name="eventsProvider">The events provider.</param>
+            <param name="listsProvider">The lists provider.</param>
+            <param name="rewriteRegisterTags">if set to <c>true</c> [rewrite register tags].</param>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Web.Services.MigrationService.ChangeCachingSettings(System.Boolean)">
+            <summary>
+            Changes the caching settings.
+            </summary>
+            <param name="enableCaching">If set to <c>true</c> [enable caching].</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Web.Services.MigrationService.ClearLog">
+            <summary>
+            Clears content of the log.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Web.Services.MigrationService.GetLog">
+            <summary>
+            Gets content of the log.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Web.Services.MigrationService.CancelMigration">
+            <summary>
+            Cancels the migration migration process.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.InitializeControls(Telerik.Sitefinity.Web.UI.GenericContainer)">
+            <summary>
+            Initializes the controls.
+            </summary>
+            <param name="container"></param>
+            <remarks>
+            Initialize your controls in this method. Do not override CreateChildControls method.
+            </remarks>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.GetScriptDescriptors">
+            <summary>
+            Gets a collection of script descriptors that represent ECMAScript (JavaScript) client components.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerable"/> collection of <see cref="T:System.Web.UI.ScriptDescriptor"/> objects.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.GetScriptReferences">
+            <summary>
+            Gets a collection of <see cref="T:System.Web.UI.ScriptReference"/> objects that define script resources that the control requires.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerable"/> collection of <see cref="T:System.Web.UI.ScriptReference"/> objects.
+            </returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.LayoutTemplateName">
+            <summary>
+            Gets the name of the embedded layout template. This property must be overridden to provide the path (key) to an embedded resource file.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.LocalMigrationServiceUrl">
+            <summary>
+            Url of the local service used for reading the logs
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.SiteUrl">
+            <summary>
+            Gets the URL of the project that will be migrated
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.UsernameTextBox">
+            <summary>
+            Gets the username text box for the project that will be migrated
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.PasswordTextBox">
+            <summary>
+            Gets the password text box for the project that will be migrated
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.ReportLabel">
+            <summary>
+            Gets the tag in which the migration log is written
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Migrate_All">
+            <summary>
+            Gets the checkbox which all modules can be checked/unchecked for migration with
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.RewriteRegisterTags">
+            <summary>
+            Gets the checkbox which indicates whether to rewrite user control Register tags for not working controls
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Migrate_Roles">
+            <summary>
+            Gets the checkbox to turn on/off Roles module for migration
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Migrate_Users">
+            <summary>
+            Gets the checkbox to turn on/off Users module for migration
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Migrate_Libraries">
+            <summary>
+            Gets the checkbox to turn on/off Libraries module for migration
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Migrate_GenericContent">
+            <summary>
+            Gets the checkbox to turn on/off Generic content module for migration
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Migrate_News">
+            <summary>
+            Gets the checkbox to turn on/off News module for migration
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Migrate_Blogs">
+            <summary>
+            Gets the checkbox to turn on/off Blogs module for migration
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Migrate_Events">
+            <summary>
+            Gets the checkbox to turn on/off Events module for migration
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Migrate_Lists">
+            <summary>
+            Gets the checkbox to turn on/off Lists module for migration
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Migrate_Themes">
+            <summary>
+            Gets the checkbox to turn on/off Themes for migration
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Migrate_Templates">
+            <summary>
+            Gets the checkbox to turn on/off Templates for migration
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Migrate_Pages">
+            <summary>
+            Gets the checkbox to turn on/off Pages for migration
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.GetCountsBtn">
+            <summary>
+            Gets the link button for items per module calculation
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.TestConnectionBtn">
+            <summary>
+            Gets the link button to test the connection to the project which will be migrated
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.BeginMigrationBtn">
+            <summary>
+            Gets the link button which starts the migration process
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.MigrationProgressDiv">
+            <summary>
+            Gets the html tag which is shown will testing the connection to project 
+            which will be migrated and while calulating the items per module
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Count_Roles">
+            <summary>
+            Gets the html cell which the number of items in Roles module is written in
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Count_Users">
+            <summary>
+            Gets the html cell which the number of items in Users module is written in
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Count_Libraries">
+            <summary>
+            Gets the html cell which the number of items in Libraries module is written in
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Count_GenericContent">
+            <summary>
+            Gets the html cell which the number of items in Generic content module is written in
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Count_News">
+            <summary>
+            Gets the html cell which the number of items in News module is written in
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Count_Blogs">
+            <summary>
+            Gets the html cell which the number of items in Blogs module is written in
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Count_Events">
+            <summary>
+            Gets the html cell which the number of items in Events module is written in
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Count_Lists">
+            <summary>
+            Gets the html cell which the number of items in Lists module is written in
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Count_Themes">
+            <summary>
+            Gets the html cell which the number of Themes is written in
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Count_Templates">
+            <summary>
+            Gets the html cell which the number of Templates is written in
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Count_Pages">
+            <summary>
+            Gets the html cell which the number of Pages is written in
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.CancelStatisticsBtn">
+            <summary>
+            Gets the link button which cancels the retrieving the number of items per module process
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.CancelStatisticsLbl">
+            <summary>
+            Gets the label which replaces the cancel statistics link button when the link button is pressed
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Providers_Libraries">
+            <summary>
+            Gets the drop down which lists the providers of Libraries module
+            Used to choose which provider data will be migrated
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Providers_GenericContent">
+            <summary>
+            Gets the drop down which lists the providers of Generic content module
+            Used to choose which provider data will be migrated
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Providers_News">
+            <summary>
+            Gets the drop down which lists the providers of News module
+            Used to choose which provider data will be migrated
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Providers_Blogs">
+            <summary>
+            Gets the drop down which lists the providers of Blogs module
+            Used to choose which provider data will be migrated
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Providers_Events">
+            <summary>
+            Gets the drop down which lists the providers of Events module
+            Used to choose which provider data will be migrated
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Providers_Lists">
+            <summary>
+            Gets the drop down which lists the providers of Lists module
+            Used to choose which provider data will be migrated
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.LicenseLabel">
+            <summary>
+            Gets the label which is shown when the user does not have valid license
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.ContentDiv">
+            <summary>
+            Gets the html tag which holds all elements of the Migration module
+            It is hidden when the user does not have license to see the modules
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.MessageControl">
+            <summary>
+            Gets the message control displaying success and error messages for the whole module
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.MigrationLogDialog">
+            <summary>
+            Gets the jquery UI dialog which shows the migration log during the migration process
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.MigrationDlgMsg">
+            <summary>
+            Gets the message control in the migration log dialog which displays messages in the dialog
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.CloseMigrationDlgBtn">
+            <summary>
+            Gets the close link button of migration log dialog which is used to close the dialog after the migration process has been finished
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.CancelMigrationBtn">
+            <summary>
+            Gets the cancel link button of migration log dialog which is used to cancel the migration process
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.CancelMigrationLbl">
+            <summary>
+            Gets the label which replaces the cancel migration process link button
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.ViewMigrationLogBtn">
+            <summary>
+            Gets the link button which opens the migration log
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Step3detailsLink">
+            <summary>
+            Gets the link button which toggles detailed help intructions for step 3 of the migration help
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.Step3details">
+            <summary>
+            Gets the html tag which holds the detailed intructions for step 3 of the migration help
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Modules.Migration.Web.UI.MigrationView.TagKey">
+            <summary>
+            Overrides default HTML tag which wraps the control. By default it is SPAN, changed to DIV
+            </summary>
+        </member>
+    </members>
+</doc>

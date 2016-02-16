@@ -1,0 +1,1859 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Sitefinity.DAM</name>
+    </assembly>
+    <members>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.DashboardController.GetRecentItems(System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Gets the master items.
+            </summary>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.GeneralController.GetVersion">
+            <summary>
+            A method that establish rules for communication with custom Lightning module.
+            </summary>
+            <returns>Data context that contains version of the server module </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Dam.Controllers.GeneralController.HandshakeResponseContext">
+            <summary>
+            Data context that contains information (version) about the lightning server module.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Controllers.GeneralController.HandshakeResponseContext.Version">
+            <summary>
+            Gets or sets the module version.
+            </summary>
+            <value>
+            The version.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Controllers.GeneralController.HandshakeResponseContext.SitefinityVersion">
+            <summary>
+            Gets or sets the version of Sitefinity.
+            </summary>
+            <value>
+            The sitefinity version.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Controllers.GeneralController.HandshakeResponseContext.MinRequiredClientVersion">
+            <summary>
+            Gets or sets the min required client version.
+            </summary>
+            <value>The min required client version.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Controllers.GeneralController.HandshakeResponseContext.MinRecomendedClientVersion">
+            <summary>
+            Gets or sets the min recomended client version.
+            </summary>
+            <value>The min recomended client version.</value>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.LibrariesController.GetLibrariesDefinition">
+            <summary>
+            Gets the libraries definition.
+            </summary>
+            <returns>The libraries definition</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.LibrariesController.GetLibrariesSettings">
+            <summary>
+            Gets libraries settings.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.LibrariesController.GetLibraries(System.String,System.String)">
+            <summary>
+            Gets the libraries.
+            </summary>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.LibrariesController.GetChildFolders(System.Guid,System.Nullable{System.Guid},System.String,System.String)">
+            <summary>
+            Gets the child folders.
+            </summary>
+            <param name="rootId">The root id.</param>
+            <param name="folderId">The folder id.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.LibrariesController.CopyFolders(System.Guid,System.Nullable{System.Guid},System.Collections.Generic.IEnumerable{System.Guid},System.String,System.String)">
+            <summary>
+            Copies the folder.
+            </summary>
+            <param name="rootId">The root id.</param>
+            <param name="parentFolderId">The parent folder id.</param>
+            <param name="copiedFolderIds">The copied folder ids.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.LibrariesController.MoveFolders(System.Guid,System.Nullable{System.Guid},System.Collections.Generic.IEnumerable{System.Guid},System.String,System.String)">
+            <summary>
+            Moves the folder.
+            </summary>
+            <param name="rootId">The root id.</param>
+            <param name="parentFolderId">The parent folder id.</param>
+            <param name="movedFolderIds">The moved folder ids.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.LibrariesController.SearchFolders(System.Collections.Generic.IEnumerable{System.String},System.Guid,System.Nullable{System.Guid},System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Searches the folders.
+            </summary>
+            <param name="searchFields">The search fields.</param>
+            <param name="rootId">The root id.</param>
+            <param name="parentFolderId">The parent folder id.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <param name="searchString">Filter that is used when searching folders</param>
+            <param name="searchMyItems">The search my items.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.LibrariesController.FilterFolders(Telerik.Sitefinity.Dam.Source.Models.FilterFoldersContext,System.Guid,System.Nullable{System.Guid},System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Filters the folders.
+            </summary>
+            <param name="searchFields">The search fields.</param>
+            <param name="rootId">The root id.</param>
+            <param name="parentFolderId">The parent folder id.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <param name="searchString">Filter that is used when searching folders</param>
+            <param name="searchMyItems">The search my items.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.LibrariesController.SaveLibrary(Telerik.Sitefinity.Dam.Models.LibraryModel,System.String)">
+            <summary>
+            Saves the library.
+            </summary>
+            <param name="libraryData">The library data.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.LibrariesController.BatchSaveLibraries(System.Collections.Generic.IEnumerable{Telerik.Sitefinity.Dam.Models.LibraryWithPathModel},System.String)">
+            <summary>
+            Batch save of libraries.
+            </summary>
+            <param name="librariesData">The libraries data.</param>
+            <param name="provider">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.LibrariesController.SaveFolder(System.String,System.String,System.Guid,System.Nullable{System.Guid},System.Guid,System.String,System.String)">
+            <summary>
+            Saves the folder.
+            </summary>
+            <param name="title">The title.</param>
+            <param name="description">The description.</param>
+            <param name="rootId">The root id.</param>
+            <param name="parentFolderId">The parent folder id.</param>
+            <param name="folderId">The folder id.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.LibrariesController.RenameLibrary(System.String,System.Guid,System.Boolean,System.String,System.String)">
+            <summary>
+            Renames the library.
+            </summary>
+            <param name="libraryTitle">The title.</param>
+            <param name="id">The id.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.LibrariesController.RenameFolder(System.String,System.Guid,System.Boolean,System.String,System.String)">
+            <summary>
+            Renames the folder.
+            </summary>
+            <param name="folderTitle">The folder title.</param>
+            <param name="id">The id.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.LibrariesController.DeleteLibraries(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.String)">
+            <summary>
+            Deletes the library.
+            </summary>
+            <param name="libraryIds">The library ids.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.LibrariesController.DeleteFolders(System.Collections.Generic.IEnumerable{System.Guid},System.String)">
+            <summary>
+            Deletes the folder.
+            </summary>
+            <param name="folderIds">The folder ids.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.LibrariesController.GetLibraryAllMediaItems(System.String,System.String,System.String)">
+            <summary>
+            Gets the library all media items.
+            </summary>
+            <param name="rootId">The root id.</param>
+            <param name="contentType">Type of the content.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.FlatTaxonController.GetTaxaByTaxonomyId(System.String,System.String)">
+            <summary>
+            Gets the flat taxa by taxonomy id.
+            </summary>
+            <param name="taxonomyId">The taxonomy id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.FlatTaxonController.GetTaxaByIds(System.String[],System.String)">
+            <summary>
+            Gets the flat taxa by taxonomy id and taxon ids specified
+            </summary>
+            /// <param name="taxonIds">Ids of requested taxons</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.FlatTaxonController.GetTaxon(System.String,System.String)">
+            <summary>
+            Gets the taxon.
+            </summary>
+            <param name="taxonId">The taxon id.</param>
+            <param name="provider">The provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.HierarchicalTaxonController.GetTaxaByTaxonomyId(System.String,System.String)">
+            <summary>
+            Gets the flat taxa by taxonomy id.
+            </summary>
+            <param name="taxonomyId">The taxonomy id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.HierarchicalTaxonController.GetTaxaPath(System.String[],System.String)">
+            <summary>
+            Gets the taxa path.
+            </summary>
+            <param name="taxonIds">The taxon ids.</param>
+            <param name="provider">The provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.HierarchicalTaxonController.GetHierarchicalSubTaxa(System.String,System.String,System.String)">
+            <summary>
+            Gets the hierarchical sub taxa.
+            </summary>
+            <param name="taxonomyId">The taxonomy id.</param>
+            <param name="taxonId">The taxon id.</param>
+            <param name="provider">The provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.MediaItemsController.GetMediaContentByLibraryId(System.String,System.String,System.String)">
+            <summary>
+            Gets the library all media items.
+            </summary>
+            <param name="parentId">The parent id.</param>
+            <param name="contentType">Type of the content.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.MediaItemsController.GetMediaContentByFolderId(System.Guid,System.Nullable{System.Guid},System.String,System.String)">
+            <summary>
+            Gets the library own media items.
+            </summary>
+            <param name="parentId">Parent library id.</param>
+            <param name="parentFolderId">The id of the parent folder.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.MediaItemsController.GetMediaItemForEdit(System.Guid,System.String,System.String,System.Boolean)">
+            <summary>
+            Gets the media item for edit.
+            </summary>
+            <param name="providerName">Name of the provider.</param>
+            <param name="context">The context.</param>
+            <returns></returns>        
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.MediaItemsController.SearchMediaItems(System.Collections.Generic.IEnumerable{System.String},System.Guid,System.Nullable{System.Guid},System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Searches the media items.
+            </summary>
+            <param name="parentId">Parent library id.</param>
+            <param name="parentFolderId">The parent folder id.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <param name="searchString">The search string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.MediaItemsController.EditMediaItems">
+            <summary>
+            Edits the media items.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.MediaItemsController.UpdateMediaItem(System.String,System.Boolean)">
+            <summary>
+            Updates the media item.
+            </summary>
+            <param name="provider">The provider.</param>
+            <param name="uploadStream">The upload stream.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.MediaItemsController.UploadMediaItems(System.String,System.Boolean)">
+            <summary>
+            Adds the media items.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.MediaItemsController.DownloadMediaItem(System.Guid,System.String)">
+            <summary>
+            Downloads the media item.
+            </summary>
+            <param name="itemId">The item id.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.MediaItemsController.RenameMediaItem(System.String,System.String,System.String,System.String)">
+            <summary>
+            Renames the media item.
+            </summary>
+            <param name="itemId">The item id.</param>
+            <param name="title">The title.</param>
+            <param name="contentType">Type of the content.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.MediaItemsController.CopyMediaItems(System.Guid,System.Nullable{System.Guid},System.String,System.String,System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Copies the media items.
+            </summary>
+            <param name="rootId">The root id.</param>
+            <param name="folderId">The folder id.</param>
+            <param name="workflowOperation">The workflow operation.</param>
+            <param name="providerName">Name of the provider.</param>
+            <param name="mediaItemIds">The media item ids.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.MediaItemsController.MoveMediaItems(System.String,System.Guid,System.Nullable{System.Guid},System.String,System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Moves the media items.
+            </summary>
+            <param name="libraryType">Type of the library.</param>
+            <param name="rootId">The root id.</param>
+            <param name="folderId">The folder id.</param>
+            <param name="providerName">Name of the provider.</param>
+            <param name="mediaItemIds">The media item ids.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.MediaItemsController.GetMediaItemStatus(System.String,System.String,System.Guid)">
+            <summary>
+            Gets the media item for edit.
+            </summary>
+            <param name="provider">Name of the provider.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.MediaItemsController.CancelEdit(System.Guid,System.Int32,System.String)">
+            <summary>
+            Checks in the media item.
+            </summary>
+            <param name="itemId">The item id.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.MediaItemsController.DeleteMediaItems(System.Collections.Generic.IEnumerable{System.Guid},System.String)">
+            <summary>
+            Deletes the media items.
+            </summary>
+            <param name="mediaItemIds">The media item ids.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.MediaItemsController.SaveMediaContentItem">
+            <summary>
+            Saves the media content item.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.MediaItemsController.FilterMediaItems(Telerik.Sitefinity.Dam.Source.Models.FilterContext,System.String)">
+            <summary>
+            Filters the media items.
+            </summary>
+            <param name="filterContext">The filter context.</param>
+            <param name="libraryType">Type of the library.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.WorkflowController.GetWorkflowVisualElements(System.String,System.String,System.String,System.String)">
+            <summary>
+            Gets the workflow visual elements.
+            </summary>
+            <param name="itemType">Type of the item.</param>
+            <param name="providerName">Name of the provider.</param>
+            <param name="itemId">The item id.</param>
+            <param name="itemCulture">The item culture.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.WorkflowController.GetWorkflowStates(System.String,System.String)">
+            <summary>
+            Gets the workflow states.
+            </summary>
+            <param name="itemType">Type of the item.</param>
+            <param name="itemCulture">The item culture.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.WorkflowController.GetWorkflowStates(System.String,System.String,System.String,System.String)">
+            <summary>
+            Gets the workflow states.
+            </summary>
+            <param name="itemType">Type of the item.</param>
+            <param name="providerName">Item's provider name</param>
+            <param name="itemId">Id of the item</param>
+            <param name="itemCulture">The item culture.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.DefinitionsController.GetModules">
+            <summary>
+            Gets required content modules.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Source.Interfaces.ILightningLogger.Write(System.String)">
+            <summary>
+            Writes message using Lightning configuration policy
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Source.Interfaces.ILightningLogger.WriteFormat(System.String,System.Object[])">
+            <summary>
+            Writes message in specified format
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Source.Interfaces.ILightningLogger.Write(System.Exception)">
+            <summary>
+            Logs formatted message from Exception
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Source.Helpers.LightningLogger.Write(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Source.Helpers.LightningLogger.WriteFormat(System.String,System.Object[])">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Source.Helpers.LightningLogger.Write(System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="F:Telerik.Sitefinity.Dam.Helpers.LightningPluralsResolver._dictionary">
+            <summary>
+            Store irregular plurals in a dictionary
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Dam.Helpers.LightningPluralsResolver._instance">
+            <summary>
+            The singleton instance
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Helpers.LightningPluralsResolver.#ctor">
+            <summary>
+            Run initialization on this singleton class
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Helpers.LightningPluralsResolver.ToPlural(System.String)">
+            <summary>
+            Call this method to get the properly pluralized 
+            English version of the word.
+            </summary>
+            <param name="word">The word needing conditional pluralization.</param>
+            <param name="count">The number of items the word refers to.</param>
+            <returns>The pluralized word</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Helpers.LightningPluralsResolver.ToSingular(System.String)">
+            <summary>
+            Call this method to get the singular 
+            version of a plural English word.
+            </summary>
+            <param name="word">The word to turn into a singular</param>
+            <returns>The singular word</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Helpers.LightningPluralsResolver.IsPlural(System.String)">
+            <summary>
+            test if a word is plural
+            </summary>
+            <param name="word">word to test</param>
+            <returns>true if a word is plural</returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Helpers.LightningPluralsResolver.Instance">
+            <summary>
+            Get an instance of the structure singleton. This effectively caches the dictionary 
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Dam.Interfaces.ILightningDefinitionsManager">
+            <summary>
+            A manager for retrieving data for dynamic modules and dynamic types used by lightning editor tool.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningDefinitionsManager.GetDefinitions">
+            <summary>
+            Gets the definitions.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningDefinitionsManager.GetLibrariesDefinition">
+            <summary>
+            Gets the libraries definition.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.UploadMediaContentItemsWithWorkflow(System.Collections.Generic.IEnumerable{Telerik.Sitefinity.Dam.Models.MediaContentContext},System.String)">
+            <summary>
+            Uploads the media content items with workflow.
+            </summary>
+            <param name="mediaItems">The media items.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.GetItemStatus(System.String,System.String,System.Guid)">
+            <summary>
+            Gets the media item status.
+            </summary>
+            <param name="providerName">Name of the provider.</param>
+            <param name="mediaType">Type of the media.</param>
+            <param name="itemId">The item id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.UpdateMediaContentItem(Telerik.Sitefinity.Dam.Models.MediaContentContext,System.String,System.Boolean)">
+            <summary>
+            Updates the media content item.
+            </summary>
+            <param name="mediaItem">The media item.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.GetLibraries(Telerik.Sitefinity.Dam.Models.LibraryType,System.String)">
+            <summary>
+            Gets the libraries.
+            </summary>
+            <param name="libraryTypeString">The library type string.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.GetChildFolders(Telerik.Sitefinity.Dam.Models.LibraryType,System.Guid,System.Nullable{System.Guid},System.String)">
+            <summary>
+            Gets the child folders.
+            </summary>
+            <param name="libraryType">Type of the library.</param>
+            <param name="rootId">The root id.</param>
+            <param name="parentFolderId">The parent folder id.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.GetLibraryAllMediaItems(System.String,System.String,System.String)">
+            <summary>
+            Gets the library all media items.
+            </summary>
+            <param name="libraryId">The library id.</param>
+            <param name="contentType">Type of the content.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.GetLibraryOwnMediaItems(System.Guid,System.Nullable{System.Guid},Telerik.Sitefinity.Dam.Models.LibraryType,System.String)">
+            <summary>
+            Gets the library own media items.
+            </summary>
+            <param name="rootId">The root id.</param>
+            <param name="folderId">The folder id.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.SaveMediaContentItems(System.Collections.Generic.IEnumerable{Telerik.Sitefinity.Dam.Models.MediaInfo},Telerik.Sitefinity.Modules.Libraries.LibrariesManager,System.Boolean)">
+            <summary>
+            Saves the media content items.
+            </summary>
+            <param name="mediaItems">The media items.</param>
+            <param name="librariesManager">The libraries manager.</param>
+            <param name="publish">The publish.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.SaveMediaContentItems(System.Collections.Generic.IEnumerable{Telerik.Sitefinity.Dam.Models.MediaContentContext},Telerik.Sitefinity.Modules.Libraries.LibrariesManager,System.Boolean)">
+            <summary>
+            Saves the media content items.
+            </summary>
+            <param name="mediaItems">The media items.</param>
+            <param name="librariesManager">The libraries manager.</param>
+            <param name="publish">The publish.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.UploadMediaContentItems(System.Collections.Generic.IEnumerable{Telerik.Sitefinity.Dam.Models.MediaInfo},System.String)">
+            <summary>
+            Uploads the media content items.
+            </summary>
+            <param name="mediaItems">The media items.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.UploadMediaContentItems(System.Collections.Generic.IEnumerable{Telerik.Sitefinity.Dam.Models.MediaContentContext},System.String)">
+            <summary>
+            Uploads the media content items.
+            </summary>
+            <param name="mediaItems">The media items.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.SendWorkflow(System.Collections.Generic.IEnumerable{Telerik.Sitefinity.Dam.Models.MediaInfo})">
+            <summary>
+            Sends the workflow operation for specified media items.
+            </summary>
+            <param name="mediaItems">The media items.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.SaveMediaContentItem(Telerik.Sitefinity.Dam.Models.DetailedItemData,Telerik.Sitefinity.Dam.Models.MediaInfo,System.Nullable{System.Guid})">
+            <summary>
+            Saves the media content item.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="mediaItem">The media item.</param>
+            <param name="folderId">The folder id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.DeleteMediaItems(System.Collections.Generic.IEnumerable{System.Guid},System.String)">
+            <summary>
+            Deletes the media items.
+            </summary>
+            <param name="mediaItemIds">The media item ids.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.MoveMediaItems(System.Collections.Generic.IEnumerable{System.Guid},Telerik.Sitefinity.Dam.Models.LibraryType,System.Guid,System.Nullable{System.Guid},System.String)">
+            <summary>
+            Moves the media items.
+            </summary>
+            <param name="mediaItemIds">The media item ids.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="rootId">The root id.</param>
+            <param name="folderId">The folder id.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.CopyMediaItems(System.Collections.Generic.IEnumerable{System.Guid},System.Guid,System.Nullable{System.Guid},System.String,System.String)">
+            <summary>
+            Copies the media items.
+            </summary>
+            <param name="mediaItemIds">The media item ids.</param>
+            <param name="rootId">The root id.</param>
+            <param name="folderId">The folder id.</param>
+            <param name="workflowOperation">The workflow operation.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.EditMediaItems(System.Collections.Generic.List{Telerik.Sitefinity.Dam.Models.DetailedItemData})">
+            <summary>
+            Edits the media items.
+            </summary>
+            <param name="mediaItemsData">The media items data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.GetMediaItemForEdit(System.Guid,System.String,System.String,System.Boolean)">
+            <summary>
+            Checks out the media item and return its meta data for edit.
+            </summary>
+            <param name="providerName">Name of the provider.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.SaveLibrary(Telerik.Sitefinity.Dam.Models.LibraryModel,System.String)">
+            <summary>
+            Saves the library.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.SaveFolder(System.String,System.String,System.Guid,System.Nullable{System.Guid},System.Guid,Telerik.Sitefinity.Dam.Models.LibraryType,System.String)">
+            <summary>
+            Saves the folder.
+            </summary>
+            <param name="title">The title.</param>
+            <param name="description">The description.</param>
+            <param name="rootId">The root id.</param>
+            <param name="parentId">The parent id.</param>
+            <param name="folderId">The folder id.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.MoveFolders(System.Guid,System.Nullable{System.Guid},System.Collections.Generic.IEnumerable{System.Guid},Telerik.Sitefinity.Dam.Models.LibraryType,System.String)">
+            <summary>
+            Moves the folders.
+            </summary>
+            <param name="rootId">The root id.</param>
+            <param name="parentFolderId">The parent folder id.</param>
+            <param name="movedFolderIds">The moved folder ids.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.CopyFolders(System.Guid,System.Nullable{System.Guid},System.Collections.Generic.IEnumerable{System.Guid},Telerik.Sitefinity.Dam.Models.LibraryType,System.String)">
+            <summary>
+            Copies the folders.
+            </summary>
+            <param name="rootId">The root id.</param>
+            <param name="parentFolderId">The parent folder id.</param>
+            <param name="copiedFolderIds">The copied folder ids.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.DeleteFolders(System.Collections.Generic.IEnumerable{System.Guid},System.String)">
+            <summary>
+            Deletes the folder.
+            </summary>
+            <param name="folderId">The folder id.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.DeleteLibraries(System.Collections.Generic.IEnumerable{System.Guid},Telerik.Sitefinity.Dam.Models.LibraryType,System.String)">
+            <summary>
+            Deletes the libraries.
+            </summary>
+            <param name="libraryIds">The library ids.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.SearchFolders(System.Guid,System.Nullable{System.Guid},Telerik.Sitefinity.Dam.Models.LibraryType,System.String,System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.DateTime})">
+            <summary>
+            Searches the folders.
+            </summary>
+            <param name="rootId">Parent library id.</param>
+            <param name="parentFolderId">The parent folder id.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <param name="searchString">The search string.</param>
+            <param name="searchMyItems">The search my items.</param>
+            <param name="searchFields">The search fields.</param>
+            <param name="searchDates">The search dates.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.SearchMediaItems(System.Guid,System.Nullable{System.Guid},Telerik.Sitefinity.Dam.Models.LibraryType,System.String,System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Searches the media items.
+            </summary>
+            <param name="rootId">The root id.</param>
+            <param name="parentFolderId">The parent folder id.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <param name="searchString">The search string.</param>
+            <param name="searchMyItems">The search my items.</param>
+            <param name="searchFields">The search fields.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.RenameMediaContentItem(System.String,System.String,System.String,System.String)">
+            <summary>
+            Renames the media item title.
+            </summary>
+            <param name="itemId">The item id.</param>
+            <param name="title">The title.</param>
+            <param name="contentType">Type of the content.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.DownloadMediaItem(System.Guid,System.String)">
+            <summary>
+            Downloads the media item.
+            </summary>
+            <param name="itemId">The item id.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.RenameLibrary(System.String,System.Guid,System.Boolean,Telerik.Sitefinity.Dam.Models.LibraryType,System.String)">
+            <summary>
+            Renames the library.
+            </summary>
+            <param name="title">The title.</param>
+            <param name="id">The id.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.RenameFolder(System.String,System.Guid,System.Boolean,Telerik.Sitefinity.Dam.Models.LibraryType,System.String)">
+            <summary>
+            Renames the folder.
+            </summary>
+            <param name="title">The title.</param>
+            <param name="id">The id.</param>
+            <param name="libraryType">Type of the library.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.CancelEdit(System.Guid,System.Int32,System.String)">
+            <summary>
+            Cancels the edit.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="version">The version.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.GetLibrariesSettings">
+            <summary>
+            Gets libraries settings.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningMediaContentManager.FilterMediaItems(Telerik.Sitefinity.Dam.Source.Models.FilterContext,Telerik.Sitefinity.Dam.Models.LibraryType)">
+            <summary>
+            Filters the media items.
+            </summary>
+            <param name="filterContext">The filter context.</param>
+            <param name="libraryType">Type of the library.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Dam.Interfaces.ILightningManager">
+            <summary>
+            A manager for methods that perform actions with Lightning editor tool.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Interfaces.ILightningManager.SaveContentItem(Telerik.Sitefinity.Dam.Models.DetailedItemData,System.Collections.Generic.IEnumerable{Telerik.Sitefinity.Dam.Models.MediaInfo})">
+            <summary>
+            Saves the content item.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="mediaItems">The media items.</param>
+            <returns>If the method succeed a master description data of saved content, otheriwise an exception is being thrown.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningManagerBase.GetItemStatus(System.String,System.String,System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningContentManager.GetMasterItems(System.Collections.Generic.IEnumerable{Telerik.Sitefinity.Dam.Models.ItemsRequestContext})">
+            <summary>
+            Gets the master items.
+            </summary>
+            <param name="filterContext">The filter context.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningContentManager.GetMasterItems(Telerik.Sitefinity.Dam.Models.ItemsRequestContext)">
+            <summary>
+            Gets the master items.
+            </summary>
+            <param name="filterContext">The filter context.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningContentManager.GetParentItems(Telerik.Sitefinity.Dam.Models.MajorItemContext,System.Int32,System.Int32)">
+            <summary>
+            Gets the parent items.
+            </summary>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningContentManager.GetDetailItem(System.Guid,System.String,System.Guid,System.Guid,System.Boolean,System.String)">
+            <summary>
+            Gets the detail item.
+            </summary>
+            <param name="dynamicModuleId">The dynamic module id.</param>
+            <param name="builtIncontentType">Type of the built incontent.</param>
+            <param name="dynamicContentTypeId">The dynamic content type id.</param>
+            <param name="itemId">The item id.</param>
+            <param name="isDynamicItem">The is dynamic item.</param>
+            <param name="provider">The provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningContentManager.SaveContent(Telerik.Sitefinity.Dam.Models.DetailedItemData,System.Collections.Generic.IEnumerable{Telerik.Sitefinity.Dam.Models.MediaInfo})">
+            <summary>
+            Saves a content item from client to the server.
+            </summary>
+            <param name="data">The data context from the client.</param>
+            <param name="mediaItems">Media items if any</param>
+            <returns>MasterContentItem object with the saved data</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningContentManager.DeleteContentItem(System.Guid,System.String,System.Guid,System.Guid,System.Boolean,System.String)">
+            <summary>
+            Deletes the content item.
+            </summary>
+            <param name="dynamicModuleId">The dynamic module id.</param>
+            <param name="builtInContentType">Type of the built in content.</param>
+            <param name="dynamicContentTypeId">The dynamic content type id.</param>
+            <param name="itemId">The item id.</param>
+            <param name="isDynamicContentItem">The is dynamic content item.</param>
+            <param name="provider">The provider.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningContentManager.GetItemVersionNotes(System.Guid,System.String)">
+            <summary>
+            Gets the item version notes.
+            </summary>
+            <param name="itemId">The item id.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningContentManager.FilterContentItems(Telerik.Sitefinity.Dam.Source.Models.FilterContext)">
+            <summary>
+            Filters the content items.
+            </summary>
+            <param name="filterContext">The filter context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Dam.LightningDefinitionsManager">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningDefinitionsManager.GetDefinitions">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningFieldsManager.GetFieldsByType(System.String,System.String)">
+            <summary>
+            Gets the type of the fields by.
+            </summary>
+            <param name="moduleName">Name of the module.</param>
+            <param name="contentType">Type of the content.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMajorManager.GetMajorItems(Telerik.Sitefinity.Dam.Models.MajorItemContext)">
+            <summary>
+            Gets the major items.
+            </summary>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Dam.LightningManager">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningManager.GetMasterItems(System.Collections.Generic.IEnumerable{Telerik.Sitefinity.Dam.Models.ItemsRequestContext})">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningManager.GetMajorItems(Telerik.Sitefinity.Dam.Models.MajorItemContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningManager.GetFieldsByType(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningManager.GetWorkflowVisualElements(System.String,System.String,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningManager.GetDetailItem(System.Guid,System.String,System.Guid,System.Guid,System.Boolean,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningManager.SaveContentItem(Telerik.Sitefinity.Dam.Models.DetailedItemData,System.Collections.Generic.IEnumerable{Telerik.Sitefinity.Dam.Models.MediaInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningManager.DeleteContentItem(System.Guid,System.String,System.Guid,System.Guid,System.Boolean,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningManager.GetLibraries(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningManager.GetMediaContentByLibraryId(System.String,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Helpers.ContentUtils.RecompileItemUrls(Telerik.Sitefinity.GenericContent.Model.Content,Telerik.Sitefinity.Data.IManager,System.Collections.Generic.List{System.String},System.Boolean)">
+            <summary>
+            Recompiles the item urls using the UrlName of the content item as default url and urlNames as additional urls.
+            </summary>
+            <param name="content">The content item.</param>
+            <param name="manager">The manager to use.</param>
+            <param name="additionalUrlNames">The full list additonal URL names that will be added to the content item url data collelction.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Helpers.ContentUtils.ValidateUrlConstraints``1(Telerik.Sitefinity.Data.IManager,``0)">
+            <summary>
+            Validates the URL constraints.
+            </summary>
+            <typeparam name="TContent">The type of the content.</typeparam>
+            <param name="manager">The manager.</param>
+            <param name="item">The item.</param>
+            <param name="urlRecompilationMethod">The URL recompilation method.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Helpers.ContentUtils.ModifyMediaTags(System.String,Telerik.Sitefinity.Dam.Models.MediaInfo)">
+            <summary>
+            The method updates the content of a property that contains 'img' tags with 
+            correct src attribute value and inserts 'sfref' attribute.
+            </summary>
+            <param name="contentToFix">The content to fix.</param>
+            <param name="files">The files.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.GetLibraries(Telerik.Sitefinity.Dam.Models.LibraryType,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.GetChildFolders(Telerik.Sitefinity.Dam.Models.LibraryType,System.Guid,System.Nullable{System.Guid},System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.GetLibraryAllMediaItems(System.String,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.SaveMediaContentItems(System.Collections.Generic.IEnumerable{Telerik.Sitefinity.Dam.Models.MediaContentContext},Telerik.Sitefinity.Modules.Libraries.LibrariesManager,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.SaveMediaContentItems(System.Collections.Generic.IEnumerable{Telerik.Sitefinity.Dam.Models.MediaInfo},Telerik.Sitefinity.Modules.Libraries.LibrariesManager,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.UploadMediaContentItems(System.Collections.Generic.IEnumerable{Telerik.Sitefinity.Dam.Models.MediaInfo},System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.UpdateMediaContentItem(Telerik.Sitefinity.Dam.Models.MediaContentContext,System.String,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.UploadMediaContentItems(System.Collections.Generic.IEnumerable{Telerik.Sitefinity.Dam.Models.MediaContentContext},System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.UploadMediaContentItemsWithWorkflow(System.Collections.Generic.IEnumerable{Telerik.Sitefinity.Dam.Models.MediaContentContext},System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.SendWorkflow(System.Collections.Generic.IEnumerable{Telerik.Sitefinity.Dam.Models.MediaInfo})">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.SaveMediaContentItem(Telerik.Sitefinity.Dam.Models.DetailedItemData,Telerik.Sitefinity.Dam.Models.MediaInfo,System.Nullable{System.Guid})">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.RenameMediaContentItem(System.String,System.String,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.DeleteMediaItems(System.Collections.Generic.IEnumerable{System.Guid},System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.MoveMediaItems(System.Collections.Generic.IEnumerable{System.Guid},Telerik.Sitefinity.Dam.Models.LibraryType,System.Guid,System.Nullable{System.Guid},System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.CopyMediaItems(System.Collections.Generic.IEnumerable{System.Guid},System.Guid,System.Nullable{System.Guid},System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.EditMediaItems(System.Collections.Generic.List{Telerik.Sitefinity.Dam.Models.DetailedItemData})">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.GetMediaItemForEdit(System.Guid,System.String,System.String,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.SaveLibrary(Telerik.Sitefinity.Dam.Models.LibraryModel,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.SaveFolder(System.String,System.String,System.Guid,System.Nullable{System.Guid},System.Guid,Telerik.Sitefinity.Dam.Models.LibraryType,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.MoveFolders(System.Guid,System.Nullable{System.Guid},System.Collections.Generic.IEnumerable{System.Guid},Telerik.Sitefinity.Dam.Models.LibraryType,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.CopyFolders(System.Guid,System.Nullable{System.Guid},System.Collections.Generic.IEnumerable{System.Guid},Telerik.Sitefinity.Dam.Models.LibraryType,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.DeleteFolders(System.Collections.Generic.IEnumerable{System.Guid},System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.DeleteLibraries(System.Collections.Generic.IEnumerable{System.Guid},Telerik.Sitefinity.Dam.Models.LibraryType,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.SearchFolders(System.Guid,System.Nullable{System.Guid},Telerik.Sitefinity.Dam.Models.LibraryType,System.String,System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.DateTime})">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.SearchMediaItems(System.Guid,System.Nullable{System.Guid},Telerik.Sitefinity.Dam.Models.LibraryType,System.String,System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.String})">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.BatchSaveLibraries(System.Collections.Generic.IEnumerable{Telerik.Sitefinity.Dam.Models.LibraryWithPathModel},System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.DownloadMediaItem(System.Guid,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.RenameLibrary(System.String,System.Guid,System.Boolean,Telerik.Sitefinity.Dam.Models.LibraryType,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.RenameFolder(System.String,System.Guid,System.Boolean,Telerik.Sitefinity.Dam.Models.LibraryType,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.CancelEdit(System.Guid,System.Int32,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.GetLibrariesSettings">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.FilterMediaItems(Telerik.Sitefinity.Dam.Source.Models.FilterContext,Telerik.Sitefinity.Dam.Models.LibraryType)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningMediaContentManager.GetLibraryOwnMediaItems(System.Guid,System.Nullable{System.Guid},Telerik.Sitefinity.Dam.Models.LibraryType,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningWorkflowManager.GetWorkflowVisualElements(System.String,System.String,System.String,System.String)">
+            <summary>
+            Gets the workflow visual elements.
+            </summary>
+            <param name="itemType">Type of the item.</param>
+            <param name="providerName">Name of the provider.</param>
+            <param name="itemId">The item id.</param>
+            <param name="itemCulture">The item culture.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningWorkflowManager.GetWorkflowStates(System.String,System.String)">
+            <summary>
+            Gets the workflow states.
+            </summary>
+            <param name="itemType">Type of the item.</param>
+            <param name="itemCulture">The item culture.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.LightningWorkflowManager.GetWorkflowStates(System.Type,System.String,System.Guid,System.Globalization.CultureInfo)">
+            <summary>
+            Gets the workflow states.
+            </summary>
+            <param name="type">Type of the item.</param>
+            <param name="providerName">Name of item's provider</param>
+            <param name="itemId">Id of the item</param>
+            <param name="itemCulture">The item culture.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.Dam.Models.DefinitionContext">
+            <summary>
+            Data-transfer object for a definition item.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.DefinitionContext.ModuleModel">
+            <summary>
+            Gets or sets the module model.
+            </summary>
+            <value>
+            The module model.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.DefinitionContext.Types">
+            <summary>
+            Gets or sets the types.
+            </summary>
+            <value>
+            The types.
+            </value>
+        </member>
+        <member name="T:Telerik.Sitefinity.Dam.Models.ContentTypeModel">
+            <summary>
+            A data transformation class that holds information about dynamic module types.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ContentTypeModel.SitefinityId">
+            <summary>
+            Gets or sets the id.
+            </summary>
+            <value>
+            The id.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ContentTypeModel.DisplayName">
+            <summary>
+            Gets or sets the display name of the module type.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ContentTypeModel.ParentModuleId">
+            <summary>
+            Gets or sets the id of the <see cref="T:Telerik.Sitefinity.Dam.Models.ModuleModel"/> to which this
+            type belongs to.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ContentTypeModel.TypeName">
+            <summary>
+            Gets or sets the name of the dynamic module's type.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ContentTypeModel.Fields">
+            <summary>
+            Not persistant : gets array of dynamic module type fields that belong to this type.
+            </summary>
+            <remarks>
+            Setting this property will not affect data in any way.
+            </remarks>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ContentTypeModel.MainShortTextFieldName">
+            <summary>
+            Gets or sets the name of the main short field for the dynamic module type.
+            This field will be used to generate public URLs for the custom content types.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ContentTypeModel.ParentContentTypeId">
+            <summary>
+            Gets or sets the parent dynamic module type in the module hierarchy.
+            </summary>
+            <value>
+            The type of the parent module.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ContentTypeModel.TypeUIPluralName">
+            <summary>
+            Gets or sets the name of the type UI plural.
+            </summary>
+            <value>
+            The name of the type UI plural.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ContentTypeModel.TypeUISingularName">
+            <summary>
+            Gets or sets the name of the type UI singular.
+            </summary>
+            <value>
+            The name of the type UI singular.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ContentTypeModel.LastModified">
+            <summary>
+            Gets or sets the last modified.
+            </summary>
+            <value>
+            The last modified.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.LibraryModel.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+            <value>The id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.LibraryModel.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.LibraryModel.MaxItemSize">
+            <summary>
+            Gets or sets the size of the max item in KB.
+            </summary>
+            <value>The size of the max item in KB.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.LibraryModel.MaxSize">
+            <summary>
+            Gets or sets the max size of the libary in MB.
+            </summary>
+            <value>The max size of the libary in MB.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.LibraryModel.TotalSize">
+            <summary>
+            Gets or sets the total size in Bytes.
+            </summary>
+            <value>The total size in Bytes.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.LibraryModel.RootLibraryTotalSize">
+            <summary>
+            Gets or sets the total size of the root library in Bytes.
+            </summary>
+            <value>The total size of the root library in Bytes.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.LibraryModel.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+            <value>The type.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.LibraryModel.ItemsCount">
+            <summary>
+            Gets or sets the items count.
+            </summary>
+            <value>The items count.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.LibraryModel.ChildLibrariesCount">
+            <summary>
+            Gets or sets the child libraries count.
+            </summary>
+            <value>The child libraries count.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.LibraryModel.RootId">
+            <summary>
+            Gets or sets the root id.
+            </summary>
+            <value>The root id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.LibraryModel.ParentFolderId">
+            <summary>
+            Gets or sets the parent folder id.
+            </summary>
+            <value>The parent folder id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.LibraryModel.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.LibraryModel.Path">
+            <summary>
+            Gets or sets the path.
+            </summary>
+            <value>The path.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.LibraryWithPathModel.DirectoryPath">
+            <summary>
+            Gets or sets the directory path.
+            </summary>
+            <value>The directory path.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.LibraryWithPathModel.IsRoot">
+            <summary>
+            Gets or sets whether the item is root.
+            </summary>
+            <value>Whether the item is root.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ParentContentItem.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+            <value>The id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ParentContentItem.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ParentContentItem.ProviderName">
+            <summary>
+            Gets or sets the name of the provider.
+            </summary>
+            <value>
+            The name of the provider.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.MajorItemContext.ModuleId">
+            <summary>
+            Gets or sets the module id.
+            </summary>
+            <value>The module id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.MajorItemContext.ContentType">
+            <summary>
+            Gets or sets the type of the content.
+            </summary>
+            <value>The type of the content.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.MajorItemContext.ProviderName">
+            <summary>
+            Gets or sets the name of the provider.
+            </summary>
+            <value>
+            The name of the provider.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.MediaItemModel.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+            <value>The id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.MediaItemModel.MediaUrl">
+            <summary>
+            Gets or sets the media URL.
+            </summary>
+            <value>The media URL.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.MediaItemModel.ThumbnailUrl">
+            <summary>
+            Gets or sets the tumbnail URL.
+            </summary>
+            <value>The tumbnail URL.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.MediaItemModel.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.MediaItemModel.TotalSize">
+            <summary>
+            Gets or sets the total size.
+            </summary>
+            <value>The total size.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.MediaItemModel.FileExtension">
+            <summary>
+            Gets or sets the file extension.
+            </summary>
+            <value>
+            The file extension.
+            </value>
+        </member>
+        <member name="T:Telerik.Sitefinity.Dam.Models.ModuleModel">
+            <summary>
+            A data transformation class that holds information about dynamic modules.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ModuleModel.SitefinityId">
+            <summary>
+            Gets or sets the id.
+            </summary>
+            <value>
+            The id.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ModuleModel.Name">
+            <summary>
+            Gets or sets the name of the module.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ModuleModel.Title">
+            <summary>
+            Gets or sets the title of the module. Will be displayed to user
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ModuleModel.Description">
+            <summary>
+            Gets or sets the description of the module.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ModuleModel.IsDynamic">
+            <summary>
+            Gets or sets if the module is dynamic
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ModuleModel.Status">
+            <summary>
+            Gets or sets the status.
+            </summary>
+            <value>
+            The status.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ModuleModel.LastModified">
+            <summary>
+            Gets or sets the last modified.
+            </summary>
+            <value>
+            The last modified.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ModuleModel.Providers">
+            <summary>
+            Gets or sets the providers.
+            </summary>
+            <value>
+            The providers.
+            </value>
+        </member>
+        <member name="T:Telerik.Sitefinity.Dam.Models.ModuleFieldModel">
+            <summary>
+            A data transformation class that holds information about dynamic module fields.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ModuleFieldModel.ParentTypeId">
+            <summary>
+            Gets or sets the id of the <see cref="P:Telerik.Sitefinity.Dam.Models.ModuleFieldModel.ContentType"/> to which this field belongs to.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ModuleFieldModel.ModuleName">
+            <summary>
+            Gets or sets the name of the module.
+            </summary>
+            <value>
+            The name of the module.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ModuleFieldModel.Ordinal">
+            <summary>
+            Gets or sets the ordinal of the field which determines order in which fields should be displayed.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ModuleFieldModel.InstructionalText">
+            <summary>
+            Gets or sets the instructional text.
+            </summary>
+            <value>The instructional text.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ModuleFieldModel.IsHidden">
+            <summary>
+            Gets or sets the visibility of the field in the user interface.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ModuleFieldModel.DefaultValue">
+            <summary>
+            Gets or sets the default value.
+            </summary>
+            <value>
+            The default value.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ProviderModel.Name">
+            <summary>
+            Gets the friendly name used to refer to the provider during configuration.
+            </summary>
+            <returns>
+            The friendly name used to refer to the provider during configuration.
+            </returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ProviderModel.Title">
+            <summary>
+            Gets the title.
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ProviderModel.Description">
+            <summary>
+            Gets a brief, friendly description suitable for display in administrative tools or other user interfaces (UIs).
+            </summary>
+            <returns>
+            A brief, friendly description suitable for display in administrative tools or other UIs.
+            </returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ProviderModel.IsDefault">
+            <summary>
+            Gets or sets a value indicating whether [is default].
+            </summary>
+            <value>
+              <c>true</c> if [is default]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Telerik.Sitefinity.Dam.Models.ItemsRequestContext">
+            <summary>
+            Context class that will specify the master items to be returned from  Web API service
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ItemsRequestContext.ModuleId">
+            <summary>
+            Gets or sets the module id.
+            </summary>
+            <value>The module id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ItemsRequestContext.ContentTypes">
+            <summary>
+            Gets or sets the type of the content.
+            </summary>
+            <value>The type of the content.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ItemsRequestContext.FilterExpression">
+            <summary>
+            Gets or sets the filter expression.
+            </summary>
+            <value>
+            The filter expression.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ItemsRequestContext.OrderExpression">
+            <summary>
+            Gets or sets the order expression.
+            </summary>
+            <value>
+            The order expression.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ItemsRequestContext.Skip">
+            <summary>
+            Gets or sets the number of items skip.
+            </summary>
+            <value>
+            The skip.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ItemsRequestContext.Take">
+            <summary>
+            Gets or sets the number of items to take.
+            </summary>
+            <value>
+            The take.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ItemsRequestContext.FilterCurrentUserItems">
+            <summary>
+            Gets or sets a value indicating whether to display the items if current user only.
+            </summary>
+            <value>
+            <c>true</c> if [filter my recent items]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ItemsRequestContext.ProviderName">
+            <summary>
+            Gets or sets the name of the provider.
+            </summary>
+            <value>
+            The name of the provider.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.MediaInfo.ContainingPropertyType">
+            <summary>
+            The type of the image property, will be true for the properties of type 
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.MediaInfo.MediaContentType">
+            <summary>
+            Gets or sets the type of the media content at sitefinity.
+            </summary>
+            <value>
+            The type of the media content.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.MediaInfo.FolderId">
+            <summary>
+            Gets or sets the folder id.
+            </summary>
+            <value>The folder id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.MediaInfo.ProviderName">
+            <summary>
+            Gets or sets the name of the provider.
+            </summary>
+            <value>
+            The name of the provider.
+            </value>
+        </member>
+        <member name="T:Telerik.Sitefinity.Dam.Models.ContainingPropertyType">
+            <summary>
+            Flag for the type of the containing property
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Dam.Models.ContainingPropertyType.ContentBlock">
+            <summary>
+            The properites of type content block
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Dam.Models.ContainingPropertyType.MediaField">
+            <summary>
+            A property of type media  like - image, file or video field
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ParentModel.Id">
+            <summary>
+            Gets or sets the id of the parent.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.TaxonModel.Id">
+            <summary>
+            Gets or sets the id of the taxon.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.TaxonModel.Title">
+            <summary>
+            Gets or sets the title of the taxon.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.TaxonModel.TaxonomyId">
+            <summary>
+            Gets or sets the Id of the taxonomy to which the taxon belongs to.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.TaxonModel.ParentTaxonId">
+            <summary>
+            Gets or sets the Id of the parent taxon of this hierarchical taxon.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.TaxonModel.Ordinal">
+            <summary>
+            Gets or sets the ordinal number of the item.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.TaxonModel.TaxonPath">
+            <summary>
+            Gets or sets the value that represents the string with the path to the taxon
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.TaxonModel.Type">
+            <summary>
+            Gets or sets the type of the taxonomy
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.TaxonModel.Subtaxa">
+            <summary>
+            Gets a list of child Taxons in Hierarchical taxonomy.
+            </summary>
+            <value>A list of <see cref="T:Telerik.Sitefinity.Taxonomies.Model.Taxon"/> objects.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Resources.LightningErrorMessages.GeneralError">
+            <summary>
+            Message: General error.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Resources.LightningErrorMessages.AuthenticationFailed">
+            <summary>
+            Message: Authentication failed.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Resources.LightningErrorMessages.AuthorizationFailed">
+            <summary>
+            Message: Authorization failed.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.ContentController.GetMasterItems(System.Collections.Generic.IList{Telerik.Sitefinity.Dam.Models.ItemsRequestContext})">
+            <summary>
+            Gets the master items.
+            </summary>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.ContentController.GetContentTypeItems(Telerik.Sitefinity.Dam.Models.ItemsRequestContext)">
+            <summary>
+            Gets the content type items.
+            </summary>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.ContentController.GetParentItems(Telerik.Sitefinity.Dam.Models.MajorItemContext)">
+            <summary>
+            Gets the parent items.
+            </summary>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.ContentController.SaveContentItem">
+            <summary>
+            Saves the content item.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.ContentController.GetContentItem(System.Guid,System.String,System.Guid,System.Guid,System.String,System.String)">
+            <summary>
+            Gets content item details.
+            </summary>
+            <param name="dynamicModuleId">The dynamic module id.</param>
+            <param name="builtInContentType">Type of the built in content.</param>
+            <param name="dynamicContentTypeId">The dynamic content type id.</param>
+            <param name="itemId">The item id.</param>
+            <param name="isDynamic">The is dynamic.</param>
+            <param name="provider">The provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.ContentController.DeleteContentItem(System.Guid,System.String,System.Guid,System.Guid,System.Boolean,System.String)">
+            <summary>
+            Deletes the content item.
+            </summary>
+            <param name="dynamicModuleId">The dynamic module id.</param>
+            <param name="builtInContentType">Type of the built in content.</param>
+            <param name="dynamicContentTypeId">The dynamic content type id.</param>
+            <param name="itemId">The item id.</param>
+            <param name="isDynamicContentItem">The is dynamic content item.</param>
+            <param name="provider">The provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.ContentController.GetContentItemStatus(System.String,System.String,System.Guid)">
+            <summary>
+            Gets the item status and version.
+            </summary>
+            <param name="provider">The provider.</param>
+            <param name="contentType">Type of the content.</param>
+            <param name="itemtemId">The itemtem id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.ContentController.GetVersionNotes(System.Guid,System.String)">
+            <summary>
+            Gets the version notes of an item.
+            </summary>
+            <param name="itemId">The item id.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Controllers.ContentController.FilterContentItems(Telerik.Sitefinity.Dam.Source.Models.FilterContext)">
+            <summary>
+            Filters the content items.
+            </summary>
+            <param name="filterContext">The filter context.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Resources.LightningResources.#ctor">
+            <summary>
+            Initializes new instance of <see cref="T:Telerik.Sitefinity.Dam.Resources.LightningResources"/> class with the default <see cref="T:Telerik.Sitefinity.Localization.Data.ResourceDataProvider"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.Resources.LightningResources.#ctor(Telerik.Sitefinity.Localization.Data.ResourceDataProvider)">
+            <summary>
+            Initializes new instance of <see cref="T:Telerik.Sitefinity.Dam.Resources.LightningResources"/> class with the provided <see cref="T:Telerik.Sitefinity.Localization.Data.ResourceDataProvider"/>.
+            </summary>
+            <param name="dataProvider"><see cref="T:Telerik.Sitefinity.Localization.Data.ResourceDataProvider"/></param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Resources.LightningResources.LightningResourcesTitle">
+            <summary>
+            Sitefinity Lightning
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Resources.LightningResources.LightningResourcesTitlePlural">
+            <summary>
+            Sitefinity Lightning
+            </summary>
+            <value>Title plural for the Lightning module.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Resources.LightningResources.ModuleTitle">
+            <summary>
+            Title of the lightning module.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Resources.LightningResources.ModuleDescription">
+            <summary>
+            Description of the Lightning module.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Resources.LightningResources.ItemPermissionText">
+            <summary>
+            Title of the ItemPermissionText
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Dam.DamModule">
+            <summary>
+            Enterprise adapter module that will facilitate messages communication between sitefinity instance and lightning editor tool.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Dam.DamModule.ModuleName">
+            <summary>
+            Name of the enterprise adapter module.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Dam.DamModule.ModuleId">
+            <summary>
+            Id of the module. Used for licensing.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.DamModule.Initialize(Telerik.Sitefinity.Services.ModuleSettings)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.DamModule.Install(Telerik.Sitefinity.Abstractions.SiteInitializer)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.DamModule.Upgrade(Telerik.Sitefinity.Abstractions.SiteInitializer,System.Version)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Dam.DamModule.GetModuleConfig">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.DamModule.LandingPageId">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.DamModule.Managers">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ValidatorDefinition.MaxLength">
+            <summary>
+            Gets or sets the maximum length.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ValidatorDefinition.MinLength">
+            <summary>
+            Gets or sets the minimum length.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ValidatorDefinition.MinValue">
+            <summary>
+            Gets or sets the minimum value to use when validating data.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ValidatorDefinition.MaxValue">
+            <summary>
+            Gets or sets the maximum value to use when validating data.
+            </summary>
+            <value>The max value.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ValidatorDefinition.RegularExpression">
+            <summary>
+            Gets or sets the regular expression to use when evaluating string.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ValidatorDefinition.RequiredViolationMessage">
+            <summary>
+            Gets or sets the message shown when required validation has failed.
+            </summary>
+            <value>The required violation message.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ValidatorDefinition.DecimalPlacesCount">
+            <summary>
+            Gets or sets the decimal places count.
+            </summary>
+            <value>The decimal places count.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ValidatorDefinition.MediaItemExtensions">
+            <summary>
+            Gets or sets the media item extensions.
+            </summary>
+            <value>The media item extensions.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Dam.Models.ValidatorDefinition.AllowMultipleMediaItems">
+            <summary>
+            Gets or sets whether multiple media items uploading is allowed.
+            </summary>
+            <value>Whether multiple media items uploading is allowed.</value>
+        </member>
+    </members>
+</doc>

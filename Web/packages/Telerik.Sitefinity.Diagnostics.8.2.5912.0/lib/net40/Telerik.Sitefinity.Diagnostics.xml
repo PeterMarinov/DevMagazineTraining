@@ -1,0 +1,1389 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Sitefinity.Diagnostics</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Configuration.DiagnosticsConfig">
+            <summary>
+            Configuration section for Diagnostics module settings
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Configuration.DiagnosticsConfig.Tools">
+            <summary>
+            Gets a collection of tools.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Configuration.ToolSettings">
+            <summary>
+            Contains data access profiling options.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Configuration.ToolSettings.#ctor(Telerik.Sitefinity.Configuration.ConfigElement)">
+            <summary>
+            Initializes a new instance of the <see cref="!:DataAccessProfilerSettingsElement"/> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Configuration.ToolSettings.Name">
+            <summary>
+            The name of the diagnostic tool.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Configuration.ToolSettings.Type">
+            <summary>
+            The type of the tool
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Configuration.ToolSettings.Version">
+            <summary>
+            Gets or sets a version this tool is installed to.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Configuration.ToolSettings.Enabled">
+            <summary>
+            Gets or sets a value indicating whether the tool is enabled.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Configuration.ToolSettings.Parameters">
+            <summary>
+            Gets a collection of user-defined parameters for the tool.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Configuration.ToolSettings.ErrorMessage">
+            <summary>
+            Gets or sets if there is operation error when manipulating module .
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.LoadBalancing.ReloadToolMessageHandler">
+            <summary>
+            A class responsible for handling reset application system message sent to Sitefinity instances at load balanced environment.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.LoadBalancing.ReloadToolMessageHandler.CanProcessSystemMessage(Telerik.Sitefinity.LoadBalancing.SystemMessageBase)">
+            <summary>
+            Determines whether this instance [can process system message] the specified system message.
+            </summary>
+            <param name="message">The message.</param>
+            <returns>
+                <c>true</c> if this instance [can process system message] the specified message; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.LoadBalancing.ReloadToolMessageHandler.ProcessSystemMessage(Telerik.Sitefinity.LoadBalancing.SystemMessageBase)">
+            <summary>
+            Processes the system message.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.LoadBalancing.ReloadToolMessage">
+            <summary>
+            Data transfer object for sending "reset application" message.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.LoadBalancing.ReloadToolMessage.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.LoadBalancing.ResetApplicationMessage"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.DataAccessEventSink.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object)">
+            <summary>
+            Writes a trace data entry to the listener
+            </summary>
+            <param name="eventCache">Event cache object</param>
+            <param name="source">Source of the trace event</param>
+            <param name="eventType">Type of the event</param>
+            <param name="id">Id of the event</param>
+            <param name="data">Trace data attached to the event</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.DataAccessEventSink.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object[])">
+            <summary>
+            Writes a trace data entry to the listener
+            </summary>
+            <param name="eventCache">Event cache object</param>
+            <param name="source">Source of the trace event</param>
+            <param name="eventType">Type of the event</param>
+            <param name="id">Id of the event</param>
+            <param name="data">Trace data attached to the event</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.DataAccessProfilingFactory">
+            <summary>
+            The factory for profiling DataAccess events using DataAccess to persist them.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.IDataAccessProfilingFactory">
+            <summary>
+            Abstract factory for Data Access profiling.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.IDataAccessProfilingFactory.Initialize(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Initializes the factory using the specified config settings.
+            </summary>
+            <param name="config">The config.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.IDataAccessProfilingFactory.GetLogger">
+            <summary>
+            Gets the logger object for profiling.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.IDataAccessProfilingFactory.GetReader">
+            <summary>
+            Gets the reader object that can return results from profiling.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.IDataAccessProfilingFactory.Uninstall">
+            <summary>
+            Uninstalls this instance.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.IDataAccessProfilingFactory.Install(System.Version)">
+            <summary>
+            Install or upgrade the specified instance from the given version.
+            </summary>
+            <param name="upgradeFrom">The version to upgrade from.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.DataAccessProfilingFactory.Initialize(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Initializes the factory using the specified configuration settings.
+            </summary>
+            <param name="config">The configuration parameters for initializing the factory.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.DiagnosticsModule">
+            <summary>
+            Sitefinity Diagnostics module providing diagnostic features for identifying potential application problems.
+            Data access profiling, etc.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.Diagnostics.DiagnosticsModule.DefaultConnectionStringName">
+            <summary>
+            The name of the connection string used by DiagnosticsModule by default.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.DiagnosticsModule.Initialize(Telerik.Sitefinity.Services.ModuleSettings)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.DiagnosticsModule.Load">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.DiagnosticsModule.Unload">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.DiagnosticsModule.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.DiagnosticsModule.Install(Telerik.Sitefinity.Abstractions.SiteInitializer)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.DiagnosticsModule.GetModuleConfig">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.DiagnosticsModule.GetVirtualPaths">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.DiagnosticsModule.InstallConnectionString(Telerik.Sitefinity.Services.InstallContext)">
+            <summary>
+            Registers the default database connection string in DataConfig.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsModule.LandingPageId">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsModule.Managers">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsModule.Tools">
+            <summary>
+            Gets the diagnostic tools.
+            </summary>
+            <value>The tools.</value>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels">
+            <summary>
+            Localizable strings for the Diagnostics module
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels"/> class with the default <see cref="T:Telerik.Sitefinity.Localization.Data.ResourceDataProvider"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.#ctor(Telerik.Sitefinity.Localization.Data.ResourceDataProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels"/> class with the provided <see cref="T:Telerik.Sitefinity.Localization.Data.ResourceDataProvider"/>.
+            </summary>
+            <param name="dataProvider">The data provider of type<see cref="T:Telerik.Sitefinity.Localization.Data.ResourceDataProvider"/></param>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.LabelsTitle">
+            <summary>
+            Gets the title of this class
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.LabelsDescription">
+            <summary>
+            Gets localizable resources for help information such as UI elements descriptions, usage explanations, FAQ and etc.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.HomePageTitle">
+            <summary>
+            Sitefinity Diagnostics
+            </summary>
+            <value>Diagnostics</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.DiagnosticsErrorPage">
+            <summary>
+            Sitefinity Diagnostics error page
+            </summary>
+            <value>Database diagnostics</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.DiagnosticsHomeUrlName">
+            <summary>
+            diagnostics
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.DiagnosticsHomeDescription">
+            <summary>
+            Sitefinity diagnostics page
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.DiagnosticsHomeHtmlTitle">
+            <summary>
+            Sitefinity Diagnostics
+            </summary>
+            <value>Diagnostics</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ClearReports">
+            <summary>
+            Clear diagnostics reports
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.StartDatabaseProfiling">
+            <summary>
+            Start Database Profiling
+            </summary>
+            <value>Start database profiling</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.StopDatabaseProfiling">
+            <summary>
+            Stop Database Profiling
+            </summary>
+            <value>Stop database profiling</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.DatabaseProfilingDisabled">
+            <summary>
+            Confirmation message: Database profiling is disabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.DatabaseProfilingEnabled">
+            <summary>
+            Confirmation message: Database profiling is enabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ReportsTitle">
+            <summary>
+            Reports
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ToolSettingsTitle">
+            <summary>
+            Gets the title of the Diagnostics.DataAccessProfilerSettings configuration element.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ToolSettingsDescription">
+            <summary>
+            Gets the description of the Diagnostics.DataAccessProfilerSettings configuration element.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ToolSettingsVersionTitle">
+            <summary>
+            Version
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ToolSettingsVersionDescription">
+            <summary>
+            The version of the diagnostic tool.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ToolSettingsEnabledTitle">
+            <summary>
+            Enabled
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ToolSettingsEnabledDescription">
+            <summary>
+            If the diagnostic tool is active.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.CustomReports">
+            <summary>
+            The heading title for the stored procedure view.
+            </summary>
+            <value>Custom report</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.RunReport">
+            <summary>
+            The text of the button that executes the custom report
+            </summary>
+            <value>Generate report</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.Results">
+            <summary>
+            The results heading in the custom reports view.
+            </summary>
+            <value>Results</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.Operations">
+            <summary>
+            The heading of the Operations View.
+            </summary>
+            <value>Operations</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.Filter">
+            <summary>
+            The text for the button that filteres the operations on start and end date.
+            </summary>
+            <value>Filter</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.NPlusOneViewTitle">
+            <summary>
+            The title for the N+1 query problems view
+            </summary>
+            <value>N+1 Query Problems</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.DatabaseQueries">
+            <summary>
+            The title of the details window for each operation in the listed in the Operations view
+            </summary>
+            <value>Database queries</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.BackToReport">
+            <summary>
+            The label of the hyperlink that closes the detail window.
+            </summary>
+            <value>Back to Report</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.NoRecords">
+            <summary>
+            The text to show when there are no results for the specified view.
+            </summary>
+            <value>No recrods to display.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.UtcDates">
+            <summary>
+            The clarification text for dates.
+            </summary>
+            <value>All dates are in UTC format.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.SelectReport">
+            <summary>
+            The label of the dropdown when selecting a custom report.
+            </summary>
+            <value>Select report</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.RequiredField">
+            <summary>
+            The text shown when a field is required and has no input.
+            </summary>
+            <value>Required field</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.RequiredNumericField">
+            <summary>
+            The text shown when a field is numeric and required.
+            </summary>
+            <value>Required numeric field</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.RequiredBooleanField">
+            <summary>
+            The text shown when a field is boolean and required.
+            </summary>
+            <value>Required boolean field</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.Miliseconds">
+            <summary>
+            The symbol for miliseconds
+            </summary>
+            <value>ms</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.NoReports">
+            <summary>
+            The message show when there are no stored procedure with the prefix in the database.
+            </summary>
+            <value>No reports are available. To create a report in the database use the prefix <b>{0}</b>yourname.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.Period">
+            <summary>
+            Period
+            </summary>
+            <value>Period</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.AlertThreshold">
+            <summary>
+            Period
+            </summary>
+            <value>Period</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.DiagnosticsDisabled">
+            <summary>
+            The description when there is a problem with the data access diagnostics tool.
+            </summary>
+            <value><b>Database diagnostics tool is disabled</b> Enable this tool in {0}</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.Error">
+            <summary>
+            The error displayed when there is a problem with the data access tool.
+            </summary>
+            <value><b>Error</b><p>{0}</p> <p>For more details look at the error log</p></value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.MakeWebsiteFasterLabel">
+            <summary>
+            Gets the make website faster label.
+            </summary>
+            <value>
+            The make website faster label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.PerformanceOptimizationsTips">
+            <summary>
+            Gets the performance optimization tips.
+            </summary>
+            <value>
+            The performance optimization tips.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.BackToDiagnostics">
+            <summary>
+            Gets the back to diagnostics.
+            </summary>
+            <value>
+            The back to diagnostics.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.PerformanceOptimizationsTipsDescription">
+            <summary>
+            Gets the performance optimization tips description.
+            </summary>
+            <value>
+            The performance optimization tips description.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.Status">
+            <summary>
+            Gets the status.
+            </summary>
+            <value>
+            The status.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.SomeIndicatorsAffectThePerformance">
+            <summary>
+            Gets some indicators affect the performance.
+            </summary>
+            <value>
+            Some indicators affect the performance.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.PerformanceIndicators">
+            <summary>
+            Gets performance indicators label.
+            </summary>
+            <value>
+            The performance indicators label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.OutputCache">
+            <summary>
+            Gets the output cache.
+            </summary>
+            <value>
+            The output cache.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.OutputCacheOff">
+            <summary>
+            Gets the output cache off.
+            </summary>
+            <value>
+            The output cache off.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ClientCache">
+            <summary>
+            Gets the client cache.
+            </summary>
+            <value>
+            The client cache.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ClientCacheOff">
+            <summary>
+            Gets the client cache OFF label.
+            </summary>
+            <value>
+            The client cache OFF label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.L2Cache">
+            <summary>
+            Gets the l2 cache.
+            </summary>
+            <value>
+            The l2 cache.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.L2CacheOff">
+            <summary>
+            Gets the l2 cache off.
+            </summary>
+            <value>
+            The l2 cache off.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ClientSideCacheForThemes">
+            <summary>
+            Gets the client side cache for themes.
+            </summary>
+            <value>
+            The client side cache for themes.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ClientSideCacheForThemesOff">
+            <summary>
+            Gets the client side cache for themes off.
+            </summary>
+            <value>
+            The client side cache for themes off.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.DebugMode">
+            <summary>
+            Gets the debug mode.
+            </summary>
+            <value>
+            The debug mode.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.DebugModeOn">
+            <summary>
+            Gets the debug mode on.
+            </summary>
+            <value>
+            The debug mode on.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.CdnImages">
+            <summary>
+            Gets the CDN libraries.
+            </summary>
+            <value>
+            The CDN libraries.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.CdnImagesOff">
+            <summary>
+            Gets the CDN libraries off.
+            </summary>
+            <value>
+            The CDN libraries off.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.CdnOff">
+            <summary>
+            Gets the CDN off.
+            </summary>
+            <value>
+            The CDN off.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.CombineScriptsFrontEnd">
+            <summary>
+            Gets the combine scripts front end.
+            </summary>
+            <value>
+            The combine scripts front end.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.CombineScriptsBackEnd">
+            <summary>
+            Gets the combine scripts back end.
+            </summary>
+            <value>
+            The combine scripts back end.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.CombineStyleSheets">
+            <summary>
+            Gets the combine style sheets.
+            </summary>
+            <value>
+            The combine style sheets.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ScriptsCombiningFrontEndOff">
+            <summary>
+            Gets the scripts combining front end off.
+            </summary>
+            <value>
+            The scripts combining front end off.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ScriptsCombiningBackEndOff">
+            <summary>
+            Gets the scripts combining back end off.
+            </summary>
+            <value>
+            The scripts combining back end off.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.CombineStyleSheetsOff">
+            <summary>
+            Gets the combine style sheets off.
+            </summary>
+            <value>
+            The combine style sheets off.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.Tips">
+            <summary>
+            Gets the tips.
+            </summary>
+            <value>
+            The tips.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.WhatElseCanBeOptimized">
+            <summary>
+            Gets the what else can be optimized.
+            </summary>
+            <value>
+            The what else can be optimized.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.DeactivateUnusedModulesAndServices">
+            <summary>
+            Gets the deactivate unused modules and services.
+            </summary>
+            <value>
+            The deactivate unused modules and services.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.MinifyJavaScriptFiles">
+            <summary>
+            Gets the minify java script files.
+            </summary>
+            <value>
+            The minify java script files.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.UsingRelatedData">
+            <summary>
+            Gets the using related data.
+            </summary>
+            <value>
+            The using related data.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.FindMoreTips">
+            <summary>
+            Gets the find more tips.
+            </summary>
+            <value>
+            The find more tips.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.CacheForPages">
+            <summary>
+            Gets the CacheForPages label.
+            </summary>
+            <value>
+            The CacheForPages label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.NotCachedPages">
+            <summary>
+            Gets the label of NotCachedPages.
+            </summary>
+            <value>
+            The label of NotCachedPages.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.Under">
+            <summary>
+            Gets the Under label.
+            </summary>
+            <value>
+            The Under label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.OnTopLevel">
+            <summary>
+            Gets the OnTopLevel label.
+            </summary>
+            <value>
+            The OnTopLevel label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.CacheForLibraries">
+            <summary>
+            Gets the CacheForLibraries label.
+            </summary>
+            <value>
+            The CacheForLibraries label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.NotCachedLibraries">
+            <summary>
+            Gets the label of NotCachedLibraries label.
+            </summary>
+            <value>
+            The label of NotCachedLibraries label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.SslOffloading">
+            <summary>
+            Gets the label of SSL ofloading.
+            </summary>
+            <value>
+            The label of SSL ofloading.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.SslOffloadingOff">
+            <summary>
+            Gets the label of SSL ofloading OFF.
+            </summary>
+            <value>
+            The label of SSL ofloading OFF.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.SslOffloadingDescription">
+            <summary>
+            Gets SSL ofloading description.
+            </summary>
+            <value>
+            The SSL ofloading description.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.StaticCompression">
+            <summary>
+            Gets the static compression label.
+            </summary>
+            <value>
+            The static compression label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.StaticCompressionOff">
+            <summary>
+            Gets the static compression OFF label.
+            </summary>
+            <value>
+            The static compression OFF label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.StaticCompressionDescription">
+            <summary>
+            Gets the static compression description.
+            </summary>
+            <value>
+            The static compression description.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.DynamicCompression">
+            <summary>
+            Gets the dynamic compression label.
+            </summary>
+            <value>
+            The dynamic compression label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.DynamicCompressionOff">
+            <summary>
+            Gets the Dynamic compression OFF label.
+            </summary>
+            <value>
+            The Dynamic compression OFF label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.DynamicCompressionDescription">
+            <summary>
+            Gets the dynamic compression description.
+            </summary>
+            <value>
+            The dynamic compression description.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.OutputCacheDescription">
+            <summary>
+            Gets the output cache description.
+            </summary>
+            <value>
+            The output cache description.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ClientCacheDescription">
+            <summary>
+            Gets the client cache description.
+            </summary>
+            <value>
+            The client cache description.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.L2CacheDescription">
+            <summary>
+            Gets the l2 cache description.
+            </summary>
+            <value>
+            The l2 cache description.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ClientSideCacheForThemesDescription">
+            <summary>
+            Gets the client side cache for themes description.
+            </summary>
+            <value>
+            The client side cache for themes description.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.CacheForPagesDescription">
+            <summary>
+            Gets the cache for pages description.
+            </summary>
+            <value>
+            The cache for pages description.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.CacheForLibrariesDescription">
+            <summary>
+            Gets the cache for libraries description.
+            </summary>
+            <value>
+            The cache for libraries description.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.DebugModeDescription">
+            <summary>
+            Gets the debug mode description.
+            </summary>
+            <value>
+            The debug mode description.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.CdnForImagesDescription">
+            <summary>
+            Gets the CDN for libraries description.
+            </summary>
+            <value>
+            The CDN for libraries description.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ScriptsCombiningFrontEndDescription">
+            <summary>
+            Gets the scripts combining front end description.
+            </summary>
+            <value>
+            The scripts combining front end description.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ScriptsCombiningBackEndDescription">
+            <summary>
+            Gets the scripts combining back end description.
+            </summary>
+            <value>
+            The scripts combining back end description.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.CombineStyleSheetsDescription">
+            <summary>
+            Gets the combine style sheets description.
+            </summary>
+            <value>
+            The combine style sheets description.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.Pages">
+            <summary>
+            Gets the pages.
+            </summary>
+            <value>
+            The pages.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.Providers">
+            <summary>
+            Gets the providers.
+            </summary>
+            <value>
+            The providers.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.Libraries">
+            <summary>
+            Gets the libraries.
+            </summary>
+            <value>
+            The libraries.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.Cache">
+            <summary>
+            Gets the cache label.
+            </summary>
+            <value>
+            The cache label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.RssCache">
+            <summary>
+            Gets the RSS cache label.
+            </summary>
+            <value>
+            The RSS cache label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.RssCacheOff">
+            <summary>
+            Gets the RSS cache OFF label.
+            </summary>
+            <value>
+            The RSS cache label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.RssCacheDescription">
+            <summary>
+            Gets the RSS cache description.
+            </summary>
+            <value>
+            The RSS cache description.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.PagesPermissionsCache">
+            <summary>
+            Gets the Pages Permissions Cache label.
+            </summary>
+            <value>
+            The Pages Permissions Cache label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.PagesPermissionsCacheOff">
+            <summary>
+            Gets the Pages Permissions Cache OFF label.
+            </summary>
+            <value>
+            The Pages Permissions Cache OFF label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.PagesPermissionsCacheDescription">
+            <summary>
+            Gets the Pages Permissions Cache description.
+            </summary>
+            <value>
+            The Pages Permissions Cache description.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.Site">
+            <summary>
+            Gets the Site label.
+            </summary>
+            <value>
+            The Site label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ClientCacheLib">
+            <summary>
+            Gets the "client cache" label.
+            </summary>
+            <value>
+            The "client cache" label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ServerCacheLib">
+            <summary>
+            Gets the "server cache" label.
+            </summary>
+            <value>
+            The "server cache" label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.ClientAndServerCacheLib">
+            <summary>
+            Gets the "client and server cache" label.
+            </summary>
+            <value>
+            The "client and server cache" label.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.DiagnosticsLabels.Library">
+            <summary>
+            Gets the library label.
+            </summary>
+            <value>
+            The library label.
+            </value>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.DataAccessProfiler.Initialize(System.Collections.Specialized.NameValueCollection)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.DataAccessProfiler.Load">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.DataAccessProfiler.Unload">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.DataAccessProfiler.Reload(System.Collections.Specialized.NameValueCollection)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.DataAccessProfiler.Install(System.Version)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.DataAccessProfiler.Uninstall">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.DataAccessProfiler.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.DataAccessProfiler.GetReader">
+            <summary>
+            Gets the result reader.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.DataAccessProfiler.LoadProfilingFactory(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Gets configured or default IDataAccessProfilingFactory instance.
+            </summary>
+            <param name="config">The config.</param>
+            <returns>The profiling factory based on the configuration or the default one.</returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.DataAccessProfiler.EnableBackendProfiling">
+            <summary>
+            Gets or sets the if the enable backend profiling.
+            </summary>
+            <value>The enable backend profiling.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.DataAccessProfiler.LogOperationsWithNoEvents">
+            <summary>
+            Gets or sets a flag whether to log or not the operations with no data events.
+            </summary>
+            <value>The log operations with no events.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.QueryLog.StatementId">
+            <summary>
+            Non-persistent property!
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.DataAccessDataAccessEventLogger">
+            <summary>
+            Logger for Data Access activity events that uses Data Access for persistence.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.DataAccessDataAccessEventReader">
+            <summary>
+            Reader that has a source Data Access and returns events for Data Access activity.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.Web.UI.DiagnosticsToolError">
+            <summary>
+            Displays report information for DataAccess activities.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.Web.UI.DiagnosticsToolError.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.Web.UI.DiagnosticsToolError"/> class.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.Web.UI.DataAccessReportView">
+            <summary>
+            Displays report information for DataAccess activities.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.Web.UI.DataAccessReportView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.Web.UI.DataAccessReportView"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.DataAccess.Web.UI.DataAccessReportView.EventReader">
+            <summary>
+            Gets or sets the event reader.
+            </summary>
+            <value>The event reader.</value>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Request.GetCompressionSettings">
+            <summary>
+            Request DTO for getting the web application compression settings.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Request.GetPerformanceTips">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Request.GetScriptsCombining">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Request.GetCdnImages">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Request.GetDebugMode">
+            <summary>
+            Request DTO for getting debug mode
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Request.GetCacheStatuses">
+            <summary>
+            Request DTO for getting cache statuses
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Request.GetSites">
+            <summary>
+            Request DTO for getting application sites.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Request.GetSites.ForContentType">
+            <summary>
+            Gets or sets the content type for which the sites should be retrieved.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Request.GetSslOffloadingStatus">
+            <summary>
+            Request DTO for getting the SSL offloading stastus
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Request.GetUncachedLibraries">
+            <summary>
+            Request DTO for getting the uncached libraries
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Request.GetUncachedLibraries.CountOnly">
+            <summary>
+            Gets or sets whether the service should return the count only.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Request.GetUncachedLibraries.Skip">
+            <summary>
+            Gets or sets the number of items to skip.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Request.GetUncachedLibraries.Take">
+            <summary>
+            Gets or sets the number of items to take.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Request.GetUncachedLibraries.SiteId">
+            <summary>
+            Gets or sets the site id filter.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Request.GetUncachedPages">
+            <summary>
+            Request DTO for uncached pages
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Request.GetUncachedPages.CountOnly">
+            <summary>
+            Gets or sets whether the service should return only count.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Request.GetUncachedPages.Skip">
+            <summary>
+            Gets or sets the number of items to skip.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Request.GetUncachedPages.Take">
+            <summary>
+            Gets or sets the number of items to take.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Request.GetUncachedPages.SiteRootNodeId">
+            <summary>
+            Gets or sets the id of the root node associated with a site.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.CompressionSettingsProxy">
+            <summary>
+            Response DTO for the compression settings
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.CompressionSettingsProxy.DoStaticCompression">
+            <summary>
+            Gets or sets whether static compression in enabled.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.CompressionSettingsProxy.DoDynamicCompression">
+            <summary>
+            Gets or sets whether dynamic compression is enabled.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.PageProxy">
+            <summary>
+            Response DTO for transfering page information.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.PageProxy.Title">
+            <summary>
+            Gets or sets the page title.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.PageProxy.ParentPagesTitles">
+            <summary>
+            Gets or sets the titles of eventual paren pages.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.PageProxy.WorkflowStatus">
+            <summary>
+            Gets or sets the workflow status.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.PageProxy.HasDraftNewerThanPublished">
+            <summary>
+            Gets or sets whether a published page has a draft newer than published.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.MediaLibraryProxy">
+            <summary>
+            Response DTO for the media libraries (Image, Video, Document)
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.MediaLibraryProxy.Title">
+            <summary>
+            Gets or sets the media library title
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.MediaLibraryProxy.LibraryType">
+            <summary>
+            Gets or sets the media libarary type
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.MediaLibraryProxy.CacheProfileType">
+            <summary>
+            Gets or sets the cache profile type
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.SiteProxy">
+            <summary>
+            Response DTO for application sites
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.SiteProxy.Title">
+            <summary>
+            Gets or sets the site title.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.SiteProxy.SiteMapRootNodeId">
+            <summary>
+            Gets or sets the id which relates to the root node of the site.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.SiteProxy.Id">
+            <summary>
+            Gets or sets the site ID.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.SslOffloadingProxy">
+            <summary>
+            Respose DTO for SSL offloading
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.SslOffloadingProxy.Enabled">
+            <summary>
+            Gets or sets whether the SSL offloading is enabled.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.UncachedLibrariesProxy">
+            <summary>
+            Response DTO for uncached libraries.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.UncachedLibrariesProxy.NotCachedLibraries">
+            <summary>
+            Gets or sets a collection of uncached libraries.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.UncachedLibrariesProxy.CountAllSites">
+            <summary>
+            Gets or sets the total number of uncached libraries for all sites.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.UncachedLibrariesProxy.CountCurrentSite">
+            <summary>
+            Gets or sets the total number of uncached libraries for the current site.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.UncachedPagesProxy">
+            <summary>
+            Response DTO for uncached pages.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.UncachedPagesProxy.NotCachedPages">
+            <summary>
+            Gets or sets a collection of uncached pages.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.UncachedPagesProxy.CountAllSites">
+            <summary>
+            Gets or sets the number of not cached pages for all sites.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.Services.Dto.Response.UncachedPagesProxy.CountCurrentSite">
+            <summary>
+            Gets or sets the number of not cached pages for a particualr site.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.UI.PerformanceTipsView.AddAppVirtualPath(System.String)">
+            <summary>
+            Adds the application virtual path.
+            </summary>
+            <param name="path">The path.</param>
+            <returns>Real URL with application virtual path.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.UI.PerformanceTipsView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.UI.PerformanceTipsView"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Tools.PerformanceTips.Web.UI.PerformanceTipsView.LayoutTemplatePath">
+            <summary>
+            Gets the layout template path
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Web.UI.DiagnosticsModuleCommands">
+            <summary>
+            The sidebar that contains the links for switching between different views (reports) in the DiagnosticsModulePanel.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Web.UI.DiagnosticsModuleCommands.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.Diagnostics.Web.UI.DiagnosticsModuleCommands"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Web.UI.DiagnosticsModuleCommands.ControlPanel">
+            <summary>
+            Reference to the control panel tied to the command panel instance.
+            </summary>
+            <remarks>
+            This property is used for communication between the command panel and its control
+            panel.
+            </remarks>
+            <example>
+            You can refer to <see cref="T:Telerik.Sitefinity.Web.UI.Backend.ICommandPanel">ICommandPanel</see> interface for more
+            complicated example implementing the whole
+            <see cref="T:Telerik.Sitefinity.Web.UI.Backend.ICommandPanel">ICommandPanel</see> interface.
+            </example>
+            <value></value>
+        </member>
+        <member name="T:Telerik.Sitefinity.Diagnostics.Web.UI.DiagnosticsModulePanel">
+            <summary>
+            The diagnostics module basic view.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.Diagnostics.Web.UI.DiagnosticsModulePanel.CreateCustomCommandPanels(System.String,System.Collections.Generic.IList{Telerik.Sitefinity.Web.UI.Backend.ICommandPanel})">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.Diagnostics.Web.UI.DiagnosticsModulePanel.LayoutTemplatePath">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

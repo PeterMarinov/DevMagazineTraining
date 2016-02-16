@@ -1,0 +1,364 @@
+/* line 1, ../sass/_typography.scss */
+body {
+  font: 16px/1.3 Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+/* line 6, ../sass/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', Arial, sans-serif;
+  letter-spacing: -0.04em;
+}
+/* line 10, ../sass/_typography.scss */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #000;
+}
+/* line 13, ../sass/_typography.scss */
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+  text-decoration: none;
+}
+
+/* line 19, ../sass/_typography.scss */
+h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+/* line 24, ../sass/_typography.scss */
+h2 {
+  font-size: 44px;
+  margin-bottom: 25px;
+}
+
+/* line 29, ../sass/_typography.scss */
+h3 {
+  font-size: 28px;
+  margin-top: 0;
+}
+
+/* line 34, ../sass/_typography.scss */
+h4 {
+  font-size: 25px;
+  color: #999;
+}
+
+/* line 39, ../sass/_typography.scss */
+h5 {
+  margin-top: 35px;
+  font-size: 22px;
+}
+
+/* line 44, ../sass/_typography.scss */
+h6 {
+  font-size: 18px;
+}
+
+/* line 48, ../sass/_typography.scss */
+a {
+  color: #5573c9;
+}
+
+/* line 52, ../sass/_typography.scss */
+ul {
+  margin-bottom: 45px;
+}
+
+/* line 56, ../sass/_typography.scss */
+li {
+  font-size: 15px;
+  padding-top: 4px;
+  padding-bottom: 7px;
+}
+
+/* line 62, ../sass/_typography.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 67, ../sass/_typography.scss */
+hr {
+  border-top: 1px solid #d6d6d6;
+}
+
+/* line 2, ../sass/_layout.scss */
+.section--gray {
+  background-color: #ebebec;
+}
+
+/* line 6, ../sass/_layout.scss */
+.section--border .container {
+  border-bottom: 1px solid #d6d6d6;
+}
+
+/* line 11, ../sass/_layout.scss */
+.container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+/* line 18, ../sass/_layout.scss */
+.row {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+/* line 22, ../sass/_layout.scss */
+.row ~ .row {
+  margin-top: 30px;
+}
+
+/* line 27, ../sass/_layout.scss */
+.row--border {
+  border-bottom: 1px solid #d6d6d6;
+}
+
+@font-face {
+  font-family: "icon-font";
+  src: url("../fonts/icon-font-f6fda056118430355b73e822e3a6f0f5.eot");
+  src: url("../fonts/icon-font-f6fda056118430355b73e822e3a6f0f5.eot?#iefix") format("embedded-opentype"), url("../fonts/icon-font-f6fda056118430355b73e822e3a6f0f5.svg?#icon-font") format("svg"), url("../fonts/icon-font-f6fda056118430355b73e822e3a6f0f5.woff") format("woff"), url("../fonts/icon-font-f6fda056118430355b73e822e3a6f0f5.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 17, ../sass/modules/_icon-font.scss */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "icon-font";
+  vertical-align: middle;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 34, ../sass/modules/_icon-font.scss */
+.icon-facebook:before {
+  content: "\b1";
+}
+
+/* line 35, ../sass/modules/_icon-font.scss */
+.icon-google:before {
+  content: "\b2";
+}
+
+/* line 36, ../sass/modules/_icon-font.scss */
+.icon-linkedin:before {
+  content: "\b3";
+}
+
+/* line 37, ../sass/modules/_icon-font.scss */
+.icon-twitter:before {
+  content: "\b4";
+}
+
+/* line 1, ../sass/modules/_glyph.scss */
+.glyph-bordered {
+  border: .2em solid inherit;
+  border-radius: 50%;
+  padding: 0.4em;
+  font-size: 0.8em;
+}
+
+/* line 8, ../sass/modules/_glyph.scss */
+.glyph-bordered.glyphicon-chevron-right {
+  margin-right: 0.4em;
+}
+
+/* line 12, ../sass/modules/_glyph.scss */
+.glyph-bordered.glyphicon-chevron-down:before {
+  margin-left: -1px;
+}
+
+/* line 1, ../sass/modules/_Navbar.scss */
+.navbar-default {
+  background-color: #596c9b;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  margin-bottom: 0;
+}
+/* line 8, ../sass/modules/_Navbar.scss */
+.navbar-default .navbar-nav {
+  font-size: 0;
+}
+/* line 11, ../sass/modules/_Navbar.scss */
+.navbar-default .navbar-nav > li {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+/* line 15, ../sass/modules/_Navbar.scss */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #fff;
+}
+/* line 21, ../sass/modules/_Navbar.scss */
+.navbar-default .navbar-nav > li.active > a {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+/* line 25, ../sass/modules/_Navbar.scss */
+.navbar-default .navbar-nav > li.active > a:hover, .navbar-default .navbar-nav > li.active > a:focus {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+/* line 32, ../sass/modules/_Navbar.scss */
+.navbar-default .navbar-nav > li > a {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #fff;
+  font-size: 20px;
+  transition: font-size .1s linear, padding-top .1s linear, padding-bottom .1s linear, background-color .15s ease-in;
+}
+/* line 46, ../sass/modules/_Navbar.scss */
+.navbar-default .navbar-brand {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #fff;
+  font-size: 25px;
+  font-family: "Roboto Light", Arial;
+  height: auto;
+  transition: font-size .1s linear, padding-top .1s linear, padding-bottom .1s linear, background-color .15s ease-in;
+}
+/* line 58, ../sass/modules/_Navbar.scss */
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #fff;
+}
+/* line 65, ../sass/modules/_Navbar.scss */
+.navbar-default.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  margin-top: 0;
+  transform: translateZ(0);
+}
+/* line 75, ../sass/modules/_Navbar.scss */
+.navbar-default.is-fixed .navbar-nav > li > a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+/* line 82, ../sass/modules/_Navbar.scss */
+.navbar-default.is-fixed .navbar-brand {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 89, ../sass/modules/_Navbar.scss */
+.navbar-nav {
+  float: none;
+  text-align: center;
+}
+/* line 93, ../sass/modules/_Navbar.scss */
+.navbar-nav > li {
+  float: none;
+  display: inline-block;
+}
+
+/* line 99, ../sass/modules/_Navbar.scss */
+.fixed-dummy {
+  height: 50px;
+}
+
+/* line 2, ../sass/modules/_Author.scss */
+.Author--small .media-heading {
+  font-weight: bold;
+}
+/* line 6, ../sass/modules/_Author.scss */
+.Author--small .date-created {
+  color: #999;
+}
+
+/* line 12, ../sass/modules/_Author.scss */
+.Author--header {
+  width: 770px;
+  margin: 0 auto;
+}
+/* line 17, ../sass/modules/_Author.scss */
+.Author--header .text-muted {
+  margin-bottom: 20px;
+}
+
+/* line 23, ../sass/modules/_Author.scss */
+.Author--big
+> .pull-left {
+  margin-right: 70px;
+}
+
+/* line 29, ../sass/modules/_Author.scss */
+.Author .list-unstyled {
+  margin-bottom: 25px;
+}
+
+/* line 1, ../sass/modules/_Social.scss */
+.Social {
+  text-align: center;
+}
+/* line 4, ../sass/modules/_Social.scss */
+.Social li {
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 5px;
+}
+/* line 10, ../sass/modules/_Social.scss */
+.Social a {
+  font-size: 100px;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+/* line 16, ../sass/modules/_Social.scss */
+.Social a:before {
+  color: #596c9b;
+  transition: color .15s ease-in;
+}
+/* line 24, ../sass/modules/_Social.scss */
+.Social a:hover:before, .Social a:focus:before {
+  color: #343f5a;
+}
+
+/* line 1, ../sass/modules/_Buttons.scss */
+.Btn {
+  display: inline-block;
+  padding: 16px 67px;
+  color: #fff;
+  background-color: #596c9b;
+  transition-property: background-color;
+  transition-duration: .2s;
+  transition-timing-function: ease;
+  border-radius: 50px;
+  -webkit-appearance: none;
+  font-size: 22px;
+  text-align: center;
+  text-decoration: none;
+}
+/* line 15, ../sass/modules/_Buttons.scss */
+.Btn:hover, .Btn:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #343f5a;
+}
+
+/* line 23, ../sass/modules/_Buttons.scss */
+.Btn--download-issue {
+  position: relative;
+  top: -110px;
+}
+
+/* line 28, ../sass/modules/_Buttons.scss */
+.Btn-download-issue-2 {
+  position: relative;
+  top: -30px;
+}
+
+/* line 1, ../sass/modules/_Issue.scss */
+.Issue-cover {
+  border-bottom: 1px solid #d6d6d6;
+}

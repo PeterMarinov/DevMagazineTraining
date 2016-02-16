@@ -1,0 +1,1858 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Sitefinity.MobileAppBuilder</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.Sitefinity.MobileAppBuilder.Configuration.MobileAppBuilderConfig">
+            <summary>
+            The configuration class for the mobile app builder.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Configuration.MobileAppBuilderConfig.InitializeDefaultProviders(Telerik.Sitefinity.Configuration.ConfigElementDictionary{System.String,Telerik.Sitefinity.Configuration.DataProviderSettings})">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Configuration.MobileAppBuilderConfig.IceniumUrl">
+            <summary>
+            Gets or sets the address of the icenium url. 
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Configuration.MobileAppBuilderConfig.TfisUrl">
+            <summary>
+            Gets or sets the address of the icenium ssl url. 
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Data.MobileAppBuilderFluentMapping.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Data.MobileAppBuilderFluentMapping.#ctor(Telerik.Sitefinity.Model.IDatabaseMappingContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Data.MobileAppBuilderFluentMapping.GetMapping">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.MobileAppBuilder.Data.MobileAppBuilderMetadataSource">
+            <summary>
+            A concrete implementation of the <see cref="T:Telerik.Sitefinity.Data.OA.SecuredProviderMetadataSource"/> for the module builder module.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Data.MobileAppBuilderMetadataSource.#ctor(Telerik.Sitefinity.Model.IDatabaseMappingContext)">
+            <summary>
+            Creates a new instance of the <see cref="!:ModuleBuilderMetadataSource"/> type.
+            </summary>
+            <param name="context">
+            An instance of the <see cref="T:Telerik.Sitefinity.Model.IDatabaseMappingContext"/> used to build mappings for the
+            ecommerce catalog module.
+            </param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Data.MobileAppBuilderMetadataSource.BuildCustomMappings">
+            <summary>
+            Builds the custom Telerik OpenAccess ORM mappings of the persistent classes for the module builder module.
+            </summary>
+            <returns>A collection of the <see cref="T:Telerik.Sitefinity.Model.IOpenAccessFluentMapping"/> objects.</returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderDataProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderDataProvider.GetItem(System.Type,System.Guid)">
+            <summary>
+            Gets the data item with the specified ID.
+            An exception should be thrown if an item with the specified ID does not exist.
+            </summary>
+            <param name="itemType">Type of the item.</param>
+            <param name="id">The ID of the item to return.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderDataProvider.GetItems(System.Type,System.String,System.String,System.Int32,System.Int32,System.Nullable{System.Int32}@)">
+            <summary>
+            Gets the items.
+            </summary>
+            <param name="itemType">Type of the item.</param>
+            <param name="filterExpression">The filter expression.</param>
+            <param name="orderExpression">The order expression.</param>
+            <param name="skip">The skip.</param>
+            <param name="take">The take.</param>
+            <param name="totalCount">Total count of the items that are filtered by <paramref name="filterExpression"/></param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderDataProvider.CreateMobileApplication">
+            <summary>
+            Creates the mobile application.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderDataProvider.CreateMobileApplication(System.Guid,System.String)">
+            <summary>
+            Creates the mobile application.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="applicationName">Name of the application.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderDataProvider.GetMobileApplication(System.Guid)">
+            <summary>
+            Gets the mobile application.
+            </summary>
+            <param name="id">The id.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderDataProvider.GetMobileApplications">
+            <summary>
+            Gets the mobile applications.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderDataProvider.Delete(Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication)">
+            <summary>
+            Deletes the specified mobile application.
+            </summary>
+            <param name="mobileApplication">The mobile application.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderDataProvider.GetKnownTypes">
+            <summary>
+            Get a list of types served by this manager
+            </summary>
+            <returns>An array of known types for this data provider.</returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderDataProvider.RootKey">
+            <summary>
+            Gets a unique key for each data provider base.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Data.OpenAccessMobileAppBuilderDataProvider.CreateMobileApplication">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Data.OpenAccessMobileAppBuilderDataProvider.CreateMobileApplication(System.Guid,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Data.OpenAccessMobileAppBuilderDataProvider.GetMobileApplication(System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Data.OpenAccessMobileAppBuilderDataProvider.GetMobileApplications">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Data.OpenAccessMobileAppBuilderDataProvider.Delete(Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Data.OpenAccessMobileAppBuilderDataProvider.GetMetaDataSource(Telerik.Sitefinity.Model.IDatabaseMappingContext)">
+            <summary>
+            Gets the meta data source.
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Data.OpenAccessMobileAppBuilderDataProvider.Context">
+            <summary>
+            Gets or sets the OpenAccess context. Alternative to Database.
+            </summary>
+            <value>The context.</value>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager"/> class.
+            </summary>
+            <param name="providerName">Name of the provider.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager"/> class.
+            </summary>
+            <param name="providerName">Name of the provider.</param>
+            <param name="transactionName">Name of the transaction.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager.GetManager">
+            <summary>
+            Gets a new instance of the <see cref="!:ModuleBuilderManager"/> with the default provider.
+            </summary>
+            <returns>An instance of the <see cref="!:ModuleBuilderManager"/>.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager.GetManager(System.String)">
+            <summary>
+            Gets a new instance of the <see cref="!:ModuleBuilderManager"/> with the specified provider.
+            </summary>
+            <param name="providerName">
+            Name of the provider with which the manager ought to be initialized.
+            </param>
+            <returns>An instance of the <see cref="!:CatalogManager"/>.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager.GetManager(System.String,System.String)">
+            <summary>
+            Gets a new instance of the <see cref="!:ModuleBuilderManager"/> with specified provider name
+            and transaction name.
+            </summary>
+            <param name="providerName">
+            Name of the provider with which the manager ought to be initialized.
+            </param>
+            <param name="transactionName">
+            Name of the transaction in which the manager ought to be participate.
+            </param>
+            <returns>An instance of the <see cref="!:CatalogManager"/>.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager.CreateMobileApplication">
+            <summary>
+            Creates the mobile application.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager.CreateMobileApplication(System.Guid,System.String)">
+            <summary>
+            Creates the mobile application.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="applicationName">Name of the application.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager.CreateMobileApplication(System.Guid)">
+            <summary>
+            Creates the mobile application.
+            </summary>
+            <param name="id">The id.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager.GetMobileApplication(System.Guid)">
+            <summary>
+            Gets the mobile application.
+            </summary>
+            <param name="id">The id.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager.GetMobileApplications">
+            <summary>
+            Gets the mobile applications.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager.Delete(Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication)">
+            <summary>
+            Deletes the specified mobile app.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager.MobileApplicationExists(System.String)">
+            <summary>
+            Modules the exists.
+            </summary>
+            <param name="moduleName">Name of the module.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager.MobileApplicationExists(System.Guid)">
+            <summary>
+            Mobiles the application exists.
+            </summary>
+            <param name="mobileAppId">The mobile app id.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager.MobileApplicationExists(System.Func{Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication,System.Boolean})">
+            <summary>
+            Mobiles the app exists.
+            </summary>
+            <param name="verification">The verification.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager.DefaultProviderDelegate">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager.ModuleName">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderManager.ProvidersSettings">
+            <inheritdoc />
+        </member>
+        <member name="F:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderModule.MobileAppBuilderServiceUrl">
+            <summary>
+            Relative URL of the mobile app builder web service
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderModule.MobileAppServiceUrl">
+            <summary>
+            Relative URL of the mobile app web service
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderModule.Initialize(Telerik.Sitefinity.Services.ModuleSettings)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderModule.Install(Telerik.Sitefinity.Abstractions.SiteInitializer)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderModule.GetVirtualPaths">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderModule.Uninstall(Telerik.Sitefinity.Abstractions.SiteInitializer)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderModule.Upgrade(Telerik.Sitefinity.Abstractions.SiteInitializer,System.Version)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderModule.GetModuleConfig">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderModule.LandingPageId">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderModule.Managers">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderNodeFilter.IsNodeAccessPrevented(Telerik.Sitefinity.Web.PageSiteNode)">
+            <summary>
+            Execute custom logic to optionally prevent access to a page node
+            </summary>
+            <param name="pageNode">Sitefinity page node corresponding to the sitemap node</param>
+            <returns>
+            True if we want to mark the node as inaccessible, or false if we do not want to hide the node.
+            </returns>
+            <remarks>
+            Executed by Sitefinity's sitemap provider after the security engine determines that
+            the node is accessible.
+            Calling this method will be skipped if its result is cached.
+            </remarks>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.MobileAppsTitle">
+            <summary>
+            Title of the mobile applications group page
+            </summary>
+            <value>Mobile app builder</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.MobileAppsModuleDescription">
+            <summary>
+            Description of the mobile applications group page
+            </summary>
+            <value>Create mobile apps based on Sitefinity modules (News, Blogs, Events, etc. or modules created with Module builder).</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.MobileAppsModuleUrlName">
+            <summary>
+            UrlName of the mobile applications group page
+            </summary>
+            <value>mobile-app-builder</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.AppName">
+            <summary>
+            phrase: App name
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.BasedOn">
+            <summary>
+            phrase: Based on...
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.SelectAModule">
+            <summary>
+            phrase: - Select a module -
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.Provider">
+            <summary>
+            word: Provider
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.TheAppAllows">
+            <summary>
+            phrase: The app allows...
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.AllowReadingOnly">
+            <summary>
+            phrase: Reading content only
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.AllowCrud">
+            <summary>
+            phrase: Reading, creating, editing and deleting content
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.UserPermissionsControl">
+            <summary>
+            phrase: User permissions will control these operations
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.AppIcon">
+            <summary>
+            phrase: App icon
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.Continue">
+            <summary>
+            word: Continue
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.Cancel">
+            <summary>
+            word: Cancel
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.RegularExpressionErrorMessage">
+            <summary>
+            phrase: App name contains invalid characters. Please use: letters, numbers, spaces and _.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.NameCannotBeEmpty">
+            <summary>
+            phrase: Mobile app name cannot be empty
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.SelectBasedOnModuleError">
+            <summary>
+            phrase: Please select based on module
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.IceniumUsernameCannotBeEmpty">
+            <summary>
+            phrase: Username cannot be empty!
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.IceniumPasswordCannotBeEmpty">
+            <summary>
+            phrase: Password cannot be empty!
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.MobileAppBuilder">
+            <summary>
+            phrase: Mobile app builder
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.NoAppsCreatedYet">
+            <summary>
+            phrase: No apps have been created yet
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.CreateFirstMobileApp">
+            <summary>
+            phrase: Create your first mobile app
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.CreateAnApp">
+            <summary>
+            phrase: Create an app
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.HeaderAppStatus">
+            <summary>
+            phrase: APP / STATUS
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.HeaderBasedOnModule">
+            <summary>
+            phrase: BASED ON MODULE
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.HeaderActions">
+            <summary>
+            phrase: ACTIONS
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.HeaderDateCreated">
+            <summary>
+            phrase: DATE CREATED
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.BackToMobileAppBuilder">
+            <summary>
+            phrase: Back to Mobile app builder
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.CreateAMobileApp">
+            <summary>
+            phrase: Create a mobile app
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.EditAMobileApp">
+            <summary>
+            phrase: Edit a mobile app
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.HowToGetAppOnMyPhone">
+            <summary>
+            phrase: How to get this app on my phone?
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.HowToGetAppOnMyPhoneDescr">
+            <summary>
+            phrase: If you want to use a module with the same fields and settings in other projects, you can import exported .zip file there.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.HowToUseApps">
+            <summary>
+            phrase: How to use apps?
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.HowToUseAppsDescrLine1">
+            <summary>
+            phrase: Download the app from the respective marketplace for each platform, and run it.
+            </summary>
+            <value>You need to have Sitefinity Box installed on your phone in order to use all apps created here.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.HowToUseAppsDescrLine2">
+            <summary>
+            phrase: Once the application is up and running you will be prompted to enter the app key of your Everlive app and you are done!
+            </summary>
+            <value>Download the Sitefinity Box app from the respective marketplace for each platform</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.HowToUseAppsDescrLine3">
+            <summary>
+            phrase: Now you can sign up, start taking pictures, and sharing moments that will be automatically uploaded to cloud.
+            </summary>
+            <value>Once the Sitefinity Box is installed, login with your account you use in this site</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.HowToUseAppsDescrLine4">
+            <summary>
+            phrase: You can easily manage the generated content of your app in the Everlive Portal or push content to the device by creating it in the Portal itself.
+            </summary>
+            <value>All apps created here will be automatically available in your Sitefinity Box</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.Loading">
+            <summary>
+            phrase: Loading...
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.DeleteMobileApplication">
+            <summary>
+            phrase: Delete mobile application
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.ConfirmMobileAppDeleteMessage">
+            <summary>
+            phrase: Are you sure you want to delete {0} mobile application?
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.PublishInSitefinityBox">
+            <summary>
+            phrase: Publish in Sitefinity Box
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.PublishInSitefinityBoxExample">
+            <summary>
+            phrase: To view this app in action without having to deploy it to an app store, use this option to push the app to Sitefinity Box, and start managing app content right away.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.UnpublishFromSitefinityBox">
+            <summary>
+            phrase: Unpublish from Sitefinity Box
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.Or">
+            <summary>
+            phrase: Or...
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.ModifyAppInIcenium">
+            <summary>
+            phrase: Modify the app in AppBuilder
+            </summary>
+            <value>Modify the app in AppBuilder</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.ModifyAppInIceniumExample">
+            <summary>
+            phrase: To modify your generated app in an Integrated Cloud Environment (ICE), select this option that will automatically push the application to AppBuilder.
+            </summary>
+            <value>To modify your generated app in an Integrated Cloud Environment (ICE), select this option that will automatically push the application to AppBuilder.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.DownloadAppAsZip">
+            <summary>
+            phrase: Download the app as ZIP file
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.DownloadAppAsZipExample">
+            <summary>
+            phrase: To modify your generated app in any development environment, use this option and start developing your app in your favourite IDE.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.BasedOnWithColon">
+            <summary>
+            phrase: Based on:
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.EditAppProperties">
+            <summary>
+            phrase: Edit app properties
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.Delete">
+            <summary>
+            word: Delete
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.PublishToSfBoxSuccessMessage">
+            <summary>
+            word: The app is succesfully published to Sitefinity Box
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.PublishToSfBoxErrorMessage">
+            <summary>
+            word: There was error publishing the app to Sitefinity Box
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.UploadedToIceniumSuccessMessage">
+            <summary>
+            word: The app is successfully uploaded to AppBuilder
+            </summary>
+            <value>The app is successfully uploaded to AppBuilder</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.HowToHaveAppOnMyPhone">
+            <summary>
+            phrase: How to have this app on my phone?
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.HowToHaveAppOnMyPhoneDescriptionLine1">
+            <summary>
+            phrase: A. I have Sitefinity Box installed on my phone
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.HowToHaveAppOnMyPhoneDescriptionLine2">
+            <summary>
+            phrase: Just open the Sitefinity Box and this app will be automatically downloaded there
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.HowToHaveAppOnMyPhoneDescriptionLine3">
+            <summary>
+            phrase: B. I don't have Sitefinity Box installed on my phone
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.HowToHaveAppOnMyPhoneDescriptionLine4">
+            <summary>
+            phrase: 1. Download the Sitefinity Box app from the respective marketplace for each platform
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.HowToHaveAppOnMyPhoneDescriptionLine5">
+            <summary>
+            phrase: 2. Once the Sitefinity Box is installed, login with your account you use in this site
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.HowToHaveAppOnMyPhoneDescriptionLine6">
+            <summary>
+            phrase: 3. All apps created here will be automatically available in your Sitefinity Box
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.ScanThisCode">
+            <summary>
+            phrase: Scan this code to download Sitefinity Box
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.SitefinityBoxQRCodeAlt">
+            <summary>
+            phrase: Sitefinity Box QR Code
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.TelerikUsername">
+            <summary>
+            phrase: Telerik username
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.TelerikPassword">
+            <summary>
+            phrase: Telerik password
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.ForgottenPassword">
+            <summary>
+            phrase: Forgotten password
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.CreateTelerikAccount">
+            <summary>
+            phrase: Create Telerik account
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.SendToIcenium">
+            <summary>
+            phrase: Send to AppBuilder
+            </summary>
+            <value>Send to AppBuilder</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.Save">
+            <summary>
+            word: Save
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.Change">
+            <summary>
+            word: Change
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.SelectAnIcon">
+            <summary>
+            phrase: Select an icon
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.SendAppToIceniumErrorNotLoggedIn">
+            <summary>
+            phrase: You are not logged in AppBuilder. Use your Telerik account to login.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.SendAppToIceniumErrorUnauthorized">
+            <summary>
+            phrase: The username or password is incorrect
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.SendAppToIceniumErrorSubscriptionExpired">
+            <summary>
+            phrase: Your AppBuilder subscription has expired. Contact your administrator for details.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.SendAppToIceniumErrorAppAlreadyExists">
+            <summary>
+            phrase: An application with this name already exists in your AppBuilder account
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.SendAppToIceniumErrorUnknownError">
+            <summary>
+            phrase: We are unable to process your request due to an unknown error. Please, try again.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.SendAppToIceniumErrorAppNotFound">
+            <summary>
+            phrase: The mobile application you have selected does not exist anymore. Please, choose another one.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppBuilderResources.SendAppToIceniumErrorAppNotValid">
+            <summary>
+            phrase: The mobile application you are trying to export is not valid. Try exporting it again or contact your administrator.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.DomainConfigHelper">
+            <summary>
+            Helper class for creating domain configuration
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.DomainConfigHelper.PopulateEverliveSettings(Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.EverliveSettings@)">
+            <summary>
+            Populates the everlive connection settings.
+            </summary>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.EverliveSettings">
+            <summary>
+            Determines the settings for everlive connection
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.EverliveSettings.EverliveServiceUrl">
+            <summary>
+            Gets or sets the everlive service URL.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.EverliveSettings.EverliveServiceSchema">
+            <summary>
+            Gets or sets the everlive service schema.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.EverliveSettings.EverliveRelyingParty">
+            <summary>
+            Gets or sets the everlive relying party.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileApp.MobileAppLogger.Write(System.Object)">
+            <summary>
+            Writes message using MobileApplication configuration policy
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileApp.MobileAppLogger.WriteFormat(System.String,System.Object[])">
+            <summary>
+            Writes message in specified format
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileApp.MobileAppLogger.WriteException(Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppExceptionModel)">
+            <summary>
+            Logs formatted message from MobileAppExceptionModel
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.ChoiceOptionContext">
+            <summary>
+            This class represents the options of a specific choice field.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.ChoiceOptionContext.Text">
+            <summary>
+            Gets or sets the text of the option.
+            </summary>
+            <remarks>
+            This value will be used in the user interface to
+            display the option text.
+            </remarks>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.ChoiceOptionContext.Value">
+            <summary>
+            Gets or sets the value of the option.
+            </summary>
+            <remarks>
+            This value will be used in the user interface to
+            set the option value.
+            </remarks>
+        </member>
+        <member name="T:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileTypeContext">
+            <summary>
+            This class represents the state of the content type data created or edited through the
+            wizard for creating or editing a content type.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileTypeContext.Id">
+            <summary>
+            Gets or sets the id of the type.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileTypeContext.ModuleId">
+            <summary>
+            Gets or sets the module id.
+            </summary>
+            <value>
+            The module id.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileTypeContext.ParentTypeId">
+            <summary>
+            Gets or sets the id of the parent type .
+            </summary>
+            <value>
+            The id of the parent type.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileTypeContext.ChildTypeId">
+            <summary>
+            Gets or sets the id of the child type .
+            </summary>
+            <value>
+            The id of the child type.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileTypeContext.Name">
+            <summary>
+            Gets or sets the name of the content type.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileTypeContext.Title">
+            <summary>
+            Gets or sets the title of the content type.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileTypeContext.Fields">
+            <summary>
+            Gets or sets the fields of the content type items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileTypeContext.MainShortTextFieldName">
+            <summary>
+            Gets or sets the main short text field for the content type item.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileTypeContext.FullName">
+            <summary>
+            Gets or sets the CLR type full name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileTypeContext.BlankItem">
+            <summary>
+            Gets or sets an empty item.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext">
+            <summary>
+            This class represents the state of the content type item field created or edited through the
+            wizard for creating or editing a content type.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext.Name">
+            <summary>
+            Gets or sets the name of the field.
+            </summary>
+            <remarks>
+            This is the programmatic name and will not be displayed in the
+            user interface. This value must be unique inside of a type.
+            </remarks>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext.Title">
+            <summary>
+            Gets or sets the title of the field.
+            </summary>
+            <remarks>
+            This value will be used to in the user interface to
+            identify the field.
+            </remarks>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext.InstructionalText">
+            <summary>
+            Gets or sets the instructionalText text of the field.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext.FieldType">
+            <summary>
+            Gets or sets the type of the content type item field.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext.Choices">
+            <summary>
+            Gets or sets the choices of the type of the content type item field.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext.ChoiceRenderType">
+            <summary>
+            Gets or sets the render type of the choices field.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext.MediaType">
+            <summary>
+            Gets or sets the media type of the media field.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext.TaxonomyType">
+            <summary>
+            Gets or sets the taxonomy type of the classification field.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext.ClassificationId">
+            <summary>
+            Gets or sets the classification id of the classification field.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext.AllowMultipleItems">
+            <summary>
+            Gets or sets the value which indicates if the user can upload/select
+            more than one item
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext.AddressFieldMode">
+            <summary>
+            Gets or sets the address mode of address field
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext.IsLocalizable">
+            <summary>
+            Gets or sets a value indicating whether the field is localizable.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext.IsRequired">
+            <summary>
+            Gets or sets the value which indicates if the field is required. If true
+            field is required; otherwise field is not required.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext.MinLength">
+            <summary>
+            Gets or sets the minimum length accepted for this field.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext.MaxLength">
+            <summary>
+            Gets or sets the maximum length accepted for this field.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext.MinValue">
+            <summary>
+            Gets or sets the minimum range for number 
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext.MaxValue">
+            <summary>
+            Gets or sets the maximum range for number
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext.RegularExpression">
+            <summary>
+            Get or sets the regular expression which should be applied to the field element
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileFieldContext.NumberUnit">
+            <summary>
+            Gets or sets the number unit text
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="!:MobileAppViewModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext.Id">
+            <summary>
+            Gets or sets the identity of the mobile application.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext.ModuleId">
+            <summary>
+            Gets or sets the name of the module.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext.ModuleName">
+            <summary>
+            Gets or sets the name of the module.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext.ModuleProvider">
+            <summary>
+            Gets or sets the name of the provider for the based on module.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext.AppMode">
+            <summary>
+            Gets or sets the app mode - read only or crud.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext.AllowTracking" -->
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext.Icon">
+            <summary>
+            Gets or sets the image used as an icon.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext.Types">
+            <summary>
+            Gets or sets the the application types.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext.EverliveAPIKey">
+            <summary>
+            Gets or sets the API key for the everlive application.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext.EverliveServiceSchema">
+            <summary>
+            Gets or sets the everlive service schema.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext.EverliveServiceUrl">
+            <summary>
+            Gets or sets the everlive service URL.
+            </summary>       
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext.EverliveRealm">
+            <summary>
+            Gets or sets the everlive relying party.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext.GoogleAPIKey">
+            <summary>
+            Gets or sets the google API key.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext.EnableGeoLocationSearch">
+            <summary>
+            Gets or sets a value indicating whether the geo location search is enabled.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.MobileAppIcon">
+            <summary>
+            Name of the field of the icon. 
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.#ctor(System.Guid,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication"/> class.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="applicationName">Name of the application.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.Owner">
+            <summary>
+            Gets or sets the identity of the user that owns this item.
+            </summary>
+                    [FieldAlias("name")]
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.ModuleId">
+            <summary>
+            Gets or sets the id of the module.
+            </summary>
+            <value>
+            The id of the module.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.ModuleName">
+            <summary>
+            Gets or sets the name of the module.
+            </summary>
+            <value>
+            The name of the module.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.ModuleProvider">
+            <summary>
+            Gets or sets the name of the provider for the based on module.
+            </summary>
+            <value>
+            The name of the provider for the based on module.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.TargetedMobileDevices">
+            <summary>
+            Gets or sets the targeted mobile devices.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.AppMode">
+            <summary>
+            Gets or sets the app mode - read only or crud.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.AllowTracking" -->
+        <!-- Badly formed XML comment ignored for member "P:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.IsPublished" -->
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.Icon">
+            <summary>
+            Gets or sets the image used as an icon.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.DateCreated">
+            <summary>
+            Gets or sets the date created.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.PublicationDate">
+            <summary>
+            Gets or sets the publication date.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.Id">
+            <summary>
+            Gets the unique identity of the data item.
+            </summary>
+            <value>The id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.Transaction">
+            <summary>
+            The transaction this item belongs to or null.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.Provider">
+            <summary>
+            The data provider this item was instantiated with.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.LastModified">
+            <summary>
+            Gets or sets the time this item was last modified.
+            </summary>
+            <value>The last modified time.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication.ApplicationName">
+            <summary>
+            Gets or sets the name of the application to which this data item belongs to.
+            </summary>
+            <value>The name of the application.</value>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.Data.DeviceErrorInfo.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.MobileAppBuilder.Services.Data.DeviceErrorInfo"/> class.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.DeviceErrorInfo.Name" -->
+        <!-- Badly formed XML comment ignored for member "P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.DeviceErrorInfo.Platform" -->
+        <!-- Badly formed XML comment ignored for member "P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.DeviceErrorInfo.Uuid" -->
+        <!-- Badly formed XML comment ignored for member "P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.DeviceErrorInfo.Version" -->
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Extensions.NormalizeString(System.String)">
+            <summary>
+            Returns Normalized strings. Splits the string on Capital letters and return it as a string with empty spaces.
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Extensions.UrlEncode(System.String)">
+            <summary>
+            Encodes the Url
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Extensions.ToQueryString(System.Collections.Specialized.NameValueCollection,System.Boolean,System.Boolean)">
+            <summary>
+            Returns a QueryString
+            </summary>
+            <param name="collection">Headers</param>
+            <param name="startWithQuestionMark"></param>
+            <param name="urlEncode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Extensions.ToQueryString(System.Collections.Specialized.NameValueCollection,System.String,System.Boolean)">
+            <summary>
+            Converts a Name/Value collection to HTTP query string format.
+            </summary>
+            <param name="collection">The collection.</param>
+            <param name="leadingChar">The leading char.</param>
+            <param name="urlEncode">if set to <c>true</c> the values are URL encoded before appending to the query string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Extensions.ParseNameValueCollection(System.String,System.String)">
+            <summary>
+            Parse a query stingr to NaveValueCollection
+            </summary>
+            <param name="source"></param>
+            <param name="regExPattern"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Extensions.ReadTemplateContent(System.String)">
+            <summary>
+            Gets a file content and returns it as a string.
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.DomainConfigModel">
+            <summary>
+            Represents the configuration properties needed to create a config.js file for the mobile application.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.DomainConfigModel.ServerUri">
+            <summary>
+            The current server domain name
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.DomainConfigModel.ModuleName">
+            <summary>
+            Current module name
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.DomainConfigModel.ApplicationId">
+            <summary>
+            Current application id
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.DomainConfigModel.ModuleDescription">
+            <summary>
+            Gets or sets the module description
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.DomainConfigModel.ModuleProvider">
+            <summary>
+            Gets or sets the name of the provider of the based on module
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.DomainConfigModel.GoogleMapsApiV3Key">
+            <summary>
+            Gets or sets the Google Maps API v3 key for using Google Maps
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.DomainConfigModel.EnableGeoLocationSearch">
+            <summary>
+            Gets or sets a value indicating whether the geo location search is enabled.
+            </summary>      
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.DomainConfigModel.EverliveApiKey">
+            <summary>
+            Gets or sets the API key for connecting with Everlive
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.DomainConfigModel.EverliveServiceSchema">
+            <summary>
+            Gets or sets the everlive service schema.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.DomainConfigModel.EverliveServiceUrl">
+            <summary>
+            Gets or sets the everlive service URL.
+            </summary>     
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.DomainConfigModel.EverliveRealm">
+            <summary>
+            Gets or sets the everlive relying party.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.DomainJSCreator.CreateStream(Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.DomainConfigModel)">
+            <summary>
+            Creates and returns a memory stream with the configurations for each module
+            </summary>
+            <param name="domainConfigModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.ZipContent.CompressMobileAppProjectToStream(System.IO.Stream,Telerik.Sitefinity.MobileAppBuilder.MobileAppGenerator.DomainConfigModel)">
+            <summary>
+            Compresses the resource files for the mobile im in .zip format to specific strem.
+            </summary>
+            This method uses Config.xml stored as embedded resource. If a new folder is create under "Icenium" folder this should be declared in the 
+            folder structure in Config.xml file.
+            <param name="outputStrem">The strem to which all files will be compressed in .zip format</param>
+            <param name="domainConfigModel">The configuration of the current module</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.IMobileAppService.GetMobileApplications(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            Gets the collection of <see cref="T:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext"/> and returns the result in JSON format.
+            </summary>
+            <param name="provider">Name of the mobile app provider to be used when retrieving the <see cref="T:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext"/>.</param>
+            <param name="sortExpression">Sort expression used to order the collection of <see cref="T:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext"/>.</param>
+            <param name="skip">Number of items to skip before starting to take the result set.</param>
+            <param name="take">Number of items to take in the result set.</param>
+            <param name="filter">Filter expression used to filter which <see cref="T:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext"/> ought to be retrieved.</param>
+            <returns>An instance of CollectionContext object that contains the collection of <see cref="T:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext"/>.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.IMobileAppService.GetMobileApplicationsInXml(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            Gets the collection of <see cref="T:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext"/> and returns the result in XML format.
+            </summary>
+            <param name="provider">Name of the mobile app provider to be used when retrieving the <see cref="T:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext"/>.</param>
+            <param name="sortExpression">Sort expression used to order the collection of <see cref="T:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext"/>.</param>
+            <param name="skip">Number of items to skip before starting to take the result set.</param>
+            <param name="take">Number of items to take in the result set.</param>
+            <param name="filter">Filter expression used to filter which <see cref="T:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext"/> ought to be retrieved.</param>
+            <returns>An instance of CollectionContext object that contains the collection of <see cref="T:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext"/>.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.IMobileAppService.GetMobileApplication(System.String,System.String)">
+            <summary>
+            Gets single <see cref="T:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext"/> and returns the result in JSON format.
+            </summary>
+            <param name="itemId">Id of the mobile application that ought to be retrieved.</param>
+            <param name="provider">Name of the mobile app provider to be used when retrieving the <see cref="T:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext"/>.</param>
+            <returns>A single  <see cref="T:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext"/>.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.IMobileAppService.GetMobileApplicationInXml(System.String,System.String)">
+            <summary>
+            Gets single <see cref="T:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext"/> and returns the result in XML format.
+            </summary>
+            <param name="itemId">Id of the mobile application that ought to be retrieved.</param>
+            <param name="provider">Name of the mobile app provider to be used when retrieving the <see cref="T:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext"/>.</param>
+            <returns>A single <see cref="T:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.Data.MobileApplicationContext"/>.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.IMobileAppService.IsCurrentUserAuthenticated">
+            <summary>
+            Determines whether [current user is authenticated].
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.IMobileAppService.LogException(Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppExceptionModel)">
+            <summary>
+            Logs exceptions occured in SitefinityBox or Mobile Application.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.MobileAppService.GetMobileApplications(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.MobileAppService.GetMobileApplicationsInXml(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.MobileAppService.GetMobileApplication(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.MobileAppService.GetMobileApplicationInXml(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.MobileAppService.IsCurrentUserAuthenticated">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.MobileApp.Services.MobileAppService.LogException(Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppExceptionModel)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppExceptionModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppExceptionModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppExceptionModel.Message">
+            <summary>
+            Gets or sets the error message
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppExceptionModel.FileName">
+            <summary>
+            Gets or sets the file name where the exception occured
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppExceptionModel.LineNumber">
+            <summary>
+            Gets or sets the line number where the exception occured
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppExceptionModel.Device">
+            <summary>
+            Gets or sets device information if available (os, version, cordova version etc.)
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppViewModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppViewModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppViewModel.Id">
+            <summary>
+            Gets or sets the identity of the mobile application.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppViewModel.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppViewModel.ModuleId">
+            <summary>
+            Gets or sets the name of the module.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppViewModel.ModuleName">
+            <summary>
+            Gets or sets the name of the module.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppViewModel.IsModuleActive">
+            <summary>
+            Gets or sets the state of the module.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppViewModel.ModuleProvider">
+            <summary>
+            Gets or sets the name of provider for the based on module.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppViewModel.TargetedMobileDevices">
+            <summary>
+            Gets or sets the targeted mobile devices.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppViewModel.AppMode">
+            <summary>
+            Gets or sets the app mode - read only or crud.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppViewModel.AllowTracking" -->
+        <!-- Badly formed XML comment ignored for member "P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppViewModel.IsPublished" -->
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppViewModel.Icon">
+            <summary>
+            Gets or sets the image used as an icon.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppViewModel.DateCreated">
+            <summary>
+            Gets or sets the date created.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppViewModel.PublicationDate">
+            <summary>
+            Gets or sets the publication date.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.SendAppToIceniumModel.AppId">
+            <summary>
+            Gets or sets the id of the mobile application that will be uploaded to icenium
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.SendAppToIceniumModel.Username">
+            <summary>
+            Gets or sets the username for icenium
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Services.Data.SendAppToIceniumModel.Password">
+            <summary>
+            Gets or sets the password for icenium
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.IMobileAppBuilderService.GetMobileApplications(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            Gets the collection of <see cref="T:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication"/> and returns the result in JSON format.
+            </summary>
+            <param name="provider">Name of the mobile app provider to be used when retrieving the <see cref="T:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication"/>.</param>
+            <param name="sortExpression">Sort expression used to order the collection of <see cref="T:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication"/>.</param>
+            <param name="skip">Number of items to skip before starting to take the result set.</param>
+            <param name="take">Number of items to take in the result set.</param>
+            <param name="filter">Filter expression used to filter which <see cref="T:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication"/> ought to be retrieved.</param>
+            <returns>An instance of CollectionContext object that contains the collection of <see cref="T:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication"/>.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.IMobileAppBuilderService.GetMobileApplicationsInXml(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            Gets the collection of <see cref="T:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication"/> and returns the result in XML format.
+            </summary>
+            <param name="provider">Name of the mobile app provider to be used when retrieving the <see cref="T:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication"/>.</param>
+            <param name="sortExpression">Sort expression used to order the collection of <see cref="T:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication"/>.</param>
+            <param name="skip">Number of items to skip before starting to take the result set.</param>
+            <param name="take">Number of items to take in the result set.</param>
+            <param name="filter">Filter expression used to filter which <see cref="T:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication"/> ought to be retrieved.</param>
+            <returns>An instance of CollectionContext object that contains the collection of <see cref="T:Telerik.Sitefinity.MobileAppBuilder.Model.MobileApplication"/>.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.IMobileAppBuilderService.SaveMobileAppItem(Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppViewModel,System.String,System.String)">
+            <summary>
+            Saves a mobile app item. If the mobile app item exists it updates it; otherwise creates a new mobile app item. 
+            Returns the saved mobile app item object in JSON format.
+            </summary>
+            <param name="moduleId">The Id of the mobile app that will be saved.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.IMobileAppBuilderService.SaveMobileAppItemInXml(Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppViewModel,System.String,System.String)">
+            <summary>
+            Saves a mobile app item. If the mobile app item exists it updates it; otherwise creates a new mobile app item. 
+            Returns the saved mobile app item object in JSON format.
+            </summary>
+            <param name="moduleId">The Id of the mobile app that will be saved.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.IMobileAppBuilderService.GetMobileAppItemById(System.String,System.String)">
+            <summary>
+            Gets a mobile app item by supplied Id.
+            </summary>
+            <param name="moduleId">The Id of the mobile app that will be returned.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.IMobileAppBuilderService.GetMobileAppItemByIdInXml(System.String,System.String)">
+            <summary>
+            Gets a mobile app item by supplied Id.
+            </summary>
+            <param name="moduleId">The Id of the mobile app that will be returned.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.IMobileAppBuilderService.DeleteMobileAppItemById(System.String,System.String)">
+            <summary>
+            Deletes a mobile app item by supplied Id.
+            </summary>
+            <param name="moduleId">The Id of the mobile app that will be deleted.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.IMobileAppBuilderService.DeleteMobileAppItemByIdInXml(System.String,System.String)">
+            <summary>
+            Deletes a mobile app item by supplied Id.
+            </summary>
+            <param name="moduleId">The Id of the mobile app that will be deleted.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.IMobileAppBuilderService.PublishUnpublishMobileApp(System.String,System.String,System.String)">
+            <summary>
+            Publishes or unpublishes mobile application. Supported operations: publish, unpublish
+            </summary>
+            <param name="moduleId">The Id of the mobile app that will be published/unpublished.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.IMobileAppBuilderService.PublishUnpublishMobileAppInXml(System.String,System.String,System.String)">
+            <summary>
+            Publishes or unpublishes mobile application. Supported operations: publish, unpublish
+            </summary>
+            <param name="moduleId">The Id of the mobile app that will be published/unpublished.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.MobileAppBuilderService.GetMobileApplications(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.MobileAppBuilderService.GetMobileApplicationsInXml(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.MobileAppBuilderService.SaveMobileAppItem(Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppViewModel,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.MobileAppBuilderService.SaveMobileAppItemInXml(Telerik.Sitefinity.MobileAppBuilder.Services.Data.MobileAppViewModel,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.MobileAppBuilderService.GetMobileAppItemById(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.MobileAppBuilderService.GetMobileAppItemByIdInXml(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.MobileAppBuilderService.DeleteMobileAppItemById(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.MobileAppBuilderService.DeleteMobileAppItemByIdInXml(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.MobileAppBuilderService.PublishUnpublishMobileApp(System.String,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Services.MobileAppBuilderService.PublishUnpublishMobileAppInXml(System.String,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Sitefinity.MobileAppBuilder.Web.ExportMobileAppHttpHandler">
+            <summary>
+            Http handler which serves the files that are generated
+            by the export mobile app functionality.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Web.ExportMobileAppHttpHandler.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            Enables processing of HTTP Web requests by a custom HttpHandler that
+            implements the <see cref="T:System.Web.IHttpHandler"/> interface.
+            </summary>
+            <param name="context">
+            An <see cref="T:System.Web.HttpContext"/> object that provides
+            references to the intrinsic server objects (for example, Request, Response, Session,
+            and Server) used to service HTTP requests. 
+            </param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Web.ExportMobileAppHttpHandler.ProcessRequest(System.Web.HttpContextBase)">
+            <summary>
+            Processes the request.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.ExportMobileAppHttpHandler.IsReusable">
+            <summary>
+            Gets a value indicating whether another request can use the <see cref="T:System.Web.IHttpHandler"/>
+            instance.
+            </summary>
+            <returns>
+            true if the <see cref="T:System.Web.IHttpHandler"/> instance is reusable; otherwise, false.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.MobileAppBuilder.Web.ExportMobileAppRouteHandler">
+            <summary>
+            Route handler which serves the export mobile app file
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Web.ExportMobileAppRouteHandler.GetHttpHandler(System.Web.Routing.RequestContext)">
+            <summary>
+            Provides the object that processes the request.
+            </summary>
+            <returns>
+            An object that processes the request.
+            </returns>
+            <param name="requestContext">
+            An object that encapsulates information about the request.
+            </param>
+        </member>
+        <member name="T:Telerik.Sitefinity.MobileAppBuilder.Web.SendAppToIceniumHttpHandler">
+            <summary>
+            Http handler which serves the files that are generated
+            by the export mobile app functionality.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Web.SendAppToIceniumHttpHandler.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            Enables processing of HTTP Web requests by a custom HttpHandler that
+            implements the <see cref="T:System.Web.IHttpHandler"/> interface.
+            </summary>
+            <param name="context">
+            An <see cref="T:System.Web.HttpContext"/> object that provides
+            references to the intrinsic server objects (for example, Request, Response, Session,
+            and Server) used to service HTTP requests. 
+            </param>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.SendAppToIceniumHttpHandler.IsReusable">
+            <summary>
+            Gets a value indicating whether another request can use the <see cref="T:System.Web.IHttpHandler"/>
+            instance.
+            </summary>
+            <returns>
+            true if the <see cref="T:System.Web.IHttpHandler"/> instance is reusable; otherwise, false.
+            </returns>
+        </member>
+        <member name="T:Telerik.Sitefinity.MobileAppBuilder.Web.SendAppToIceniumRouteHandler">
+            <summary>
+            Route handler which serves the export mobile app file
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Web.SendAppToIceniumRouteHandler.GetHttpHandler(System.Web.Routing.RequestContext)">
+            <summary>
+            Provides the object that processes the request.
+            </summary>
+            <returns>
+            An object that processes the request.
+            </returns>
+            <param name="requestContext">
+            An object that encapsulates information about the request.
+            </param>
+        </member>
+        <member name="T:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppConfigureControl">
+            <summary>
+            Control that gives users the ability to manage mobile applications (publish in Sitefinity Box, Upload to Icenium or download az a ZIP)
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppConfigureControl.InitializeControls(Telerik.Sitefinity.Web.UI.GenericContainer)">
+            <summary>
+            Initializes the controls.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppConfigureControl.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Remove the outer span on the control
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppConfigureControl.GetScriptReferences">
+            <summary>
+            Gets a collection of <see cref="T:System.Web.UI.ScriptReference"/> objects
+            that define script resources that the control requires.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerable"/> collection of <see cref="T:System.Web.UI.ScriptReference"/>
+            objects.
+            </returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppConfigureControl.LayoutTemplatePath">
+            <summary>
+            Gets the layout template path
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppConfigureControl.LayoutTemplateName">
+            <summary>
+            Gets the layout template name
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppConfigureControl.ServiceUrlHiddenField">
+            <summary>
+            Gets the hidden field that will hold the service url
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppConfigureControl.BaseExportUrlHiddenField">
+            <summary>
+            Gets the hidden field that will hold the export url for mobile apps
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppConfigureControl.SendAppToIceniumHiddenField">
+            <summary>
+            Gets the hidden field that will hold the send to icenium url
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppDashboard">
+            <summary>
+            This control displays all available mobile applications and is used as an entry point for Mobile app builder module
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppDashboard.InitializeControls(Telerik.Sitefinity.Web.UI.GenericContainer)">
+            <summary>
+            Initializes the controls.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppDashboard.OnPreRender(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.PreRender"/> event.
+            </summary>
+            <param name="e">
+            An <see cref="T:System.EventArgs"/> object that contains the event data.
+            </param>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppDashboard.GetScriptReferences">
+            <summary>
+            Gets a collection of <see cref="T:System.Web.UI.ScriptReference"/> objects
+            that define script resources that the control requires.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerable"/> collection of <see cref="T:System.Web.UI.ScriptReference"/>
+            objects.
+            </returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppDashboard.LayoutTemplatePath">
+            <summary>
+            Gets the layout template path
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppDashboard.LayoutTemplateName">
+            <summary>
+            Gets the layout template name
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppDashboard.MobileAppsWebServiceUrl">
+            <summary>
+            Sets the web service url for retrieving mobile applications
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppDashboard.MobileAppEditorClientID">
+            <summary>
+            Gets the hidden field that will hold the client id of the mobileAppEditor control
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppDashboard.BaseExportUrlHiddenField">
+            <summary>
+            Gets the hidden field that will hold the export url for mobile apps
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppDashboard.MobileAppEditor">
+            <summary>
+            Gets the MobileAppEditor control
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor">
+            <summary>
+             This control provides the ability to create and edit mobile application properties
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor.InitializeControls(Telerik.Sitefinity.Web.UI.GenericContainer)">
+            <summary>
+            Initializes the controls.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor.LoadBasedOnDynamicModules">
+            <summary>
+            Loads all dynamic modules to the BasedOnDropDown choice field
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor.GetScriptReferences">
+            <summary>
+            Gets a collection of <see cref="T:System.Web.UI.ScriptReference"/> objects
+            that define script resources that the control requires.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerable"/> collection of <see cref="T:System.Web.UI.ScriptReference"/>
+            objects.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor.GetScriptDescriptors">
+            <summary>
+            Gets a collection of script descriptors that represent ECMAScript (JavaScript)
+            client components.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerable"/> collection of <see cref="T:System.Web.UI.ScriptDescriptor"/>
+            objects.
+            </returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor.LayoutTemplatePath">
+            <summary>
+            Gets the layout template path
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor.LayoutTemplateName">
+            <summary>
+            Gets the layout template name
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor.ScriptDescriptorType">
+            <summary>
+            Gets the type (full name) of the script descriptor to be used. By default
+            it returns current type.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor.BasedOnDropDown">
+            <summary>
+            ChoiceField for choosing what module the mobile app will be based on
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor.ProvidersDropDown">
+            <summary>
+            ChoiceField for choosing module provider
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor.AppAllowsChoice">
+            <summary>
+            ChoiceField for choosing what operations will the app allow
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor.IconSelector">
+            <summary>
+            Represents the image field for selecting icon
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor.AppName">
+            <summary>
+            Input field for entering application name
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor.ContinueButton">
+            <summary>
+            Gets the reference to the button that opens saves the changes of the editor and fires event
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor.CancelButton">
+            <summary>
+            Gets the reference to the button that fires cancel event and resets the editor
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor.FieldControlsBinder">
+            <summary>
+            Gets the field controls client binder.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor.MobileAppEditorTitle">
+            <summary>
+            Gets the mobile app editor title
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor.BasedOnRequiredErrorLabel">
+            <summary>
+            Gets the label for displaying error message when based on module is not selected
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor.AppNameRequiredErrorMessage">
+            <summary>
+            Gets the label for displaying error message when mobile app name is not entered
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.MobileAppBuilder.Web.UI.MobileAppEditor.TagKey">
+            <summary>
+            we use div wrapper tag to make easier common styling
+            </summary>
+        </member>
+    </members>
+</doc>

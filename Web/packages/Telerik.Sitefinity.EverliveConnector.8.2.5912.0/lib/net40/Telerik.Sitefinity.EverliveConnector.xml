@@ -1,0 +1,1238 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Sitefinity.EverliveConnector</name>
+    </assembly>
+    <members>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Configuration.EverliveConnectorConfig.AccountKey">
+            <summary>
+            Gets or sets the Everlive account key.
+            </summary>
+            <value>The account key.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Configuration.EverliveConnectorConfig.TapAccountId">
+            <summary>
+            Gets or sets the tap account id.
+            </summary>
+            <value>The tap account id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Configuration.EverliveConnectorConfig.WorkspaceId">
+            <summary>
+            Gets or sets the workspace id.
+            </summary>
+            <value>The workspace id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Configuration.EverliveConnectorConfig.Username">
+            <summary>
+            Gets or sets the username.
+            </summary>
+            <value>The username.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Configuration.EverliveConnectorConfig.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+            <value>The password.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Configuration.EverliveConnectorConfig.Modules">
+            <summary>
+            Gets a list of the dynamic modules that are selected for sync.
+            </summary>
+            <value>The modules.</value>
+            //[DescriptionResource(typeof(ConfigDescriptions), "Modules")]
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Configuration.EverliveConnectorConfig.SyncInterval">
+            <summary>
+            Gets or sets the sync interval.
+            </summary>
+            <value>The sync interval.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Configuration.EverliveConnectorConfig.Active">
+            <summary>
+            Gets or sets whether the connection with Everlive is active.
+            </summary>
+            <value>The active.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Configuration.EverliveConnectorConfig.UseEverliveAuthentication">
+            <summary>
+            Gets or sets whether to the use Everlive authentication.
+            </summary>
+            <value>The use everlive authentication.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Configuration.EverliveConnectorConfig.EverliveServiceUrl">
+            <summary>
+            Gets or sets the Everlive service URL.
+            </summary>
+            <value>The Everlive service URL.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Configuration.EverliveConnectorConfig.EverliveAccountService">
+            <summary>
+            Gets or sets the Everlive account service URL.
+            </summary>
+            <value>The Everlive account service URL.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Configuration.EverliveConnectorConfig.EverliveServiceUseHttps">
+            <summary>
+            Gets or sets whether the Everlive service uses HTTPS.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Configuration.EverliveConnectorConfig.PublicSTSIssuerUrl">
+            <summary>
+            Public issuer url of the STS server, must not be hidden by firewall.
+            If empty means that the mobile application (Sitefinity Box) authenticates directly to the site
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Converter.DynamicTypeStreamConverter.Compare(Telerik.OpenAccess.DataAdapter.Sync.SyncAdapterBase,Telerik.OpenAccess.DataAdapter.Sync.SyncAdapterBase,System.Object,System.Object,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Converter.DynamicTypeStreamConverter.Copy(Telerik.OpenAccess.DataAdapter.Sync.SyncAdapterBase,Telerik.OpenAccess.DataAdapter.Sync.SyncAdapterBase,System.Object,System.Object,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.BeginImport">
+            <summary>
+            Validates this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.CreateNewInstance(System.Object)">
+            <summary>
+            Creates the a new instance of type <see cref="!:SitefinitySharepointSyncAdapter"/>.
+            </summary>
+            <param name="idValue">The id value.</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.UploadStream(Telerik.Sitefinity.Libraries.Model.MediaContent,System.IO.Stream)">
+            <summary>
+            Uploads the stream.
+            </summary>
+            <param name="mediaContent">Content of the media.</param>
+            <param name="stream">The stream.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.DownloadStream(Telerik.Sitefinity.Libraries.Model.MediaContent)">
+            <summary>
+            Downloads the stream.
+            </summary>
+            <param name="mediaContent">Content of the media.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.GetValue(System.Object,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.SetValue(System.Object,System.Object,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.PushChanges(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.Insert(System.Object[])">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.Update(System.Object[])">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.Delete(System.Object[])">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.Delete(System.Tuple{System.Object,System.Object}[])">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.GetNewEntries(System.Int32,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.GetItems(System.String,System.Collections.IList)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.GetItem(System.String,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.GetItemForUpsert(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.GetNextPage(System.Int32,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.BeginList(Telerik.OpenAccess.DataAdapter.Metadata.Description)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.EndList">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.Manager">
+            <summary>
+            Gets the manager.
+            </summary>
+            <value>
+            The manager.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.DynamicModuleType">
+            <summary>
+            Gets the type of the dynamic module.
+            </summary>
+            <value>The type of the dynamic module.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.SupportsTransactions">
+            <summary>
+            Gets a value indicating whether [supports transactions].
+            </summary>
+            <value>
+              <c>true</c> if [supports transactions]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.DynamicTypesSyncAdapter.HasChanges">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveAuthenticationManager.SetUsername(System.String)">
+            <summary>
+            Sets the username in the configuratuion.
+            </summary>
+            <param name="username">The username.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveAuthenticationManager.IsAuthenticated">
+            <summary>
+            Determines whether this instance have user name in the configuration.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveAuthenticationManager.LogOut">
+            <summary>
+            Removes the user data from the configuration.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveAuthenticationManager.TryGetUsageMetrics(Telerik.Everlive.Sdk.Core.Model.System.Account.UsageMetricsInfo@)">
+            <summary>
+            Gets the usage statistics from the Everlive account if the user is logged in.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveAuthenticationManager.Connect(System.Boolean)">
+            <summary>
+            Determines whether the connection with Everlive is active.
+            </summary>
+            <param name="active">The active.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager">
+            <summary>
+            A manager that encapsulates the logic for synchronization of Everlive and Sitefinity data.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.TriggerDynamicModulesSynchronization(System.Collections.Generic.IEnumerable{Telerik.Sitefinity.EverliveConnector.Configuration.ModulesConfigElement})">
+            <summary>
+            Triggers the synchronization of the passed dynamic modules.
+            </summary>
+            <param name="dynamicModules">The configuration for the dynamic modules.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.GetDynamicModuleConfiguration(System.String,System.String)">
+            <summary>
+            Gets the dynamic module configuration.
+            </summary>
+            <param name="moduleName">Name of the module.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.DeleteDynamicModuleConfiguration(System.String,System.String)">
+            <summary>
+            Deletes the configuration for the given dynamic module.
+            </summary>
+            <param name="moduleName">Name of the module.</param>
+            <param name="providerName">Name of the provider.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.CreateEverliveApplication(System.String,System.String,Telerik.Sitefinity.EverliveConnector.Data.Model.SitefinitySettings)">
+            <summary>
+            Creates an Everlive application for the given dynamic module and provider.
+            </summary>
+            <param name="moduleName">Name of the module.</param>
+            <param name="providerName">Name of the provider.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.UpdateEverliveApplication(Telerik.Sitefinity.EverliveConnector.Configuration.ModulesConfigElement,Telerik.Sitefinity.EverliveConnector.Data.Model.SitefinitySettings)">
+            <summary>
+            Updates the everlive application metadata.
+            </summary>
+            <param name="moduleConfig">The module configuration.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.ProvisionEverliveApplications">
+            <summary>
+            
+            </summary>
+            <param name="useEverliveAuth">Should the application be authenticated through Everlive</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.RegisterDynamicModuleAdapters">
+            <summary>
+            Registers the dynamic module adapters.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.ResetConfigurations(Telerik.Sitefinity.Abstractions.SiteInitializer)">
+            <summary>
+            Resets the configurations.
+            </summary>
+            <param name="initializer">The initializer.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.GetTaskManager">
+            <summary>
+            Gets the task manager.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.ScheduleImmediateSyncTask">
+            <summary>
+            Schedule an immediate task for synchronization of the dynamic modules saved in EveliverConnectorConfig
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.ScheduleSyncTask">
+            <summary>
+            Schedule a task for synchronization of the dynamic modules saved in EverliveConnectorConfig.
+            The task will be scheduled according to the sync interval saved in that configuration
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.DeleteSyncTask">
+            <summary>
+            Deletes the sync task when the module is disconnected.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.TryResetConfigurationById(System.Guid)">
+            <summary>
+            Resets the configuration.
+            </summary>
+            <param name="configurationName">Name of the configuration.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.TryResetConfigurationById(System.String)">
+            <summary>
+            Resets the configuration.
+            </summary>
+            <param name="configurationName">Name of the configuration.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.GetEverliveRelyingPartyKey">
+            <summary>
+            Gets the Everlive relying party key.
+            If not present it will generate new one and add it to the Security config
+            </summary>
+            <returns>The Everlive relying party key</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.GetDefaultSitefinitySettings">
+            <summary>
+            Creates a JObject holding the current settings that will be stored in the customSettings collection
+            for every Everlive application
+            </summary>
+            <param name="relyingPartyKey"></param>
+            <param name="useEverliveAuth"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.CreateEverliveApplication(Telerik.Everlive.Sdk.Core.Model.System.Metadata.Application)">
+            <summary>
+            Creates the everlive application.
+            </summary>
+            <param name="everliveApplication">The everlive application.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.TryGetConfigurationFromDatabase(Telerik.Everlive.Sdk.Core.Model.System.Metadata.Application,System.String,Telerik.OpenAccess.Sync.Configuration@)">
+            <summary>
+            If exist retrieves the configuration from database.
+            </summary>
+            <param name="connectionString">The connection string.</param>
+            <param name="configId">The config id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.GetConfigurationFromDatabase(System.String,System.Guid)">
+            <summary>
+            Gets the configuration from database.
+            </summary>
+            <param name="connectionString">The connection string.</param>
+            <param name="configId">The config id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorManager.SaveConfigurationToDatabase(Telerik.OpenAccess.Sync.Configuration,System.String)">
+            <summary>
+            Saves the configuration to database.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="connectionString">The connection string.</param>
+        </member>
+        <member name="F:Telerik.Sitefinity.EverliveConnector.EverliveConnectorModule.ModuleName">
+            <summary>
+            Name of the enterprise adapter module.
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.EverliveConnector.EverliveConnectorModule.ModuleId">
+            <summary>
+            Id of the module. Used for licensing.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorModule.GetVirtualPaths">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveConnectorModule.InstallPages(Telerik.Sitefinity.Abstractions.SiteInitializer)">
+            <summary>
+            Installs the pages.
+            </summary>
+            <param name="initializer">The initializer.</param>
+        </member>
+        <member name="F:Telerik.Sitefinity.EverliveConnector.EverliveConnectorModule.ConnectorPageGroupId">
+            <summary>
+            Page group node for the Everlive connector module
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.EverliveConnector.EverliveConnectorModule.PageGroupId">
+            <summary>
+            Page group node for the Everlive connector module
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.EverliveConnector.EverliveConnectorModule.EverliveConnectorGroupPageTitle">
+            <summary>
+            The title of the group page used for Everlive connector under Connectivity
+            </summary>
+        </member>
+        <member name="F:Telerik.Sitefinity.EverliveConnector.EverliveConnectorModule.EverliveCloudServicesConnectorPageId">
+            <summary>
+            Id of the everlive cloud services page
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.EverliveConnectorGroupPageTitle">
+            <summary>
+            Title of the Everlive Connector's group page.
+            </summary>
+            <value>Connector for Telerik BaaS</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.EverliveConnectorGroupPageUrlName">
+            <summary>
+            Urlname of the Everlive Connector's group page.
+            </summary>
+            <value>Telerik-backend-services</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.EverliveConnectorGroupPageDescription">
+            <summary>
+            Description of the Sharepoint Connector module group page.
+            </summary>
+            <value>This is the Telerik Backend Services Connector module group page.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.EverliveConnectorPageTitle">
+            <summary>
+            Phrase: Telerik Backend Services connector
+            </summary>
+            <value>Telerik Backend Services connector</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.ScheduleFiveMinutes">
+            <summary>
+            Phrase: Every 5 minutes
+            </summary>
+            <value>Every 5 minutes</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.ScheduleHalfHour">
+            <summary>
+            Phrase: Every 30 minutes
+            </summary>
+            <value>Every 30 minutes</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.ScheduleOneHour">
+            <summary>
+            Phrase: Every 1 hour
+            </summary>
+            <value>Every 1 hour</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.ScheduleWeekly">
+            <summary>
+            Phrase: Weekly on
+            </summary>
+            <value>Weekly on</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.ScheduleMonday">
+            <summary>
+            Word: Monday
+            </summary>
+            <value>Monday</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.ScheduleTuesday">
+            <summary>
+            Word: Tuesday
+            </summary>
+            <value>Tuesday</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.ScheduleWednesday">
+            <summary>
+            Word: Wednesday
+            </summary>
+            <value>Wednesday</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.ScheduleThursday">
+            <summary>
+            Word: Thursday
+            </summary>
+            <value>Thursday</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.ScheduleFriday">
+            <summary>
+            Word: Friday
+            </summary>
+            <value>Friday</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.ScheduleSaturday">
+            <summary>
+            Word: Saturday
+            </summary>
+            <value>Saturday</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.ScheduleSunday">
+            <summary>
+            Word: Sunday
+            </summary>
+            <value>Sunday</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.ScheduleTypeLabel">
+            <summary>
+            Phrase: When to sync
+            </summary>
+            <value>When to sync...</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.ChangeModulesLabel">
+            <summary>
+            Phrase: Change modules
+            </summary>
+            <value>Change modules</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.SaveLabel">
+            <summary>
+            Word: Save
+            </summary>
+            <value>Save</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.SyncNowLabel">
+            <summary>
+            Phrase: Sync now
+            </summary>
+            <value>Sync now</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.DisconnectAlertMessage">
+            <summary>
+            Phrase: All applications that are using Backend Services will not be synced anymore. Are you sure you want to disconnect?
+            </summary>
+            <value>All applications that are using Backend Services will not be synced anymore. Are you sure you want to disconnect?</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.ChangeConnectionLabel">
+            <summary>
+            Phrase: Change connection
+            </summary>
+            <value>Change connection</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.UsernameLabel">
+            <summary>
+            Phrase: Telerik username
+            </summary>
+            <value>Telerik username</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.PasswordLabel">
+            <summary>
+            Phrase: Telerik password
+            </summary>
+            <value>Telerik password</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.LogInFailMessage">
+            <summary>
+            Phrase: Failed to connect to Everlive
+            </summary>
+            <value>Failed to connect to Telerik Backend Services</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.ConnectLabel">
+            <summary>
+            Word: Connect
+            </summary>
+            <value>Connect</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.LogInFormHeader">
+            <summary>
+            Phrase: Connect to Telerik Backend Services, using your Telerik Account
+            </summary>
+            <value>Connect to Telerik Backend Services, using your Telerik Account</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.MetricsHint">
+            <summary>
+            Phrase: Total usage of the connected account
+            </summary>
+            <value>Total usage of the connected account</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.NameLabel">
+            <summary>
+            Word: Name
+            </summary>
+            <value>Name</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.SelectProviders">
+            <summary>
+            Phrase: Select providers
+            </summary>
+            <value>Select providers</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.AcknowledgeMessage">
+            <summary>
+            Phrase: By logging into Telerik Backend Services (part of Telerik Platform) I acknowledge that I have read and agree to the 
+            </summary>
+            <value>By logging into Telerik Backend Services (part of Telerik Platform) I acknowledge that I have read and agree to the </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.TermsOfUse">
+            <summary>
+            Phrase: Terms of Use
+            </summary>
+            <value>Terms of Use</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.ModulesSelectorHeader">
+            <summary>
+            Phrase: Which modules will be connected to Telerik Backend Services?
+            </summary>
+            <value>Which modules will be connected to Telerik Backend Services?</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.ModulesSelectorHint">
+            <summary>
+            Phrase: A new Evervlive project will be created for each of the selected providers
+            </summary>
+            <value>A new Telerik Backend Services project will be created for each of the selected providers</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.EverliveQuestionLabel">
+            <summary>
+            Phrase: Why use Telerik Backend Services?
+            </summary>
+            <value>Why use Telerik Backend Services?</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.EverliveQuestionsListLabel">
+            <summary>
+            Phrase: Use syncing with Backend Services to:
+            </summary>
+            <value>Use syncing with Backend Services to:</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.EverliveReasonLabel1">
+            <summary>
+            Phrase: Back up the content of your modules
+            </summary>
+            <value>Back up the content of your modules</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.EverliveReasonDescriptionLabel1">
+            <summary>
+            Phrase: You can expose some data, while keeping the rest safely behind your firewall.
+            </summary>
+            <value>You can expose some data, while keeping the rest safely behind your firewall.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.EverliveReasonLabel2">
+            <summary>
+            Phrase: Havе faster mobile apps
+            </summary>
+            <value>Havе faster mobile apps</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.EverliveReasonDescriptionLabel2">
+            <summary>
+            Phrase: To maximize mobile app performance, Telerik Backend Services use a non-relational database built for speed and scalability. RESTful web services result in less traffic and in lightning speed of mobile apps.
+            </summary>
+            <value>To maximize mobile app performance, Telerik Backend Services use a non-relational database built for speed and scalability. RESTful web services result in less traffic and in lightning speed of mobile apps.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.EverliveReasonLabel3">
+            <summary>
+            Phrase: Grant access to sensitive intranet data to employees on the go
+            </summary>
+            <value>Grant access to sensitive intranet data to employees on the go</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.EverliveReasonDescriptionLabel3">
+            <summary>
+            Phrase: Sitefinity controls which data is synced, then permissions on the Telerik Backend Services side control who can access it.
+            </summary>
+            <value>Sitefinity controls which data is synced, then permissions on the Telerik Backend Services side control who can access it.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.SyncFrequencyLabel">
+            <summary>
+            Label: Sync frequency:
+            </summary>
+            <value>Now you can sign up, start taking pictures, and sharing moments that will be automatically uploaded to cloud.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.AccessEverliveConnectorTitle">
+            <summary>
+            Phrase: Access Everlive connector module
+            </summary>
+            <value>Access Everlive connector module</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.AccessEverliveConnectorDescription">
+            <summary>
+            Phrase: Security action that allows access to the backend pages of the Everlive connector module
+            </summary>
+            <value>Security action that allows access to the backend pages of the Everlive connector module</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.PublicSTSIssuerUrlTitle">
+            <summary>
+            Phrase: Public STS issuer url
+            </summary>
+            <value>Public STS issuer url</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.PublicSTSIssuerUrlDescription">
+            <summary>
+            Phrase: Url of the STS issuer that is not hidden by firewall
+            </summary>
+            <value>Url of the STS issuer that is not hidden by firewall. If empty means that the mobile application (Sitefinity Box) authenticates directly to the site.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveConnectorResources.TelerikBackendServicesLabel">
+            <summary>
+            Phrase: Telerik Backend Services
+            </summary>
+            <value>Telerik Backend Services</value>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveSyncAdapterBase.Delete(System.Tuple{System.Object,System.Object}[])">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.EverliveSyncAdapterBase.GetItemForUpsert(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.EverliveSyncAdapterBase.HasChanges">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Scheduling.EverliveSyncTask.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.EverliveConnector.Scheduling.EverliveSyncTask"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Scheduling.EverliveSyncTask.SetCustomData(System.String)">
+            <summary>
+            Sets the custom data. This is used when reviving a task from a persistent storage to deserialize any custom stored data
+            </summary>
+            <param name="customData"></param>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Scheduling.EverliveSyncTask.Execute">
+            <summary>
+            Executes the task.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.TaxonomySyncAdapter.GetItem(System.String,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.TaxonomySyncAdapter.GetItemForUpsert(System.Object,System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.TaxonomySyncAdapter.GetValue(System.Object,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.TaxonomySyncAdapter.SetValue(System.Object,System.Object,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.TaxonomySyncAdapter.Delete(System.Tuple{System.Object,System.Object}[])">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.TaxonomySyncAdapter.HasChanges">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.Services.IEverliveConnectorService.Save(Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveAccountViewModel)">
+            <summary>
+            Saves the information for syncing Sitefinity with Everlive account.
+            </summary>
+            <param name="accountVM">The account VM.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.Services.IEverliveConnectorService.GetAccountSyncData(System.String,System.String)">
+            <summary>
+            Gets the information for syncing Sitefinity with Everlive.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.Services.IEverliveConnectorService.Connect(System.Boolean)">
+            <summary>
+            Determines whether the connection with Everlive is active.
+            </summary>
+            <param name="active">The active.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.Services.IEverliveConnectorService.GetSiteDataSourceAvailableLinks(System.String,System.String)">
+            <summary>
+            Gets a collection of all available provider links for specific data source of the site. The results are returned in JSON format.
+            </summary>
+            <param name="siteId">The site id.</param>
+            <param name="moduleName">Name of the module.</param>
+            <returns>Collection context object of <see cref="T:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.AvailableLinkViewModel"/> objects.</returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.Services.EverliveConnectorService.Save(Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveAccountViewModel)">
+            <summary>
+            Saves the information for syncing Sitefinity with Everlive account.
+            </summary>
+            <param name="accountVM">The account VM.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.Services.EverliveConnectorService.GetSiteDataSourceAvailableLinks(System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.Services.EverliveConnectorService.Connect(System.Boolean)">
+            <summary>
+            Determines whether the connection with Everlive is active.
+            </summary>
+            <param name="active">The active.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.Services.EverliveConnectorService.GetAccountSyncDataInternal(System.String,System.String)">
+            <summary>
+            Gets the account sync data internal.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.Services.EverliveConnectorService.SaveSyncIntervalInternal(System.String)">
+            <summary>
+            Saves the sync interval.
+            </summary>
+            <param name="expression">The expression in crontab format.</param>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.Services.EverliveConnectorService.ConnectInternal(System.Boolean)">
+            <summary>
+            Determines whether the connection with Everlive is active.
+            </summary>
+            <param name="active">The active.</param>
+        </member>
+        <member name="T:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.AvailableLinkViewModel">
+            <summary>
+            View model used by content source selector.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.AvailableLinkViewModel.Link">
+            <summary>
+            Gets or sets the data source link.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.AvailableLinkViewModel.UsedAlsoBy">
+            <summary>
+            Gets or sets an array of sites (their names) that use this provider.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.AvailableLinkViewModel.IsDeletable">
+            <summary>
+            Gets or sets the boolean value indicating whether this link can be deleted.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveAccountViewModel">
+            <summary>
+            View model that represents information for synchronizing Sitefinity with Everlive account
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveAccountViewModel.DisplayMode">
+            <summary>
+            Gets or sets the UI mode of the control displaying the modules.
+            </summary>
+            <value>The mode (Change / View)</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveAccountViewModel.Username">
+            <summary>
+            Gets or sets the username.
+            </summary>
+            <value>The username.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveAccountViewModel.SyncInterval">
+            <summary>
+            Gets or sets the synchronization interval.
+            </summary>
+            <value>The sync interval in crontab format.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveAccountViewModel.Active">
+            <summary>
+            Gets or sets whether the account is connected.
+            </summary>
+            <value>The active.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveAccountViewModel.Modules">
+            <summary>
+            Gets or sets the Sitefinity modules which will be synchronized.
+            </summary>
+            <value>The modules.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveAccountViewModel.TotalUsageMetrics">
+            <summary>
+            Gets or sets the total usage metrics for a Everlive account.
+            </summary>
+            <value>The total usage metrics.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveAccountViewModel.IsAuthenticated">
+            <summary>
+            Determines whether the user is authenticated.
+            </summary>
+            <value>The is authenticated.</value>
+        </member>
+        <member name="T:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveConnectorSyncModuleViewModel">
+            <summary>
+            View model that represents one module in the list of sitefinity modules that 
+            the user can choose to sync with Everlive
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveConnectorSyncModuleViewModel.ModuleName">
+            <summary>
+            The name of the module
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveConnectorSyncModuleViewModel.ModuleId">
+            <summary>
+            Gets or sets the module id.
+            </summary>
+            <value>The module id.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveConnectorSyncModuleViewModel.Providers">
+            <summary>
+            Holds a list of all providers that must be synced with Everlive
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveConnectorSyncModuleViewModel.AvailableProvidersNumber">
+            <summary>
+            Gets or sets the number of all available providers that could be synced.
+            </summary>
+            <value>The available providers.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveConnectorSyncModuleViewModel.SyncInterval">
+            <summary>
+            The time interval between consecutive syncs
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveConnectorSyncModuleViewModel.UsedForSync">
+            <summary>
+            Gets or sets whether the module is used for sync.
+            </summary>
+            <value>The used for sync.</value>
+        </member>
+        <member name="T:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveDataProviderViewModel">
+            <summary>
+            Represents the DataProvider view model.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveDataProviderViewModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveDataProviderViewModel"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveDataProviderViewModel.#ctor(Telerik.Sitefinity.Data.DataSource.DataProviderInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveDataProviderViewModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveDataProviderViewModel.Name">
+            <summary>
+            Gets or sets the name of the provider.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveDataProviderViewModel.Title">
+            <summary>
+            Gets or sets the title of the provider.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.EverliveDataProviderViewModel.EverliveApplicationId">
+            <summary>
+            If this is empty, then there is no everlive application created yet
+            Used in the Everlive Connector Service to distinguish already created modules in everlive from
+            the new one when saving the information to the config file
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.SiteDataSourceLinkViewModel">
+            <summary>
+            Represents the provider view model.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.SiteDataSourceLinkViewModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.SiteDataSourceLinkViewModel"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.SiteDataSourceLinkViewModel.#ctor(Telerik.Sitefinity.Multisite.Model.SiteDataSourceLink)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.SiteDataSourceLinkViewModel"/> class.
+            </summary>
+            <param name="siteDataSourceLink">The site data source link.</param>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.SiteDataSourceLinkViewModel.Id">
+            <summary>
+            Gets or sets the provider id.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.SiteDataSourceLinkViewModel.ProviderName">
+            <summary>
+            Gets or sets the provider name.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.SiteDataSourceLinkViewModel.ProviderTitle">
+            <summary>
+            Gets or sets the provider title.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.SiteDataSourceLinkViewModel.SiteId">
+            <summary>
+            Gets or sets the site id.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.SiteDataSourceLinkViewModel.DataSourceName">
+            <summary>
+            Gets or sets the name of the data source.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.SiteDataSourceLinkViewModel.IsDefault">
+            <summary>
+            Gets or sets a value indicating whether this instance is default for the site.
+            </summary>
+        </member>
+        <member name="T:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.TotalUsageMetricsViewModel">
+            <summary>
+            Represents information about the total data usage for a Everlive account
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.TotalUsageMetricsViewModel.Bandwidth">
+            <summary>
+            Gets or sets the bandwidth.
+            </summary>
+            <value>The bandwidth.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.TotalUsageMetricsViewModel.FilesStorage">
+            <summary>
+            Gets or sets the files storage.
+            </summary>
+            <value>The files storage.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.Services.ViewModels.TotalUsageMetricsViewModel.DataStorage">
+            <summary>
+            Gets or sets the data storage.
+            </summary>
+            <value>The data storage.</value>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.UI.EverliveConnectorSettings.InitializeControls(Telerik.Sitefinity.Web.UI.GenericContainer)">
+            <summary>
+            Initializes the controls.
+            </summary>
+            <param name="container"></param>
+            <remarks>
+            Initialize your controls in this method. Do not override CreateChildControls method.
+            </remarks>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.UI.EverliveConnectorSettings.GetScriptReferences">
+            <summary>
+            Gets a collection of <see cref="T:System.Web.UI.ScriptReference" /> objects
+            that define script resources that the control requires.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerable" /> collection of <see cref="T:System.Web.UI.ScriptReference" />
+            objects.
+            </returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.EverliveConnectorSettings.LayoutTemplateName">
+            <summary>
+            Gets the name of the embedded layout template.
+            </summary>
+            <value></value>
+            <remarks>
+            Override this property to change the embedded template to be used with the dialog
+            </remarks>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.EverliveConnectorSettings.LayoutTemplatePath">
+            <summary>
+            Gets or sets the path of the external template to be used by the control.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.EverliveConnectorSettings.ViewDataInCloudLink">
+            <summary>
+            Gets the view data in the cloud link.
+            </summary>
+            <value>The view data in the cloud link.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.EverliveConnectorSettings.DetailsLink">
+            <summary>
+            Gets the details link.
+            </summary>
+            <value>The details link.</value>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.UI.EverliveLogInForm.InitializeControls(Telerik.Sitefinity.Web.UI.GenericContainer)">
+            <summary>
+            Initializes the controls.
+            </summary>
+            <param name="container"></param>
+            <remarks>
+            Initialize your controls in this method. Do not override CreateChildControls method.
+            </remarks>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.EverliveLogInForm.LayoutTemplateName">
+            <summary>
+            Gets the name of the embedded layout template.
+            </summary>
+            <remarks>
+            Override this property to change the embedded template to be used with the dialog
+            </remarks>
+            <value></value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.EverliveLogInForm.LayoutTemplatePath">
+            <summary>
+            Gets or sets the path of the external template to be used by the control.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.ModulesSelector.LayoutTemplateName">
+            <summary>
+            Gets the name of the embedded layout template.
+            </summary>
+            <remarks>
+            Override this property to change the embedded template to be used with the dialog
+            </remarks>
+            <value></value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.ModulesSelector.LayoutTemplatePath">
+            <summary>
+            Gets or sets the path of the external template to be used by the control.
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.UI.PreciseSchedulerView.InitializeControls(Telerik.Sitefinity.Web.UI.GenericContainer)">
+            <summary>
+            Initializes the controls.
+            </summary>
+            <param name="container"></param>
+            <remarks>
+            Initialize your controls in this method. Do not override CreateChildControls method.
+            </remarks>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.UI.PreciseSchedulerView.GetScriptReferences">
+            <summary>
+            Gets a collection of <see cref="T:System.Web.UI.ScriptReference"/> objects
+            that define script resources that the control requires.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerable"/> collection of <see cref="T:System.Web.UI.ScriptReference"/>
+            objects.
+            </returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.PreciseSchedulerView.LayoutTemplatePath">
+            <summary>
+            Gets the layout template path
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.PreciseSchedulerView.LayoutTemplateName">
+            <summary>
+            Gets the layout template name
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Scheduling.EverliveSyncSettings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.EverliveConnector.Scheduling.EverliveSyncSettings"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Scheduling.EverliveSyncSettings.Parse(System.String)">
+            <summary>
+            Parses the specified data.
+            </summary>
+            <param name="data">The data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Scheduling.EverliveSyncSettings.GetRetryInterval">
+            <summary>
+            Gets or sets the retry interval in seconds.
+            </summary>
+            <value>The retry interval.</value>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Scheduling.EverliveSyncSettings.GetSchedule">
+            <summary>
+            Gets or sets the schedule.
+            </summary>
+            <value>
+            The schedule.
+            </value>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Scheduling.EverliveSyncSettings.GetSynchronizationStatus">
+            <summary>
+            Gets or sets the synchronization status.
+            </summary>
+            <value>The synchronization status.</value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Scheduling.EverliveSyncSettings.Username">
+            <summary>
+            Gets or sets the account key
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.UsageMetricsView.LayoutTemplateName">
+            <summary>
+            Gets the name of the embedded layout template.
+            </summary>
+            <remarks>
+            Override this property to change the embedded template to be used with the dialog
+            </remarks>
+            <value></value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.UsageMetricsView.LayoutTemplatePath">
+            <summary>
+            Gets or sets the path of the external template to be used by the control.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:Telerik.Sitefinity.EverliveConnector.Web.UI.DataSourceProviderSelectorDialog">
+            <summary>
+            A dialog for selecting providers for a data source.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.UI.DataSourceProviderSelectorDialog.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Sitefinity.EverliveConnector.Web.UI.DataSourceProviderSelectorDialog"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.UI.DataSourceProviderSelectorDialog.GetScriptDescriptors">
+            <summary>
+            Gets a collection of script descriptors that represent ECMAScript (JavaScript) client components.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerable"/> collection of <see cref="T:System.Web.UI.ScriptDescriptor"/> objects.
+            </returns>
+        </member>
+        <member name="M:Telerik.Sitefinity.EverliveConnector.Web.UI.DataSourceProviderSelectorDialog.GetScriptReferences">
+            <summary>
+            Gets a collection of <see cref="T:System.Web.UI.ScriptReference"/> objects that define script resources that the control requires.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerable"/> collection of <see cref="T:System.Web.UI.ScriptReference"/> objects.
+            </returns>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.DataSourceProviderSelectorDialog.LayoutTemplateName">
+            <summary>
+            Gets the name of the embedded layout template.
+            </summary>
+            <value></value>
+            <remarks>
+            Override this property to change the embedded template to be used with the dialog
+            </remarks>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.DataSourceProviderSelectorDialog.OuterDiv">
+            <summary>
+            Gets a reference to the outer div containing the window content.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.DataSourceProviderSelectorDialog.DialogTitle">
+            <summary>
+            Gets the dialog title.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.DataSourceProviderSelectorDialog.CancelButton">
+            <summary>
+            Gets the cancel button.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.DataSourceProviderSelectorDialog.DoneButton">
+            <summary>
+            Gets the done button.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.DataSourceProviderSelectorDialog.ClientLabelManager">
+            <summary>
+            Gets the client label manager.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.DataSourceProviderSelectorDialog.SourcesGrid">
+            <summary>
+            Gets the sources grid.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.DataSourceProviderSelectorDialog.SearchBox">
+            <summary>
+            Gets the search box.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.DataSourceProviderSelectorDialog.SelectAllSourcesCheckbox">
+            <summary>
+            Gets the checkbox for selecting all sources.
+            </summary>
+        </member>
+        <member name="P:Telerik.Sitefinity.EverliveConnector.Web.UI.DataSourceProviderSelectorDialog.DisableProviderConfirmDialog">
+            <summary>
+            Gets the delete provider confirm dialog.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,19 @@
+@model Telerik.Sitefinity.Frontend.Mvc.Models.ContentListViewModel
+
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Web.DataResolving;
+@using DevMagazine.Core.Mvc.Helpers;
+
+@Html.GetPageTitle((Guid)@ViewBag.DetailsPageId)
+
+<ul class="list-unstyled">
+    @foreach (var item in Model.Items)
+    {
+        var navigateUrl = HyperLinkHelpers.GetDetailPageUrl(item, ViewBag.DetailsPageId, ViewBag.OpenInSamePage);
+
+        <li>
+            <a href="@navigateUrl">@item.Fields.Title</a>
+        </li>
+    }
+</ul>
