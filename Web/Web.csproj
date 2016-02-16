@@ -332,6 +332,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\Sitefinity\" />
+    <Folder Include="Mvc\Views\Cars\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Data\GeoLocation\GeoLiteCity.dat" />
@@ -610,6 +611,11 @@
     <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\sf-icon-font.woff" />
     <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\sf-icon-font.ttf" />
     <Content Include="ResourcePackages\Bootstrap\assets\dist\fonts\sf-icon-font.eot" />
+    <Content Include="ResourcePackages\DevMagazine\MVC\Views\Car\List.Hondas.cshtml" />
+    <Content Include="ResourcePackages\DevMagazine\MVC\Views\Cars\Index.cshtml" />
+    <Content Include="ResourcePackages\DevMagazine\MVC\Views\ContentBlock\DesignerView.Simple.cshtml" />
+    <Content Include="ResourcePackages\DevMagazine\MVC\Views\Cars\DesignerView.Nice.cshtml" />
+    <Content Include="ResourcePackages\DevMagazine\MVC\Views\Cars\DesignerVIew.Nice.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="AjaxControlToolkit, Version=3.0.20820.16598, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
@@ -668,6 +674,7 @@
       <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
       <Private>True</Private>
@@ -1280,6 +1287,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DevMagazine.Cars\DevMagazine.Cars.csproj">
+      <Project>{fd054816-0811-4a6c-916e-d40ff6e07c84}</Project>
+      <Name>DevMagazine.Cars</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DevMagazine.Core\DevMagazine.Core.csproj">
       <Project>{a826272a-3ec4-4c31-8053-30fac097d14a}</Project>
       <Name>DevMagazine.Core</Name>

@@ -3,9 +3,7 @@
 @using Telerik.Sitefinity.Frontend.Mvc.Helpers;
 @using Telerik.Sitefinity.Modules.Pages;
 @using Telerik.Sitefinity.Web.DataResolving;
-@using DevMagazine.Core.Mvc.Helpers;
-
-@Html.GetPageTitle((Guid)@ViewBag.DetailsPageId)
+@using Telerik.Sitefinity.RelatedData;
 
 <ul class="list-unstyled">
     @foreach (var item in Model.Items)
@@ -14,6 +12,10 @@
 
         <li>
             <a href="@navigateUrl">@item.Fields.Title</a>
+            @if (item.RelatedItem("Image") != null)
+            {
+                <img src="@item.Fields.Image.Fields.MediaUrl" />
+            }
         </li>
     }
 </ul>
