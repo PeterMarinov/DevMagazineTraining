@@ -1,0 +1,22 @@
+﻿@model Telerik.Sitefinity.Frontend.Identity.Mvc.Models.LoginStatus.LoginStatusViewModel
+
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers
+@using Telerik.Sitefinity.Modules.Pages;
+
+@Html.Script(ScriptRef.JQuery, "top")
+
+<div class="system">
+    <a ui-sref="sign-it" class="signin" href="#/sign-it">
+        <span>Assine</span> TOTVS
+    </a>
+    <a data-sf-role="sf-logged-out-view" style="display: none" ui-sref="dashboard" class="login" href="@(Model.LoginPageUrl ?? "#")">
+        <span class="icon-user"></span>@Html.Resource("Login")
+    </a>
+    <a data-sf-role="sf-logged-in-view" ui-sref="dashboard" class="login" href="@(Model.LoginPageUrl ?? "#")">
+        <span class="icon-user"></span>@Html.Resource("Logout")
+    </a>
+    <a ui-sref="cart-open" class="store" href="#/cart-open">
+        <span class="only-xs">Carrinho</span>
+        <span class="icon-cart"></span>
+    </a>
+</div>

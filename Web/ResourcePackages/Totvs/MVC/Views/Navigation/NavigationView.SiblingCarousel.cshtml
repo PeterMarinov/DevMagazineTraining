@@ -1,0 +1,60 @@
+@model Telerik.Sitefinity.Frontend.Navigation.Mvc.Models.INavigationModel
+
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Frontend.Navigation.Mvc.Models;
+@using Telerik.Sitefinity.Modules.Pages;
+
+@*Add scripts and stylesheets*@
+
+<section class="menu-segments container-fluid" sticky-header>
+    <div class="menu-segments-inner">
+        <div id="carousel-segments-selector" class="">
+            <span class="arrow-navigation" id="menu-segments-nav-prev"></span>
+            <div class="segments-container">
+                <div class="carousel-content" segments-slider>
+                    @foreach (var item in Model.Nodes)
+                    {
+                        <div class="item">
+                            <a href="@item.Url" class="@GetClass(item)">
+                                <span class="dropdown-filter dropdown-filter-text">@item.Title</span>
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+            <span class="arrow-navigation" id="menu-segments-nav-next"></span>
+        </div>
+    </div>
+</section>
+
+@*Here is specified the rendering for the root level*@
+@helper RenderRootLevelNode(NodeViewModel node)
+{
+if (node.ChildNodes.Count > 0)
+{
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                @node.Title
+                <span class="caret"></span>
+            </a>
+        </li>
+}
+else
+{
+        <li class="@GetClass(node)"><a href="@node.Url" target="@node.LinkTarget">@node.Title</a></li>
+}
+}
+
+@*Resolves the class that will be added for each node depending whether it is selected*@
+@helper GetClass(NodeViewModel node)
+{
+
+if (node.IsCurrentlyOpened)
+{
+        @Html.Raw("active");
+    }
+    else if (node.HasChildOpen)
+    {
+        @Html.Raw("active");
+    }
+}

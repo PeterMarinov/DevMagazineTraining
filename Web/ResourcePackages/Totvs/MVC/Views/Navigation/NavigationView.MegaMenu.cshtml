@@ -1,0 +1,105 @@
+@model Telerik.Sitefinity.Frontend.Navigation.Mvc.Models.INavigationModel
+
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Frontend.Navigation.Mvc.Models;
+@using Telerik.Sitefinity.Modules.Pages;
+
+@*Add scripts and stylesheets*@
+
+<div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <span class="only-xs sprite search"></span>
+    <a class="navbar-brand" ui-sref="home" href="#/">TOTVS</a>
+</div>
+
+<div class="collapse navbar-collapse" id="main-navigation" navigation-events="" aria-expanded="false">
+    <ul class="nav navbar-nav">
+        @foreach (var node in Model.Nodes)
+            {
+            @RenderRootLevelNode(node);
+            }
+    </ul>
+</div><!-- /.navbar-collapse -->
+@*Here is specified the rendering for the root level*@
+@helper RenderRootLevelNode(NodeViewModel node)
+{
+if (node.ChildNodes.Count > 0)
+{
+        <li class="has-children" hide-on-redirect="">
+            <a href="@node.Url">
+                @node.Title
+                <span class="icon-chevron-bottom"></span>
+            </a>
+            <ul class="submenu-1">
+                @RenderSubLevelsRecursive(node)
+            </ul>
+        </li>
+}
+else
+{
+        <li><a ui-sref="store-open" href="@node.Url">@node.Title</a></li>
+}
+}
+
+@*Here is specified the rendering for all child levels*@
+@helper RenderSubLevelsRecursive(NodeViewModel node)
+{
+foreach (var childNode in node.ChildNodes)
+{
+    if (childNode.ChildNodes.Count > 0)
+    {
+            <li>
+                <a href="@childNode.Url" target="@childNode.LinkTarget">
+                    <span class="icon @GetCssClass(childNode.OriginalSiteMapNode)"></span>
+                    <span class="menu-text">@childNode.Title</span>
+                </a>
+                <ul class="submenu-2">
+                    @RenderLevel3Nodes(childNode)
+                </ul>
+            </li>
+    }
+    else
+    {
+            <li>
+                <a href="@childNode.Url" target="@childNode.LinkTarget">
+                    <span class="icon @GetCssClass(childNode.OriginalSiteMapNode)"></span>
+                    <span class="menu-text">@childNode.Title</span>
+                </a>
+            </li>
+    }
+}
+}
+
+@helper GetCssClass(SiteMapNode node)
+{
+var sitefinityNode = node as Telerik.Sitefinity.Web.PageSiteNode;
+
+    @sitefinityNode.Attributes["IconClass"]
+}
+
+@helper RenderLevel3Nodes(NodeViewModel parentNode)
+        {
+foreach (var childNode in parentNode.ChildNodes)
+{
+        <li><a href="@childNode.Url">@childNode.Title</a></li>
+}
+}
+
+@*Resolves the class that will be added for each node depending whether it is selected*@
+@helper GetClass(NodeViewModel node)
+{
+
+if (node.IsCurrentlyOpened)
+{
+        @Html.Raw("active");
+    }
+    else if (node.HasChildOpen)
+    {
+        @Html.Raw("active");
+    }
+}

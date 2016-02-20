@@ -1,0 +1,16 @@
+@model Telerik.Sitefinity.Frontend.Card.Mvc.Models.Card.CardViewModel
+
+<section class="segments-enchantment container-fluid ng-scope">
+    <div class="row no-gutter">
+        <div class="info-box">
+            <img src="@Model.SelectedSizeUrl" alt="@Model.ImageAlternativeText" class="article-image full-height">
+            <div class="info-box-content center-block bg-4">
+                <h2>@Html.Raw(Model.Heading)</h2>
+                <p>@Html.Raw(Model.Description)</p>
+                <div class="info-box-bottom">
+                    <a scroll-to="#benefits" scroll-to-speed="300" href="javascript:void(0)" class="btn btn-default btn-md btn-circle"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
